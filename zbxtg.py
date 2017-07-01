@@ -251,7 +251,7 @@ def main():
     hash_ts = str(ts) + "." + str(rnd)
 
     log_file = "/dev/null"
-
+    #接收參數，第1個是收件者，第二個是主旨，第三個是內容
     zbx_to = sys.argv[1]
     zbx_subject = sys.argv[2]
     zbx_body = sys.argv[3]
