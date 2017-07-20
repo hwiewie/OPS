@@ -7,7 +7,7 @@ FILESA=*access.log
 FILESE=*error.log
 for fa in $FILESA
 do
-   n1=`grep -n $anhour $f|head -1|cut -d ':' -f1`
+   n1=`grep -n $anhour $fa|head -1|cut -d ':' -f1`
    if [ ! -n "$n1" ] ;then
       continue
    fi
