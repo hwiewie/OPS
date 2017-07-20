@@ -5,7 +5,7 @@ anhour=`date '+%H:' -d '-10 minutes'`
 FILESE=*60??.error.log
 for fe in $FILESE
 do
-   n1=`grep -n $anhour $f|head -1|cut -d ':' -f1`
+   n1=`grep -n $anhour $fe|head -1|cut -d ':' -f1`
    if [ ! -n "$n1" ] ;then
       continue
    fi
