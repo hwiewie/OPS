@@ -1,4 +1,5 @@
 #!/bin/bash
+#抓vhost conf內upstream，並發http request，將1.upstream 2.Http status code 3.網頁title 列出
 domains=`find /opt/APP/openresty/nginx/conf/vhost/ -type f -name "*.conf" -print0 | xargs -0 egrep '^(\s|\t)*[^#]server_name' | sed -r 's/(.*server_name\s*|;)//g'` | sort -u
 upstreams=`find /opt/APP/openresty/nginx/conf/vhost/ -type f -name "*.conf" -print0 | xargs -0 egrep '^(\s|\t)*[^#]server ([0-9]{1,3}\.)([0-9]{1,3}\.)([0-9]{1,3}\.)([0-9]{1,3}):60' | sed -r 's/(.*server\s*|;)//g'`
 if [ "$upstreams" = "" ]; then
