@@ -15,3 +15,10 @@ curl -i -X POST -H 'Content-type:application/json' -d '{"jsonrpc":"2.0","method"
 Zabbix monitor script and template https://github.com/easoncon/zabbix
 saltstack combind zabbix to automatic deploy and monitor https://github.com/pengyao/salt-zabbix
 zabbix Docker monitoring https://github.com/monitoringartist/zabbix-docker-monitoring
+
+
+前台即時連線數
+index=syslog Type=access | eval group_1=split(Hostname,"_"),group=mvindex(group_1,0),fnd=mvindex(group_1,1) | search group=$group$ fnd=FE | stats sum(connections) as sum by group | table sum
+
+前台連線數
+index=syslog Type=access | eval group_1=split(Hostname,"_"),group=mvindex(group_1,0),fnd=mvindex(group_1,1) | search group=$group$ fnd=FE | timechart span=5m values(connections) as "Client IP" by Hostname
