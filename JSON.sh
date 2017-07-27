@@ -10,7 +10,7 @@ LEAFONLY=0
 PRUNE=0
 NO_HEAD=0
 NORMALIZE_SOLIDUS=0
-
+#說明網頁
 usage() {
   echo
   echo "Usage: JSON.sh [-b] [-l] [-p] [-s] [-h]"
@@ -21,7 +21,7 @@ usage() {
   echo "-n - No-head. Do not show nodes that have no path (lines that start with [])."
   echo "-s - Remove escaping of the solidus symbol (straight slash)."
   echo "-h - This help text."
-  echo
+  echo "ex. cat test.json | sh JSON.sh -l"
 }
 
 parse_options() {
