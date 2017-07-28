@@ -23,7 +23,7 @@ usage() {
   echo "-h - This help text."
   echo "ex. cat test.json | sh JSON.sh -l"
 }
-
+#$# 传递给脚本或函数的参数个数
 parse_options() {
   set -- "$@"
   local ARGN=$#
@@ -198,7 +198,7 @@ parse () {
     *) throw "EXPECTED EOF GOT $token" ;;
   esac
 }
-
+#$0 当前脚本的文件名	$@ 传递给脚本或函数的所有参数
 if ([ "$0" = "$BASH_SOURCE" ] || ! [ -n "$BASH_SOURCE" ]);
 then
   parse_options "$@"
