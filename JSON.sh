@@ -186,6 +186,7 @@ parse_value () {
   [ "$LEAFONLY" -eq 1 ] && [ "$isleaf" -eq 1 ] && \
     [ $PRUNE -eq 1 ] && [ $isempty -eq 0 ] && print=1
   [ "$print" -eq 1 ] && printf "[%s]\t%s\n" "$jpath" "$value"
+  httprequest $(echo "$value" | sed 's/"//g')
   :
 }
 
@@ -197,6 +198,12 @@ parse () {
     '') ;;
     *) throw "EXPECTED EOF GOT $token" ;;
   esac
+}
+
+httprequest () {
+  exec 5<> /dev/tcp/$1/80
+  echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $fe\r\nConnection: close\r\n\r\n" >&5
+  cat <&5 | grep "HTTP/1.1\|<title>"
 }
 #$0 当前脚本的文件名	$@ 传递给脚本或函数的所有参数
 if ([ "$0" = "$BASH_SOURCE" ] || ! [ -n "$BASH_SOURCE" ]);
