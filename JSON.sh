@@ -186,7 +186,7 @@ parse_value () {
   [ "$LEAFONLY" -eq 1 ] && [ "$isleaf" -eq 1 ] && \
     [ $PRUNE -eq 1 ] && [ $isempty -eq 0 ] && print=1
   [ "$print" -eq 1 ] && printf "[%s]\t%s\n" "$jpath" "$value"
-  httprequest $(echo "$jpath" | awk '{gsub(/"/," ");print $2;}') $(echo "$value" | sed 's/"//g')
+  httprequest $(echo $jpath | cut -d ',' -f3 | head -c 3) $(echo $value | sed 's/"//g')
   :
 }
 
@@ -200,11 +200,10 @@ parse () {
   esac
 }
 #傳入json參數(1.品牌與服務 2.網域)
-#功能：依服務決定連線port
+#功能：依服務決定連線port(1.前台走https 2.後台走https 3.支付走http 4.app走6001~6010)
 httprequest () {
   if [ -n "$2" ];then
-    local fe=${2}
-    if [[ $1 == ap* ]]; then
+    if [[ $1 == \"ap ]]; then
       for((i=6001;i<=6010;i++)); do
         exec 5<> /dev/tcp/$2/$i
         echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $2:$i\r\nConnection: close\r\n\r\n" >&5
