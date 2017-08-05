@@ -199,7 +199,8 @@ parse () {
     *) throw "EXPECTED EOF GOT $token" ;;
   esac
 }
-
+#傳入json參數(1.品牌與服務 2.網域)
+#功能：依服務決定連線port
 httprequest () {
   if [ -n "$2" ];then
     local fe=${2}
