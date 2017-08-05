@@ -203,17 +203,30 @@ parse () {
 #功能：依服務決定連線port(1.前台走https 2.後台走https 3.支付走http 4.app走6001~6010)
 httprequest () {
   if [ -n "$2" ];then
-    if [[ $1 == \"ap ]]; then
+    case "$1" in
+	\"ap)
       for((i=6001;i<=6010;i++)); do
-        exec 5<> /dev/tcp/$2/$i
-        echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $2:$i\r\nConnection: close\r\n\r\n" >&5
-        cat <&5 | grep "HTTP/1.1\|<title>"
-      done
-    else
-      exec 5<> /dev/tcp/$2/80
-      echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $2\r\nConnection: close\r\n\r\n" >&5
-      cat <&5 | grep "HTTP/1.1\|<title>"
-    fi
+	    exec 5<> /dev/tcp/$2/$i
+		echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $2:$i\r\nConnection: close\r\n\r\n" >&5
+		cat <&5 | grep "HTTP/1.1\|<title>"
+	  done
+	  ;;
+	\"be)
+	  exec 5<> /dev/tcp/$2/443
+	  echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $2:443\r\nConnection: close\r\n\r\n" >&5
+	  cat <&5 | grep "HTTP/1.1\|<title>"
+	  ;;
+	\"fe)
+	  exec 5<> /dev/tcp/$2/443
+	  echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $2:443\r\nConnection: close\r\n\r\n" >&5
+	  cat <&5 | grep "HTTP/1.1\|<title>"
+	  ;;
+	\"pa)
+	  exec 5<> /dev/tcp/$2/80
+	  echo -e "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1\r\nHost: $2\r\nConnection: close\r\n\r\n" >&5
+	  cat <&5 | grep "HTTP/1.1\|<title>"
+	  ;;
+	esac
   fi
 }
 #$0 当前脚本的文件名	$@ 传递给脚本或函数的所有参数
