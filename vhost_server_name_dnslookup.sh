@@ -3,9 +3,14 @@
 #先在reverse proxy上執行下面指令，並將結果貼在domains=""內
 #find /opt/APP/openresty/nginx/conf/vhost/ -type f -name "*.conf" -print0 | xargs -0 egrep '^(\s|\t)*server_name' | sed -r 's/(.*server_name\s*|;)//g'
 domains=""
+regex='^\w+\.+\w'
 for domain in $domains; do
-    echo -n $domain;
-    ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
-    echo -n ' ';
-    echo $ip;
+    if [[ $domain =~ $regex ]]; then
+        echo -n $domain;
+        ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
+        echo -n ' ';
+        echo $ip;
+    else
+        echo $domain "is not match";
+    fi
 done
