@@ -1,14 +1,14 @@
 #!/bin/bash
 echo "把nginx.conf內include vhost下所有conf改成include ma下所有conf"
 echo "把nginx.conf內include vhost下所有conf那行的註解拿掉"
-sed -i 's/\#include \/opt\/APP\/openresty\/nginx\/conf\/vhost\/*.conf;/include \/opt\/APP\/openresty\/nginx\/conf\/vhost\/*.conf;/g' /opt/APP/openresty/nginx/conf/nginx.conf
+sed -i 's/\#include\ \/opt\/APP\/openresty\/nginx\/conf\/vhost\/*.conf;/include\ \/opt\/APP\/openresty\/nginx\/conf\/vhost\/*.conf;/g' /opt/APP/openresty/nginx/conf/nginx.conf
 if [ $? = 0 ]; then
     echo "載入vhost目錄下conf成功"
 else
     echo "載入vhost目錄下conf失敗"
 fi
 echo "把nginx.conf內include ma.conf那行的註解拿掉"
-sed -i 's/include \/opt\/APP\/openresty\/nginx\/conf\/ma\/ma.conf;/\#include \/opt\/APP\/openresty\/nginx\/conf\/ma\/ma.conf;/g' /opt/APP/openresty/nginx/conf/nginx.conf
+sed -i 's/include\ \/opt\/APP\/openresty\/nginx\/conf\/ma\/ma.conf;/\#include\ \/opt\/APP\/openresty\/nginx\/conf\/ma\/ma.conf;/g' /opt/APP/openresty/nginx/conf/nginx.conf
 if [ $? = 0 ]; then
     echo "註解ma.conf成功"
 else
