@@ -15,13 +15,13 @@ if [ -e $filepathe ];then
     echo "maintain.html存在，將繼續執行"
 else
     echo "maintain.html不存在！從github上下載…"
-    curl -s https://raw.githubusercontent.com/nickchangs/ma/master/maintain.html -o "/opt/Htdocs/ma/maintain.html"
+    #curl -s https://raw.githubusercontent.com/nickchangs/ma/master/maintain.html -o "/opt/Htdocs/ma/maintain.html"
 fi
 if [ -e $filepatha ];then
     echo "wap_maintain.html存在，將繼續執行"
 else
     echo "wap_maintain.html不存在！從github上下載…"
-curl -s https://raw.githubusercontent.com/nickchangs/ma/master/wap_maintain.html -o "/opt/Htdocs/ma/wap_maintain.html"
+    #curl -s https://raw.githubusercontent.com/nickchangs/ma/master/wap_maintain.html -o "/opt/Htdocs/ma/wap_maintain.html"
 fi
 
 echo "把上次維護時間從maintain.html網頁內移掉"
