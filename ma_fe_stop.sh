@@ -21,7 +21,7 @@ else
 fi
 nginx -s reload
 if [ $? = 0 ]; then
-echo "成功"
+echo "nginx重載設定檔成功"
 else
-echo "失敗"
+echo "nginx重載設定檔失敗"
 fi
