@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "設定nginx.conf，把載入conf目錄從vhost切換成ma"
 sed -i 's/conf\/ma/conf\/vhost/g' /opt/APP/openresty/nginx/conf/nginx.conf
 if [ $? = 0 ]; then
