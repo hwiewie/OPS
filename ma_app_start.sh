@@ -15,8 +15,8 @@ else
 fi
 echo "修改ma.conf，設定開始維護與停止維護時間"
 echo "維護開始時間：{$1}，維護停止時間：{$2}"
-sed -i 's/StartTime\":\"[0-9]\{2\}-[0-9]\{2\}\ [0-9]\{2\}:[0-9]\{2\}/StartTime\":\"'$ttoday '\ '$1'/' /opt/APP/openresty/nginx/conf/ma/ma.conf
-sed -i 's/EndTime\":\"[0-9]\{2\}-[0-9]\{2\}\ [0-9]\{2\}:[0-9]\{2\}/EndTime\":\"'$ttoday '\ '$2'/' /opt/APP/openresty/nginx/conf/ma/ma.conf
+sed -i 's/StartTime\":\"[0-9]\{2\}-[0-9]\{2\}\ [0-9]\{2\}:[0-9]\{2\}/StartTime\":\"'$ttoday'\ '$1'/' /opt/APP/openresty/nginx/conf/ma/ma.conf
+sed -i 's/EndTime\":\"[0-9]\{2\}-[0-9]\{2\}\ [0-9]\{2\}:[0-9]\{2\}/EndTime\":\"'$ttoday'\ '$2'/' /opt/APP/openresty/nginx/conf/ma/ma.conf
 echo "修改結果如下："
 grep '[0-9]\{2\}-[0-9]\{2\}\ [0-9]\{2\}:[0-9]\{2\}' /opt/APP/openresty/nginx/conf/ma/ma.conf
 echo "重新載入nginx設定檔"
