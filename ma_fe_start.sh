@@ -1,3 +1,4 @@
+#!/bin/bash
 #sed -i 's/set $MAM 0/set $MAM 1/g' /opt/APP/openresty/nginx/conf/vhost/*.conf
 echo "把nginx.conf內include vhost下所有conf改成include ma下所有conf"
 sed -i 's/conf\/vhost/conf\/ma/g' /opt/APP/openresty/nginx/conf/nginx.conf
