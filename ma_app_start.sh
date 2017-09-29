@@ -1,5 +1,13 @@
 #!/bin/bash
 ttoday=`date +%m-%d`
+echo "判斷ma.conf是否存在"
+filepath="/opt/APP/openresty/nginx/conf/ma/ma.conf"
+if [ -e $filepath ];then
+    echo "ma.conf存在，將繼續執行"
+else
+    echo "ma.conf不存在！從github上下載…"
+    curl -s https://raw.githubusercontent.com/nickchangs/ma/master/ma-APP.conf -o "/opt/APP/openresty/nginx/conf/ma/ma.conf"
+fi
 echo "把nginx.conf內include vhost下所有conf改成include ma下所有conf"
 sed -i 's/include\ \/opt\/APP\/openresty\/nginx\/conf\/vhost\/\*.conf;/\#include\ \/opt\/APP\/openresty\/nginx\/conf\/vhost\/\*.conf;/g' /opt/APP/openresty/nginx/conf/nginx.conf
 if [ $? = 0 ]; then
