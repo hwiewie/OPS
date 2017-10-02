@@ -27,10 +27,12 @@ function check_allp1(obj,ee)
 	checkboxs2[ee].checked = obj.checked;
 	if ( obj.checked ==false ) {
 		checkboxs0[0].checked = obj.checked;
+		checkboxs1[0].checked = obj.checked;
+		checkboxs2[0].checked = obj.checked;
 	} else {
 		var tempa='t';
 		for(var i=1;i<checkboxs0.length;i++){if(checkboxs0[i].checked == false){tempa ='f';}}
-		if (tempa == 't') { checkboxs0[0].checked = obj.checked; checkboxs2[0].checked = obj.checked;}
+		if (tempa == 't') { checkboxs0[0].checked = obj.checked; checkboxs1[0].checked = obj.checked;checkboxs2[0].checked = obj.checked;}
 	}
 }
 function check_allp2(obj,ee)
@@ -42,10 +44,12 @@ function check_allp2(obj,ee)
 	checkboxs2[ee].checked = obj.checked;
 	if ( obj.checked ==false ) {
 		checkboxs0[0].checked = obj.checked;
+		checkboxs1[0].checked = obj.checked;
+		checkboxs2[0].checked = obj.checked;
 	}else {
 		var tempa='t';
 		for(var i=1;i<checkboxs0.length;i++){if(checkboxs0[i].checked == false){tempa ='f';}}
-		if (tempa == 't') { checkboxs0[0].checked = obj.checked; checkboxs2[0].checked = obj.checked;}
+		if (tempa == 't') { checkboxs0[0].checked = obj.checked; checkboxs1[0].checked = obj.checked;checkboxs2[0].checked = obj.checked;}
 	}
 } 
 function check_allh1(obj,cName)
@@ -58,8 +62,8 @@ function check_allh1(obj,cName)
     for(var i=1;i<checkboxs1.length;i++){checkboxs1[i].checked = obj.checked;}
 	if (obj.checked == true){
 		for(var i=0;i<checkboxs2.length;i++){
-			if( checkboxs2[i].checked == true){
-				checkboxs0[i].checked == obj.checked;
+			if( checkboxs2[i].checked == obj.checked){
+				checkboxs0[i].checked = obj.checked;
 			}
 		}
 	} else {
@@ -77,7 +81,7 @@ function check_allh2(obj,cName)
 	if (obj.checked == true){
 		for(var i=0;i<checkboxs2.length;i++){
 			if( checkboxs2[i].checked == true){
-				checkboxs0[i].checked == obj.checked;
+				checkboxs0[i].checked = obj.checked;
 			}
 		}
 	} else {
@@ -115,20 +119,19 @@ function check_cancel(obj,ee)
 		if (tempa == 't') { checkboxs0[ee].checked = obj.checked; }
 	}
 } 
-function selcheck() {
-  var objs = myTable.getElementsByTagName("input");
-  for(var i=0; i<objs.length; i++) {
-    if(objs[i].type.toLowerCase() == "checkbox" )
-      objs[i].checked = true;
-  }
-}
 function execsalt() {
-	var checkboxs0 = this.getElementsByName("product_1")
+	var checkboxs0 = document.getElementsByName("product_1")
 	for(var i=1;i<checkboxs0.length;i++){
-		if (checkboxs0[i].checked == true){
-			system('salt \"024*fe*\" test.ping');
+		if (checkboxs0[i].checked){
+			var spawn = require('child_process').spawn,
+			var ls  = spawn('sudo salt "'+checkboxs0[i].value+'" test.ping');
+			ls.stdout.on('data', function (data) {
+				console.log(data);
+			});
+			
 		}
 	}
+	document.getElementsByName('result').innerHTML = data;
 }
 </script>
 </head>
@@ -138,6 +141,10 @@ function execsalt() {
 <p>2.若要維護某個品牌的所有服務，可以直接勾選品牌代碼(001~025)的核取方塊</p>
 <p>3.若要維護所有品牌的某個服務，可以直接勾選該服務的核取方塊</p>
 <p>4.若要維護所有品牌的前台與APP，可以直接勾左上的核取方塊</p>
+<p></p>
+<p>salt用法</P>
+<p>sudo salt "018*fe*" cmd.run "/root/ma_fe_start.sh"</P>
+<p>說明：sudo 切換成root ，salt 主程式，"018*fe*" 品牌18的前台，"018*app*" 品牌18的app，cmd.run 執行外部程式，"/root/ma_fe_start.sh" 開前台維設的bash，同理"/root/ma_app_stop.sh"是app關維護的bash</p>
 <table style="height: 247px; width: 819px;">
   <tbody>
     <tr>
@@ -294,10 +301,9 @@ function execsalt() {
 </table>
 <input type="button" value="開始" style="width:120px;height:40px;border:2px #9999FF dashed;" onclick="execsalt()" />
 <input type="button" value="結束" style="width:120px;height:40px;border:3px orange double;" />
-
+<p><textarea cols="300" name="resulta" rows="20"></textarea></p>
 <?php
-$last_line = system('salt \"024*fe*\" test.ping', $retval);
+$last_line = system('sudo salt "018*fe*" test.ping', $retval);
 echo 'Last line of the output: ' . $last_line;
 echo '<hr />Return value: ' . $retval;
-exec('salt \"024*fe*\" test.ping');
 ?>
