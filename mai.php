@@ -123,7 +123,7 @@ function execsalt() {
 	var checkboxs0 = document.getElementsByName("product_1")
 	for(var i=1;i<checkboxs0.length;i++){
 		if (checkboxs0[i].checked){
-			var spawn = require('child_process').spawn,
+			var spawn = require('child_process').spawn;
 			var ls  = spawn('sudo salt "'+checkboxs0[i].value+'" test.ping');
 			ls.stdout.on('data', function (data) {
 				console.log(data);
