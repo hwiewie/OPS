@@ -90,23 +90,29 @@ function check_allh2(obj,cName)
 }
 function check_cancel(obj,ee)
 {
-	if ( obj.name == 'FE_1') {
-		var product = 'Product_1';
-		var another = 'APP_1';
-	}else if (obj.name == 'FE_2'){
-		var product = 'Product_2';
-		var another = 'APP_2';
-	}else if (obj.name == 'APP_1'){
-		var product = 'Product_1';
-		var another = 'FE_1';
-	}else if (obj.name == 'APP_2'){
-		var product = 'Product_2';
-		var another = 'FE_2';
+	switch( obj.name ) {
+		case 'FE_1':
+			var product = 'Product_1';
+			var another = 'APP_1';
+			break;
+		case 'FE_2':
+			var product = 'Product_2';
+			var another = 'APP_2';
+			break;
+		case 'APP_1':
+			var product = 'Product_1';
+			var another = 'FE_1';
+			break;
+		case 'APP_2':
+			var product = 'Product_2';
+			var another = 'FE_2';
+			break;
 	}
+	
 	var checkboxs1 = document.getElementsByName(obj.name);
+	var checkboxs0 = document.getElementsByName(product);
 	if ( obj.checked == false ){
         checkboxs1[0].checked = obj.checked;
-	    var checkboxs0 = document.getElementsByName(product);
 		checkboxs0[0].checked = obj.checked;
 		checkboxs0[ee].checked = obj.checked;
 	}else{
@@ -116,7 +122,7 @@ function check_cancel(obj,ee)
 			checkboxs0[ee].checked = obj.checked;
 	    }
 		for(var i=1;i<checkboxs0.length;i++){if(checkboxs0[i].checked == false){tempa ='f';}}
-		if (tempa == 't') { checkboxs0[ee].checked = obj.checked; }
+		if (tempa == 't') { checkboxs1[0].checked = obj.checked;checkboxs0[0].checked = obj.checked; }
 	}
 } 
 function execsalt() {
@@ -128,7 +134,6 @@ function execsalt() {
 			ls.stdout.on('data', function (data) {
 				console.log(data);
 			});
-			
 		}
 	}
 	document.getElementsByName('result').innerHTML = data;
@@ -179,18 +184,18 @@ function execsalt() {
     </tr>
     <tr>
       <td style="width: 56px;"><input name="APP_1" type="checkbox" onclick="check_allh1(this,'FE_1')" value="1" />APP</td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="001-500vip-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="002-cai33-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="003-cai99-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="004-hck-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="005-hcp-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="006-cai77-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="007-cai8-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="008-sscp-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="009-bale-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="010-lck-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="011-cp58-app*" /></td>
-      <td style="width: 56px;"><input name="APP_1" type="checkbox" value="012-fhcp-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,1)" value="001-500vip-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,2)" value="002-cai33-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,3)" value="003-cai99-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,4)" value="004-hck-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,5)" value="005-hcp-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,6)" value="006-cai77-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,7)" value="007-cai8-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,8)" value="008-sscp-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,9)" value="009-bale-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,10)" value="010-lck-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,11)" value="011-cp58-app*" /></td>
+      <td style="width: 56px;"><input name="APP_1" type="checkbox" onchange="check_cancel(this,12)" value="012-fhcp-app*" /></td>
     </tr>
     <!--<tr>
       <td style="width: 56px;"><input name="Product_1" type="checkbox" value="1" /></td>
@@ -239,33 +244,33 @@ function execsalt() {
     </tr>
     <tr>
       <td style="width: 56px;"><input name="FE_2" type="checkbox" onclick="check_allh2(this,'APP_2')" value="*fe*" />前台</td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="014-cp35-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="015-CBCP-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="016-cp256-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="017-tjcp-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="018-cp1-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="019-cp66-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="020-w9-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="021-dyj-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="022-cp699-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,1)" value="014-cp35-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,2)" value="015-CBCP-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,3)" value="016-cp256-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,4)" value="017-tjcp-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,5)" value="018-cp1-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,6)" value="019-cp66-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,7)" value="020-w9-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,8)" value="021-dyj-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,9)" value="022-cp699-fe*" /></td>
       <td style="width: 56px;"></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="024-cp728-fe*" /></td>
-      <td style="width: 56px;"><input name="FE_2" type="checkbox" value="025-wcp-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,10)" value="024-cp728-fe*" /></td>
+      <td style="width: 56px;"><input name="FE_2" type="checkbox" onchange="check_cancel(this,11)" value="025-wcp-fe*" /></td>
     </tr>
     <tr>
       <td style="width: 56px;"><input name="APP_2" type="checkbox" onclick="check_allh2(this,'FE_2')" value="1" />APP</td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="014-cp35-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="015-CBCP-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="016-cp256-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="017-tjcp-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="018-cp1-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="019-cp66-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="020-w9-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="021-dyj-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="022-cp699-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,1)" value="014-cp35-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,2)" value="015-CBCP-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,3)" value="016-cp256-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,4)" value="017-tjcp-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,5)" value="018-cp1-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,6)" value="019-cp66-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,7)" value="020-w9-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,8)" value="021-dyj-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,9)" value="022-cp699-app*" /></td>
       <td style="width: 56px;"></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="024-cp728-app*" /></td>
-      <td style="width: 56px;"><input name="APP_2" type="checkbox" value="025-wcp-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,10)" value="024-cp728-app*" /></td>
+      <td style="width: 56px;"><input name="APP_2" type="checkbox" onchange="check_cancel(this,11)" value="025-wcp-app*" /></td>
     </tr>
     <!--<tr>
       <td style="width: 56px;"><input name="Product_1" type="checkbox" value="1" /></td>
@@ -300,10 +305,13 @@ function execsalt() {
   </tbody>
 </table>
 <input type="button" value="開始" style="width:120px;height:40px;border:2px #9999FF dashed;" onclick="execsalt()" />
-<input type="button" value="結束" style="width:120px;height:40px;border:3px orange double;" />
+<input type="button" value="結束" style="width:120px;height:40px;border:3px orange double;" onclick="execpy()" />
 <p><textarea cols="300" name="resulta" rows="20"></textarea></p>
+
 <?php
-$last_line = system('sudo salt "018*fe*" test.ping', $retval);
+function execpy(){
+	$last_line = system('sudo salt "018*fe*" test.ping', $retval);
 echo 'Last line of the output: ' . $last_line;
 echo '<hr />Return value: ' . $retval;
+}
 ?>
