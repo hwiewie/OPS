@@ -24,7 +24,7 @@ if [ $? = 0 ]; then
 else
     echo "wap_maintain.html清除維護時間失敗"
 fi
-nginx -s reload
+systemctl reload nginx
 if [ $? = 0 ]; then
 echo "nginx重載設定檔成功"
 else
