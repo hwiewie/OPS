@@ -9,7 +9,7 @@ else
 fi
 #新增geoip
 if [ $1 == add ]; then
-    sed -i '/^\s*default\ 1/a\          '$2'\/32\ 0;' /opt/APP/openresty/nginx/conf/nginx.conf
+    sed -i "/^\s*default\ 1/a\          $2\/32\ 0;" $filepathe
     if [ $? = 0 ]; then
         echo "新增geoip白名單成功"
 		#重啟nginx服務
@@ -34,7 +34,7 @@ if [ $1 == add ]; then
 fi
 #刪除geoip
 if [ $1 == del ]; then
-    sed -i "/^\s*$2/d" /opt/APP/openresty/nginx/conf/nginx.conf
+    sed -i "/^\s*$2/d" $filepathe
     if [ $? = 0 ]; then
         echo "刪除geoip白名單成功"
 		#重啟nginx服務
@@ -58,7 +58,7 @@ if [ $1 == del ]; then
 fi
 #顯示geoip清單
 if [ $1 == show ]; then
-        grep '^\s*[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' /opt/APP/openresty/nginx/conf/nginx.conf
+        grep '^\s*[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' $filepathe
     if [ $? = 0 ]; then
         echo "顯示geoip白名單成功"
     else
