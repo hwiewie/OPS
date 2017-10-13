@@ -1,7 +1,9 @@
-#!/bin/bashyum update
+#!/bin/bash
+yum update
 yum -y install epel-release telnet bind-utils net-tools wget nc python-pip perl gcc make kernel-headers kernel-devel mod_perl2
 pip install --upgrade pip
 setenforce 0
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 
 echo "安裝vmware tools"
 mkdir /mnt/cdrom
@@ -20,7 +22,7 @@ firewall-cmd --zone=public --permanent --add-port=8080/tcp
 firewall-cmd --reload
 
 echo "安裝otrs"
-yum -y install httpd mariadb-server
+yum -y install httpd mariadb-server mod_ssl
 systemctl start mariadb
 systemctl enable mariadb
 systemctl start httpd
@@ -30,3 +32,5 @@ firewall-cmd --reload
 yum install http://mirror.globo.com/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
 wget http://ftp.otrs.org/pub/otrs/RPMS/rhel/7/otrs-6.0.0.beta3-01.noarch.rpm
 yum install check otrs-6.0.0.beta3-01.noarch.rpm
+yum install "perl(Text::CSV_XS)" "perl(Crypt::Eksblowfish::Bcrypt)" "perl(YAML::XS)" "perl(JSON::XS)" "perl(Encode::HanExtra)" "perl(Mail::IMAPClient)" "perl(ModPerl::Util)" "perl(DBD::Pg)" "perl(Authen::NTLM)"
+/opt/otrs/bin/otrs.CheckModules.pl
