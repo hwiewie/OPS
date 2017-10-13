@@ -34,3 +34,11 @@ wget http://ftp.otrs.org/pub/otrs/RPMS/rhel/7/otrs-6.0.0.beta3-01.noarch.rpm
 yum install check otrs-6.0.0.beta3-01.noarch.rpm
 yum install "perl(Text::CSV_XS)" "perl(Crypt::Eksblowfish::Bcrypt)" "perl(YAML::XS)" "perl(JSON::XS)" "perl(Encode::HanExtra)" "perl(Mail::IMAPClient)" "perl(ModPerl::Util)" "perl(DBD::Pg)" "perl(Authen::NTLM)"
 /opt/otrs/bin/otrs.CheckModules.pl
+
+echo "安裝gitlab"
+yum install git
+firewall-cmd --permanent --add-service=http
+systemctl reload firewalld
+curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+yum install gitlab-ce
+gitlab-ctl reconfigure
