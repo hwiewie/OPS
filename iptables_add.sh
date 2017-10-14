@@ -32,8 +32,9 @@ case "$1" in
 			    sed -i 's/^#//g' $filepathe
             else
                 #裡面沒這筆IP記錄，開始新增
-                echo "使用iptables -A指令新增"
-                iptables -A INPUT -s $2/32 -p tcp -m multiport --dports 443,80 -m comment --comment "$ttoday Bot used Apply" -j ACCEPT
+                echo "新增記錄到iptables"
+                #iptables -A INPUT -s $2/32 -p tcp -m multiport --dports 443,80 -m comment --comment "$ttoday Bot used Apply" -j ACCEPT
+				sed -i '/^\-.*DROP/i\-A\ INPUT\ \-s\ '$2'\/32\ \-p\ tcp\ \-m\ multiport\ \-\-dports\ 443,80\ \-m\ comment\ \-\-comment\ \"'$ttoday'\ Bot\ used\ Apply\"\ \-j\ ACCEPT' $filepathe
             fi	     
             #如果移掉註解或新增記錄成功，就重載iptables		
             if [ $? = 0 ] ;then
@@ -67,9 +68,10 @@ case "$1" in
 			    sed -i '/^#.*'$2'//g' $filepathe
             fi
             #裡面沒這筆IP記錄，開始新增
-            echo "使用iptables -A指令新增"
-            iptables -A INPUT -s $2/32 -p tcp -m multiport --dports 443,80 -m comment --comment "$ttoday $3 used Apply" -j ACCEPT	     
-            #如果移掉註解或新增記錄成功，就重載iptables		
+            echo "新增記錄到iptables"
+            #iptables -A INPUT -s $2/32 -p tcp -m multiport --dports 443,80 -m comment --comment "$ttoday $3 used Apply" -j ACCEPT	     
+            sed -i '/^\-.*DROP/i\-A\ INPUT\ \-s\ '$2'\/32\ \-p\ tcp\ \-m\ multiport\ \-\-dports\ 443,80\ \-m\ comment\ \-\-comment\ \"'$ttoday'\ '$3'\ used\ Apply\"\ \-j\ ACCEPT' $filepathe
+			#如果移掉註解或新增記錄成功，就重載iptables		
 		    if [ $? = 0 ] ;then
                 echo "開始重新載入iptables"
                 systemctl reload iptables
@@ -97,7 +99,7 @@ case "$1" in
     #找那筆記錄
     grep "^[- ].*$2" $filepathe > /dev/null
 	if [ $? = 0 ] ;then
-	    sed -i 's/^\-.*'$2'/#&/g/' $filepathe
+	    sed -i 's/^-.*'$2'/#&/g' $filepathe
 	    if [ $? = 0 ] ;then
 	        echo "已將此筆記錄註解"
 	    else
