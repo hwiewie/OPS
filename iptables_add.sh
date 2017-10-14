@@ -29,7 +29,7 @@ case "$1" in
             if [ $? = 0 ] ;then
                 #移掉註解
                 echo "移掉註解"
-                sed -i 's/^#//g' $filepathe
+                sed -i '/^#.*'$2'/s/#//' $filepathe
             else
                 #裡面沒這筆IP記錄，開始新增
                 echo "新增記錄到iptables"
