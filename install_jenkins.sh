@@ -25,6 +25,7 @@ echo "安裝otrs"
 yum -y install httpd mariadb-server mod_ssl
 systemctl start mariadb
 systemctl enable mariadb
+mysql_secure_installation
 systemctl start httpd
 systemctl enable httpd
 firewall-cmd --zone=public --permanent --add-port=80/tcp
