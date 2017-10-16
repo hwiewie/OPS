@@ -20,7 +20,7 @@ if [ $1 == add ]; then
             if [ $? = 0 ]; then
                 echo "重新啟動nginx設定檔成功"
             else
-                echo "重啟nginx失敗，請使用nginx -t查詢正確認"
+                echo "重啟nginx失敗，請到RP上使用nginx -t查詢做確認"
                 exit
             fi
         else
@@ -45,7 +45,7 @@ if [ $1 == del ]; then
             if [ $? = 0 ]; then
                 echo "重新啟動nginx設定檔成功"
             else
-                echo "重啟nginx失敗，請使用nginx -t查詢正確認"
+                echo "重啟nginx失敗，請到RP上使用nginx -t查詢做確認"
                 exit
             fi
         else
