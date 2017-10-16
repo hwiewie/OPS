@@ -13,7 +13,7 @@ if [ $1 == add ]; then
     if [ $? = 0 ]; then
         echo "新增geoip白名單成功"
         #重啟nginx服務
-        nginx -t
+        /opt/APP/openresty/nginx/sbin/nginx -t
         if [ $? = 0 ]; then
             echo "測試nginx設定檔成功，開始重啟nginx"
             service nginx restart
@@ -38,7 +38,7 @@ if [ $1 == del ]; then
     if [ $? = 0 ]; then
         echo "刪除geoip白名單成功"
         #重啟nginx服務
-        nginx -t
+        /opt/APP/openresty/nginx/sbin/nginx -t
         if [ $? = 0 ]; then
             echo "測試nginx設定檔成功，開始重啟nginx"
             service nginx restart
