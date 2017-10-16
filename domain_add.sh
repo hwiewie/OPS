@@ -11,14 +11,14 @@ function reloadnginx {
     if [ $? = 0 ] ;then
         #測試設定檔是否正確
         /opt/APP/openresty/nginx/sbin/nginx -t
-        #重啟nginx服務
+        #重載nginx設定檔
         if [ $? = 0 ]; then
-            echo "測試nginx設定檔成功，開始重啟nginx"
-            service nginx restart
+            echo "測試nginx設定檔成功，開始重載nginx設定檔"
+            service nginx reload
             if [ $? = 0 ]; then
-                echo "重新啟動nginx設定檔成功"
+                echo "重新載入nginx設定檔成功"
             else
-                echo "重啟nginx失敗，請到RP上使用nginx -t查詢做確認"
+                echo "重載nginx設定檔失敗，請到RP上使用nginx -t查詢做確認"
                 exit
             fi
         else
@@ -57,7 +57,7 @@ case "$1" in
             continue
         else
             echo "開始新增$2到$filepathe"
-            sed -i '/^[ ]*server_name [[:alnum:]]*\.[[:alnum:]]*/s/;/ '$2';/' $filepathe
+            sed -i '/^[ ]*server_name [0-9A-Za-z]*/s/;/ '$2';/' $filepathe
             if [ $? = 0 ] ;then
                 echo "新增域名$2成功"
 				reloadnginx
@@ -82,7 +82,7 @@ case "$1" in
         grep "^[[:space:]]*server_name.*$2" $filepathe > /dev/null
         if [ $? = 0 ] ;then
             echo "開始把$2從$filepathe刪除"
-            sed -i '/^[ ]*server_name [[:alnum:]]*\.[[:alnum:]]*/s/ '$2'//' $filepathe
+            sed -i '/^[ ]*server_name [0-9A-Za-z]*/s/ '$2'//' $filepathe
             if [ $? = 0 ] ;then
                 echo "刪除域名$2成功"
 				reloadnginx
@@ -102,7 +102,10 @@ case "$1" in
 	if [[ -z "$2" ]] ;then
 		domains=`egrep '^(\s|\t)*server_name' $nginxconf | sed -r 's/(.*server_name\s*|;)//g' | uniq`
 	else
-		domains=`egrep '^(\s|\t)*server_name' $nginxconf | sed -r 's/(.*server_name\s*|;)//g' | grep $2`
+	    grep "^[[:space:]]*server_name.*$2" $nginxconf
+		if [ $? = 0 ] ;then
+		    domains=$2
+		fi
 	fi
     for domain in $domains; do
         if [[ $domain =~ $regex ]]; then
