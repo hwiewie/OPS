@@ -55,3 +55,5 @@ curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script
 yum install gitlab-ce
 gitlab-ctl reconfigure
 
+echo "安裝iTop"
+yum install php php-mysql php-mcrypt php-xml php-cli php-soap php-ldap php-gd graphviz
