@@ -57,3 +57,4 @@ gitlab-ctl reconfigure
 
 echo "安裝iTop"
 yum install php php-mysql php-mcrypt php-xml php-cli php-soap php-ldap php-gd graphviz
+systemctl restart httpd
