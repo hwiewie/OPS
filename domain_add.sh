@@ -1,10 +1,10 @@
 #!/bin/bash
 function helps {
     echo "說明："
-    echo "使用語法：sh domain_add.sh 指令 IP，共有2個參數要輸入"
+    echo "使用語法：sh domain_add.sh 指令 域名，共有2個參數要輸入"
     echo "參數一，指令，有下列三種可選用： add (新增)  del (刪除)  show (查詢)"
-    echo "參數二，IP：就是要綁定或解除的IP"
-    echo "如果在使用指令show時不帶IP，可查詢所有域名"
+    echo "參數二，域名：就是要綁定或解除的域名"
+    echo "如果在使用指令show時，可查詢所有域名"
 }
 function reloadnginx {
     #如果有動到conf檔就重啟
@@ -27,14 +27,14 @@ function reloadnginx {
         fi
     fi
 }
-#判斷輸入參數個數
-if [ $# -ne "2" ];then
-    echo "參數錯誤："
-    helps
-    exit
-fi
-regex='^\w+\.+\w'
-domains=`find /opt/APP/openresty/nginx/conf/vhost/ -type f -name "*.conf" -print0 | xargs -0 egrep '^(\s|\t)*server_name' | sed -r 's/(.*server_name\s*|;)//g' | uniq`
+function errorinput {
+    #判斷輸入參數個數
+    if [ $# -ne "2" ];then
+        echo "參數錯誤："
+        helps
+        exit
+    fi
+}
 #確認是否有加密
 netstat -plnt | grep 'nginx' | grep '443'
 if [ $? = 0 ] ;then
@@ -49,6 +49,7 @@ fi
 #判斷是新增還是刪除
 case "$1" in
 "add")
+    errorinput
     #列出所有conf檔
     for filepathe in $nginxconf
     do
@@ -71,6 +72,7 @@ case "$1" in
     done
     ;;
 "del")
+    errorinput
     #列出所有conf檔
     for filepathe in $nginxconf
     do
@@ -93,6 +95,23 @@ case "$1" in
     done
     ;;
 "show")
+    #抓取vhost config內綁定域名並解析出IP，把每個域名與IP中間用空白隔開，並每筆輸出成一行
+    regex='^\w+\.+\w'
+	if [[ -z "$2" ]] ;then
+		domains=`egrep '^(\s|\t)*server_name' $nginxconf | sed -r 's/(.*server_name\s*|;)//g' | uniq`
+	else
+		domains=`egrep '^(\s|\t)*server_name' $nginxconf | sed -r 's/(.*server_name\s*|;)//g' | grep $2`
+	fi
+    for domain in $domains; do
+        if [[ $domain =~ $regex ]]; then
+            echo -n $domain;
+            ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
+            echo -n ' ';
+            echo $ip;
+        else
+            echo $domain " is not match";
+        fi
+    done
     ;;
 *)
     echo "指令只有add、del、show這三種可以用"
