@@ -27,14 +27,6 @@ function reloadnginx {
         fi
     fi
 }
-function errorinput {
-    #判斷輸入參數個數
-    if [ $# -ne "2" ];then
-        echo "參數錯誤："
-        helps
-        exit
-    fi
-}
 #確認是否有加密
 netstat -plnt | grep 'nginx' | grep '443'
 if [ $? = 0 ] ;then
@@ -49,7 +41,12 @@ fi
 #判斷是新增還是刪除
 case "$1" in
 "add")
-    errorinput
+    #判斷輸入參數個數
+    if [ $# -ne "2" ];then
+        echo "參數錯誤："
+        helps
+        exit
+    fi
     #列出所有conf檔
     for filepathe in $nginxconf
     do
@@ -72,7 +69,12 @@ case "$1" in
     done
     ;;
 "del")
-    errorinput
+    #判斷輸入參數個數
+    if [ $# -ne "2" ];then
+        echo "參數錯誤："
+        helps
+        exit
+    fi
     #列出所有conf檔
     for filepathe in $nginxconf
     do
