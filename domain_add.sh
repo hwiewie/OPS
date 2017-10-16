@@ -6,6 +6,27 @@ function helps {
     echo "參數二，IP：就是要綁定或解除的IP"
     echo "如果在使用指令show時不帶IP，可查詢所有域名"
 }
+function reloadnginx {
+    #如果有動到conf檔就重啟
+    if [ $? = 0 ] ;then
+        #測試設定檔是否正確
+        /opt/APP/openresty/nginx/sbin/nginx -t
+        #重啟nginx服務
+        if [ $? = 0 ]; then
+            echo "測試nginx設定檔成功，開始重啟nginx"
+            service nginx restart
+            if [ $? = 0 ]; then
+                echo "重新啟動nginx設定檔成功"
+            else
+                echo "重啟nginx失敗，請到RP上使用nginx -t查詢做確認"
+                exit
+            fi
+        else
+            echo "測試nginx設定檔失敗，請查看/opt/APP/openresty/nginx/conf/nginx.conf確認那邊出錯"
+            exit
+        fi
+    fi
+}
 #判斷輸入參數個數
 if [ $# -ne "2" ];then
     echo "參數錯誤："
@@ -32,15 +53,16 @@ case "$1" in
     for filepathe in $nginxconf
     do
         echo "檢查是否有綁定過此域名"
-        grep "^(\s|\t)*server_name.*$2" $filepathe > /dev/null
+        grep "^[[:space:]]*server_name.*$2" $filepathe > /dev/null
         if [ $? = 0 ] ;then
             echo "$2此域名已綁定過了"
             continue
         else
             echo "開始新增$2到$filepathe"
-            sed -i '^(\s|\t)*server_name/s/;/ '$2';/' $filepathe
+            sed -i '/^[ ]*server_name [[:alnum:]]*\.[[:alnum:]]*/s/;/ '$2';/' $filepathe
             if [ $? = 0 ] ;then
                 echo "新增域名$2成功"
+				reloadnginx
             else
                 echo "新增域名$2失敗"
                 exit
@@ -53,16 +75,20 @@ case "$1" in
     for filepathe in $nginxconf
     do
         echo "檢查是否有綁定過此域名"
-        grep "^(\s|\t)*server_name.*$2" $filepathe > /dev/null
+        grep "^[[:space:]]*server_name.*$2" $filepathe > /dev/null
         if [ $? = 0 ] ;then
             echo "開始把$2從$filepathe刪除"
-            sed -i '^(\s|\t)*server_name/s/'$2'//' $filepathe
+            sed -i '/^[ ]*server_name [[:alnum:]]*\.[[:alnum:]]*/s/ '$2'//' $filepathe
             if [ $? = 0 ] ;then
                 echo "刪除域名$2成功"
+				reloadnginx
             else
                 echo "刪除域名$2失敗"
                 exit
             fi
+        else
+            echo "在$filepathe裡找不到$2這個域名"
+            continue
         fi
     done
     ;;
@@ -79,23 +105,3 @@ case "$1" in
     exit
     ;;
 esac
-#如果有動到conf檔就重啟
-if [ $? = 0 ] ;then
-    #測試設定檔是否正確
-    /opt/APP/openresty/nginx/sbin/nginx -t
-    #重啟nginx服務
-    if [ $? = 0 ]; then
-        echo "測試nginx設定檔成功，開始重啟nginx"
-        service nginx restart
-        if [ $? = 0 ]; then
-            echo "重新啟動nginx設定檔成功"
-        else
-            echo "重啟nginx失敗，請到RP上使用nginx -t查詢做確認"
-            exit
-        fi
-    else
-        echo "測試nginx設定檔失敗，請查看/opt/APP/openresty/nginx/conf/nginx.conf確認那邊出錯"
-        exit
-    fi
-fi
-
