@@ -31,13 +31,20 @@ case "$1" in
     #列出所有conf檔
     for filepathe in $nginxconf
 	do
-	    echo "開始新增$2到$filepathe"
-		sed -i '^(\s|\t)*server_name/s/;/ '$2';/' $filepathe
+	    echo "檢查是否有綁定過此域名"
+		grep "^(\s|\t)*server_name.*$2" $filepathe > /dev/null
 		if [ $? = 0 ] ;then
-		    echo "新增域名$2成功"
+		    echo "$2此域名已綁定過了"
+			continue
 		else
-		    echo "新增域名$2失敗"
-			exit
+		    echo "開始新增$2到$filepathe"
+			sed -i '^(\s|\t)*server_name/s/;/ '$2';/' $filepathe
+			if [ $? = 0 ] ;then
+				echo "新增域名$2成功"
+			else
+				echo "新增域名$2失敗"
+				exit
+			fi
 		fi
 	done
 	;;
@@ -45,13 +52,17 @@ case "$1" in
     #列出所有conf檔
 	for filepathe in $nginxconf
 	do
-	    echo "開始把$2從$filepathe刪除"
-		sed -i '^(\s|\t)*server_name/s/'$2'//' $filepathe
+	    echo "檢查是否有綁定過此域名"
+		grep "^(\s|\t)*server_name.*$2" $filepathe > /dev/null
 		if [ $? = 0 ] ;then
-		    echo "刪除域名$2成功"
-		else
-		    echo "刪除域名$2失敗"
-			exit
+			echo "開始把$2從$filepathe刪除"
+			sed -i '^(\s|\t)*server_name/s/'$2'//' $filepathe
+			if [ $? = 0 ] ;then
+				echo "刪除域名$2成功"
+			else
+				echo "刪除域名$2失敗"
+				exit
+			fi
 		fi
 	done
 	;;
@@ -65,6 +76,7 @@ case "$1" in
     #else
 	    #echo " "
     #fi
+	exit
 	;;
 esac
 #如果有動到conf檔就重啟
