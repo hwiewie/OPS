@@ -25,11 +25,11 @@ case "$1" in
         if [ $? = 1 ] ;then
             echo "開始將IP：$2 加入白名單"
             #看是否被註解
-            grep "^#.*$2" $filepathe > /dev/null
+            grep "^#-A.*$2.*443,80" $filepathe > /dev/null
             if [ $? = 0 ] ;then
                 #移掉註解
                 echo "移掉註解"
-                sed -i '/^#.*'$2'/s/#//' $filepathe
+                sed -i '/^#\-A.*'$2'.*443,80/s/#//' $filepathe
             else
                 #裡面沒這筆IP記錄，開始新增
                 echo "新增記錄到iptables"
@@ -61,11 +61,11 @@ case "$1" in
         if [ $? = 1 ] ;then
             echo "開始將IP：$2 加入白名單"
             #看是否被註解
-            grep "^#.*$2" $filepathe > /dev/null
+            grep "^#-A.*$2.*443,80" $filepathe > /dev/null
             if [ $? = 0 ] ;then
                 #刪除註解
                 echo "移掉舊記錄"
-                sed -i '/^#.*'$2'/d' $filepathe
+                sed -i '/^#\-A.*'$2'.*443,80/d' $filepathe
             fi
             #裡面沒這筆IP記錄，開始新增
             echo "新增記錄到iptables"
@@ -97,9 +97,9 @@ case "$1" in
     ;;
 "del")
     #找那筆記錄
-    grep "^[- ].*$2" $filepathe > /dev/null
+    grep "^-A.*$2.*443,80" $filepathe > /dev/null
     if [ $? = 0 ] ;then
-        sed -i 's/^-.*'$2'/#&/g' $filepathe
+        sed -i 's/^-.*'$2'.*443,80/#&/g' $filepathe
         if [ $? = 0 ] ;then
             echo "已將此筆記錄註解"
         else
