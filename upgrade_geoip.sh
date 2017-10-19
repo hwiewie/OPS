@@ -16,7 +16,7 @@ else
     exit
 fi
 #更新GeoIP.dat
-cp /root/geoip.dat $geoipdata
+mv -f /root/geoip.dat $geoipdata
 #重載nginx設定
 #nginx -s reload
 systemctl reload nginx
