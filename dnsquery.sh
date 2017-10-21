@@ -171,35 +171,35 @@ parse () {
 }
 dnsquery () {
     if [ -n "$2" ];then
-	    case "$1" in
-		\"ap)
-		echo -n $2;
-		ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
-		echo -n ' ';
-		echo $ip;
-		;;
-		\"be)
-		echo -n $2;
-		ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
-		echo -n ' ';
-		echo $ip;
-		;;
-		\"fe)
-		echo -n $2;
-		ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
-		echo -n ' ';
-		echo $ip;
-		;;
-		\"pa)
-		echo -n $2;
-		ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
-		echo -n ' ';
-		echo $ip;
-		;;
-		esac
-	fi
+        case "$1" in
+        \"ap)
+        echo -n $2;
+        ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
+        echo -n ' ';
+        echo $ip;
+        ;;
+        \"be)
+        echo -n $2;
+        ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
+        echo -n ' ';
+        echo $ip;
+        ;;
+        \"fe)
+        echo -n $2;
+        ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
+        echo -n ' ';
+        echo $ip;
+        ;;
+        \"pa)
+        echo -n $2;
+        ip=$(nslookup "$domain" | awk '/^Address: / { print $2 }')
+        echo -n ' ';
+        echo $ip;
+        ;;
+        esac
+    fi
 }
-#$0 当前脚本的文件名	$@ 传递给脚本或函数的所有参数
+#$0 当前脚本的文件名    $@ 传递给脚本或函数的所有参数
 if ([ "$0" = "$BASH_SOURCE" ] || ! [ -n "$BASH_SOURCE" ]);
 then
   parse_options "$@"
