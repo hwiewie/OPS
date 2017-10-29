@@ -1,6 +1,7 @@
 #!/bin/bash
 yum update
-yum -y install epel-release telnet bind-utils net-tools wget nc python-pip perl gcc make kernel-headers kernel-devel mod_perl2
+yum -y install epel-release
+yum -y install telnet bind-utils net-tools wget nc python-pip perl gcc make kernel-headers kernel-devel mod_perl2
 pip install --upgrade pip
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
@@ -58,3 +59,6 @@ gitlab-ctl reconfigure
 echo "安裝iTop"
 yum install php php-mysql php-mcrypt php-xml php-cli php-soap php-ldap php-gd graphviz
 systemctl restart httpd
+
+echo "安裝docker"
+yum install docker
