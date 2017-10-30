@@ -8,4 +8,5 @@ else
 fi
 cat /etc/resolv.dnsmasq.conf  | grep nameserver | awk '{print $2}'
 echo -n `date +%Y%m%d%H%M%S` >> test.log
-echo `getent host $1` >> test.log
+echo -n ' ' >> test.log
+echo `getent hosts cp929.com` >> test.log
