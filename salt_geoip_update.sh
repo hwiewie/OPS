@@ -6,12 +6,14 @@ if [[ ! -n $1 ]]; then
 else
    geoipdata=$1
 fi
+#先把所有舊的檔案刪除
+salt "*fe*" cmd.run "rm -rf /root/geoip.dat"
 #用salt去deploy檔案到所有前台
 salt "*fe*" cp.get_file "salt://geoip/$geoipdata" /root/geoip.dat
 #睡20秒
 sleep 20
 #用salt讓前台把geoip.dat放到GeoIP的目錄下
-salt "*fe*" cmd.run "sh upgrade_geoip.sh"
+salt "*fe*" cmd.script salt://scripts/upgrade_geoip.sh
 #睡30秒
 sleep 30
 #測試服務是否正常
