@@ -9,7 +9,7 @@ fi
 #先把所有舊的檔案刪除
 salt "*fe*" cmd.run "rm -rf /root/geoip.dat"
 #用salt去deploy檔案到所有前台
-salt "*fe*" cp.get_file "salt://geoip/$geoipdata" /root/geoip.dat
+salt "*fe*" cp.get_file salt://geoip/$geoipdata /root/geoip.dat
 #睡20秒
 sleep 20
 #用salt讓前台把geoip.dat放到GeoIP的目錄下
