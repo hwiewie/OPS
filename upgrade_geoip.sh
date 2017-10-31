@@ -10,7 +10,7 @@ else
     exit
 fi
 #檢查/root/geoip.dat是否存在
-if [ -e /root/geoip ];then
+if [ -e /root/geoip.dat ];then
     echo "有找到新的geoip.dat，將繼續執行"
 else
     echo "找不到新的geoip.dat！將離開程式！"
