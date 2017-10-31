@@ -1,8 +1,9 @@
 #!/bin/bash
+date1=`date +'%D'`
 #判斷是否有輸入檔名
 if [[ ! -n $1 ]]; then
    #找今天更新的GeoIP.dat(只要檔名)
-   geoipdata=`ls -al --time-style=+%D /etc/salt/deploy/geoip/*.dat | grep "`date +'%D'`" | awk '{print $7}' | sed 's/\/etc\/salt\/deploy\/geoip\///'`
+   geoipdata=`ls -al --time-style=+%D /etc/salt/deploy/geoip/*.dat | grep "$date1" | awk '{print $7}' | sed 's/\/etc\/salt\/deploy\/geoip\///'`
 else
    geoipdata=$1
 fi
