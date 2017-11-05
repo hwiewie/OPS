@@ -100,7 +100,7 @@ case "$1" in
     #抓取vhost config內綁定域名並解析出IP，把每個域名與IP中間用空白隔開，並每筆輸出成一行
     regex='^\w+\.+\w'
 	if [[ -z "$2" ]] ;then
-		domains=`egrep '^(\s|\t)*server_name [0-9A-Za-z].*' $nginxconf | sed -r 's/(.*server_name\s*|;)//g' | uniq`
+		domains=`egrep '^(\s|\t)*server_name(\s|\t)*[0-9A-Za-z]*.[0-9A-Za-z]*' $nginxconf | sed -r 's/(.*server_name\s*|;)//g' | uniq`
 	else
 	    grep "^[[:space:]]*server_name.*$2" $nginxconf
 		if [ $? = 0 ] ;then
