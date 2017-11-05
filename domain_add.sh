@@ -32,7 +32,7 @@ netstat -plnt | grep 'nginx' | grep '443'
 if [ $? = 0 ] ;then
     echo "有SSL"
     #列出所有vhost的conf檔
-    nginxconf=/opt/APP/openresty/nginx/conf/vhost/*SSL*.conf
+    nginxconf=/opt/APP/openresty/nginx/conf/vhost/*.conf
 else
     echo "沒SSL"
     #列出所有vhost的conf檔
