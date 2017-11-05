@@ -57,7 +57,7 @@ case "$1" in
             continue
         else
             echo "開始新增$2到$filepathe"
-            sed -i '/^[ ]*server_name [0-9A-Za-z]*/s/;/ '$2';/' $filepathe
+            sed -i '/^[ ]*server_name(\s|\t)*[0-9A-Za-z]*/s/;/ '$2';/' $filepathe
             if [ $? = 0 ] ;then
                 echo "新增域名$2成功"
 				reloadnginx
@@ -82,7 +82,7 @@ case "$1" in
         grep "^[[:space:]]*server_name.*$2" $filepathe > /dev/null
         if [ $? = 0 ] ;then
             echo "開始把$2從$filepathe刪除"
-            sed -i '/^[ ]*server_name [0-9A-Za-z]*/s/ '$2'//' $filepathe
+            sed -i '/^[ ]*server_name(\s|\t)*[0-9A-Za-z]*/s/ '$2'//' $filepathe
             if [ $? = 0 ] ;then
                 echo "刪除域名$2成功"
 				reloadnginx
