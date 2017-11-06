@@ -51,7 +51,7 @@ case "$1" in
     for filepathe in $nginxconf
     do
         echo "檢查是否有綁定過此域名"
-        grep "^[[:space:]]*server_name.*$2" $filepathe > /dev/null
+        grep '^[ \s\t]*server_name[ \s\t]*[0-9A-Za-z]*\.[0-9A-Za-z]*' $filepathe | grep ' '$2'[ ;]' > /dev/null
         if [ $? = 0 ] ;then
             echo "$2此域名已綁定過了"
             continue
@@ -79,7 +79,7 @@ case "$1" in
     for filepathe in $nginxconf
     do
         echo "檢查是否有綁定過此域名"
-        grep "^[[:space:]]*server_name.*$2" $filepathe > /dev/null
+        grep '^[ \s\t]*server_name[ \s\t]*[0-9A-Za-z]*\.[0-9A-Za-z]*' $filepathe | grep ' '$2'[ ;]' > /dev/null
         if [ $? = 0 ] ;then
             echo "開始把$2從$filepathe刪除"
             sed -i '/^[ \s\t]*server_name[ \s\t]*[0-9A-Za-z]*\.[0-9A-Za-z]*/s/ '$2'//' $filepathe
@@ -102,7 +102,7 @@ case "$1" in
 	if [[ -z "$2" ]] ;then
 		domains=`grep '^[ \s\t]*server_name[ \s\t]*[0-9A-Za-z]*\.[0-9A-Za-z]*' $nginxconf | sed -r 's/(.*server_name\s*|;)//g' | uniq`
 	else
-	    grep "^[[:space:]]*server_name.*$2" $nginxconf
+	    grep '^[ \s\t]*server_name[ \s\t]*[0-9A-Za-z]*\.[0-9A-Za-z]*' $nginxconf | grep ' '$2'[ ;]'
 		if [ $? = 0 ] ;then
 		    domains=$2
 		fi
