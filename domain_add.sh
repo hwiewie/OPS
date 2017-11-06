@@ -87,8 +87,14 @@ case "$1" in
                 echo "刪除域名$2成功"
                 reloadnginx
             else
-                echo "刪除域名$2失敗"
-                exit
+                sed -i '/^[ \s\t]*server_name[ \s\t]*[0-9A-Za-z]*\.[0-9A-Za-z]*/s/ '$2';//' $filepathe
+                if [ $? = 0 ] ;then
+                    echo "刪除域名$2成功"
+                    reloadnginx
+                else
+                    echo "刪除域名$2失敗"
+                    exit
+                fi
             fi
         else
             echo "在$filepathe裡找不到$2這個域名"
