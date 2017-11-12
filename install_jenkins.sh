@@ -70,3 +70,13 @@ echo "baseurl = http://yum.mariadb.org/10.2/centos7-amd64" >> /etc/yum.repos.d/M
 echo "gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB" >> /etc/yum.repos.d/MariaDB.repo
 echo "gpgcheck=1" >> /etc/yum.repos.d/MariaDB.repo
 yum -y install MariaDB-server MariaDB-client
+#yum -y install MariaDB-Galera-server MariaDB-client galera
+vi /etc/my.cnf
+
+mysql -uroot -p
+grant all privileges on zabbix.* to zabbix_web@"%" identified by 'zabbix';
+GRANT REPLICATION CLIENT ON *.* TO 'mmm_monitor'@'%' IDENTIFIED BY 'monitor';
+GRANT SUPER, REPLICATION CLIENT, PROCESS ON *.* TO 'mmm_agent'@'%' IDENTIFIED BY 'agent';
+GRANT USAGE ON *.* to sst_user@'%' IDENTIFIED BY 'dbpass';
+GRANT ALL PRIVILEGES on *.* to sst_user@'%';
+
