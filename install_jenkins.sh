@@ -62,3 +62,11 @@ systemctl restart httpd
 
 echo "安裝docker"
 yum install docker
+
+echo "安裝Galera Cluster Server"
+echo "[mariadb]" > /etc/yum.repos.d/MariaDB.repo
+echo "name = MariaDB" >> /etc/yum.repos.d/MariaDB.repo
+echo "baseurl = http://yum.mariadb.org/10.2/centos7-amd64" >> /etc/yum.repos.d/MariaDB.repo
+echo "gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB" >> /etc/yum.repos.d/MariaDB.repo
+echo "gpgcheck=1" >> /etc/yum.repos.d/MariaDB.repo
+yum -y install MariaDB-server MariaDB-client
