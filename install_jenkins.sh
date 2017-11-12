@@ -95,7 +95,9 @@ firewall-cmd --permanent --add-port=3306/tcp
 ---------------------------------
 mysql -uroot -p
 GRANT USAGE ON *.* to sst_user@'%' IDENTIFIED BY 'dbpass';
+GRANT USAGE ON *.* to sst_user@'localhost' IDENTIFIED BY 'dbpass';
 GRANT ALL PRIVILEGES on *.* to sst_user@'%';
+GRANT ALL PRIVILEGES on *.* to sst_user@'localhost';
 quit
 
 systemctl start mariadb
