@@ -99,3 +99,11 @@ GRANT ALL PRIVILEGES on *.* to sst_user@'%';
 quit
 
 systemctl start mariadb
+------如果第二台啟動失敗---
+rm -rf /var/lock/subsys/mysql
+rm -rf /var/lib/mysql/galera.cache
+rm -rf /var/lib/mysql/grastate.dat
+galera_new_cluster
+/etc/init.d/mysql start
+--------------------
+
