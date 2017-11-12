@@ -71,16 +71,31 @@ echo "gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB" >> /etc/yum.repos.d/Ma
 echo "gpgcheck=1" >> /etc/yum.repos.d/MariaDB.repo
 yum -y install MariaDB-server MariaDB-client
 #yum -y install MariaDB-Galera-server MariaDB-client galera
-vi /etc/my.cnf
 
 systemctl start mariadb
 systemctl enable mariadb
 mysql_secure_installation
 
+----------第一台-----------
+wsrep_provider=/usr/lib64/galera/libgalera_smm.so >> /etc/my.cnf.d/server.cnf
+wsrep_cluster_address="gcomm://" >> /etc/my.cnf.d/server.cnf
+wsrep_sst_auth=sst_user:dbpass >> /etc/my.cnf.d/server.cnf
+
+firewall-cmd --add-port=3306/tcp
+firewall-cmd --add-port=4567/tcp
+firewall-cmd --permanent --add-port=3306/tcp
+firewall-cmd --permanent --add-port=4567/tcp
+------------第二台-----------------
+wsrep_provider=/usr/lib64/galera/libgalera_smm.so >> /etc/my.cnf.d/server.cnf
+wsrep_cluster_address="gcomm://172.16.100.133:4567" >> /etc/my.cnf.d/server.cnf
+wsrep_sst_auth=sst_user:dbpass >> /etc/my.cnf.d/server.cnf
+
+firewall-cmd --add-port=3306/tcp
+firewall-cmd --permanent --add-port=3306/tcp
+---------------------------------
 mysql -uroot -p
-grant all privileges on zabbix.* to zabbix_web@"%" identified by 'zabbix';
-GRANT REPLICATION CLIENT ON *.* TO 'mmm_monitor'@'%' IDENTIFIED BY 'monitor';
-GRANT SUPER, REPLICATION CLIENT, PROCESS ON *.* TO 'mmm_agent'@'%' IDENTIFIED BY 'agent';
 GRANT USAGE ON *.* to sst_user@'%' IDENTIFIED BY 'dbpass';
 GRANT ALL PRIVILEGES on *.* to sst_user@'%';
+quit
 
+systemctl start mariadb
