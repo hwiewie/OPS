@@ -73,6 +73,10 @@ yum -y install MariaDB-server MariaDB-client
 #yum -y install MariaDB-Galera-server MariaDB-client galera
 vi /etc/my.cnf
 
+systemctl start mariadb
+systemctl enable mariadb
+mysql_secure_installation
+
 mysql -uroot -p
 grant all privileges on zabbix.* to zabbix_web@"%" identified by 'zabbix';
 GRANT REPLICATION CLIENT ON *.* TO 'mmm_monitor'@'%' IDENTIFIED BY 'monitor';
