@@ -5,6 +5,7 @@ yum -y install telnet bind-utils net-tools wget nc python-pip perl gcc make kern
 pip install --upgrade pip
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+sed -i 's/SELINUXTYPE=targeted/#SELINUXTYPE=targeted/g' /etc/sysconfig/selinux
 
 echo "安裝vmware tools"
 mkdir /mnt/cdrom
