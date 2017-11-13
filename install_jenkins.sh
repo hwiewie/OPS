@@ -76,6 +76,11 @@ systemctl start mariadb
 systemctl enable mariadb
 mysql_secure_installation
 
+cp /usr/share/mysql/wsrep.cnf /etc/my.cnf.d/
+vi /etc/my.cnf.d/wsrep.cnf
+sed -i 's/wsrep_provider=none/wsrep_provider=\/usr\/lib64\/galera\/libgalera_smm.so/g' /etc/my.cnf.d/wsrep.cnf
+
+
 ----------第一台-----------
 wsrep_provider=/usr/lib64/galera/libgalera_smm.so >> /etc/my.cnf.d/server.cnf
 wsrep_cluster_address="gcomm://" >> /etc/my.cnf.d/server.cnf
