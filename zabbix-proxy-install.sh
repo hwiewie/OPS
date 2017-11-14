@@ -1,4 +1,7 @@
 #!/bin/bash
+zabbix_version=3.4.4.2
+release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{print $1}' |sed 's/ //g'`
+
 yum update
 yum -y install epel-release
 yum -y install telnet bind-utils net-tools wget nc python-pip perl gcc make kernel-headers kernel-devel
@@ -12,7 +15,11 @@ yum -y install mariadb-server
 systemctl start mariadb
 systemctl enable mariadb
 #安裝zabbix 3.4 RPM關聯
-rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm
+if [ $release = 7 ];then
+    rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4.4-2.el7.noarch.rpm
+elif [ $release = 6 ];then
+    rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/6/x86_64/zabbix-get-3.4.4-2.el6.x86_64.rpm
+fi
 #安裝zabbix proxy mysql
 yum -y install zabbix-proxy-mysql
 #安裝zabbix agent 3.4.2
