@@ -10,6 +10,15 @@ setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 sed -i 's/SELINUXTYPE=targeted/#SELINUXTYPE=targeted/g' /etc/sysconfig/selinux
 #安裝MARIADB-SERVER
+echo "[mariadb]" > /etc/yum.repos.d/MariaDB.repo
+echo "name = MariaDB" >> /etc/yum.repos.d/MariaDB.repo
+if [ $release = 7 ];then
+    echo "baseurl = http://yum.mariadb.org/10.2/centos7-amd64/" >> /etc/yum.repos.d/MariaDB.repo
+elif [ $release = 6 ];then
+    echo "baseurl = http://yum.mariadb.org/10.2/centos6-amd64/" >> /etc/yum.repos.d/MariaDB.repo
+fi
+echo "gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB" >> /etc/yum.repos.d/MariaDB.repo
+echo "gpgcheck=1" >> /etc/yum.repos.d/MariaDB.repo
 yum -y install mariadb-server
 #開機啟動及啟用
 systemctl start mariadb
