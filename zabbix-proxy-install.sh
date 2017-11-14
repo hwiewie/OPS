@@ -40,20 +40,25 @@ systemctl enable zabbix-proxy
 systemctl enable zabbix-agent
 #設定zabbix proxy設定檔
 #vi /etc/zabbix/zabbix_proxy.conf
-#ProxyMode=1
-#Server=172.16.100.131
-#Hostname=vSRV-OA-Zabbix-Proxy
-#SourceIP=172.16.100.132
+#Server=61.216.144.184
+#ServerPort=10051
+#Hostname=TJ
 #LogFile=/var/log/zabbix/zabbix_proxy.log
 #LogFileSize=0
 #PidFile=/var/run/zabbix/zabbix_proxy.pid
-#SocketDir=/var/run/zabbix
 #DBHost=localhost
 #DBName=zabbix_proxy
 #DBUser=zabbix
 #DBPassword=zabbix
+#StartHTTPPollers=50
+#SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
+#Timeout=4
 #ExternalScripts=/usr/lib/zabbix/externalscripts
 #LogSlowQueries=3000
+#TLSConnect=psk
+#TLSAccept=psk
+#TLSPSKIdentity=PSK 001
+#TLSPSKFile=/etc/zabbix/zabbix_agentd.psk
 #設定zabbix agent設定檔
 #vi /etc/zabbix/zabbix_agentd.conf
 #PidFile=/var/run/zabbix/zabbix_agentd.pid
