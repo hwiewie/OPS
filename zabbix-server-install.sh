@@ -14,6 +14,7 @@ yum -y update
 echo "關閉selinux"
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+sed -i 's/SELINUXTYPE=targeted/#SELINUXTYPE=targeted/g' /etc/sysconfig/selinux
 #sleep 10
 echo "當前目錄為:$zabbixdir"
 echo "本機IP為:$ip"
