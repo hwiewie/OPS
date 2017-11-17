@@ -46,6 +46,10 @@ chmod +x /etc/zabbix/*.sh
 #echo "UserParameter=nginx.status[*],/etc/zabbix/ngx_status.sh \$1" >> /etc/zabbix/zabbix_agentd.conf
 #echo "UserParameter=netstat.stat[*],(netstat -ant |grep -i $1|wc -l)" >> /etc/zabbix/zabbix_agentd.conf
 #echo "UserParameter=access.status[*],/etc/zabbix/access_status.sh \$1" >> /etc/zabbix/zabbix_agentd.conf
+#設定排程
+echo '* * * * * sh /etc/zabbix/splunk_access.sh' >> /var/spool/cron/root
+#變更agent上設定主機名稱
 echo Hostname=$NewName >> /etc/zabbix/zabbix_agentd.conf
+#啟動zabbix agent
 systemctl enable zabbix-agent
 service zabbix-agent restart
