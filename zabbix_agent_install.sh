@@ -8,7 +8,7 @@ read -p "Input hostname you want to change : " NewName
 rm -rf /etc/zabbix/*.sh*
 rm -rf /etc/zabbix/*.conf*
 rm -rf /etc/zabbix/zabbix_agentd.d/*
-yum install net-tools bind-utils -y
+yum install net-tools bind-utils nc -y
 if [ $release = 7 ];then
     rpm -Uvh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm
     rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-agent-3.4.4-2.el7.x86_64.rpm
