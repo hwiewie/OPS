@@ -1,5 +1,6 @@
 #!/bin/bash
 #salt auto install script
+#pki存放路徑：/etc/salt/pki/master/minions，有問題機器直接把在此目錄內那台機器名稱的檔案砍掉
 read -p "Input hostname you want to change ,ex:001-500vip-fe-03 : " NewName
 #判斷OS版本
 release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{print $1}' |sed 's/ //g'`
