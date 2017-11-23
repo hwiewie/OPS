@@ -24,6 +24,8 @@ for filepathe in $nginxconf; do
         sort crtdomains.txt confdomains.txt confdomains.txt | uniq -u
         echo "下面為憑證內沒有但conf內有綁定的域名"
         sort confdomains.txt crtdomains.txt crtdomains.txt | uniq -u
+        rm -rf confdomains.txt
+        rm -rf crtdomains.txt
         echo "結束"
     else
         echo "沒找到憑證"
