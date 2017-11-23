@@ -13,11 +13,11 @@ else
 fi
 #把所有vhost下的conf都找看看有沒有綁憑證
 for filepathe in $nginxconf; do
+    echo "設定檔名稱：$filepathe"
     #取所有的憑證檔案路徑
     crtpath=`grep '^[ \s\t]*ssl_certificate\ .*crt' $filepathe | awk '{print $2}' | sed 's/;//'`
     if [[ -n $crtpath ]];then
-        echo "有找到憑證"
-        echo "憑證路徑：$crtpath"
+        echo "有找到憑證,憑證路徑：$crtpath"
         openssl x509 -in $crtpath -noout -text -certopt no_header,no_version,no_serial,no_signame,no_pubkey,no_sigdump,no_aux | grep -A1 "Subject Alternative Name:" | tail -n1 | tr -d ' ' | tr ',' '\n' | sed 's/DNS://g' > crtdomains.txt
         grep $'^[ \s\t]*server_name[ \s\t]*[0-9A-Za-z]*\.[0-9A-Za-z]*' $filepathe | sed -r 's/(.*server_name\s*|;)//g' | sed 's/\ /\n/g' | uniq > confdomains.txt
         echo "下面為憑證內有但conf內沒綁定的域名"
