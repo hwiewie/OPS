@@ -29,6 +29,6 @@ for filepathe in $nginxconf; do
         echo "結束"
     else
         echo "沒找到憑證"
-        exit
+        continue
     fi
 done
