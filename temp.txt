@@ -7,6 +7,7 @@ https://github.com/richardasaurus/nginx-access-log-parser
 
 nginx log parser bash
 https://easyengine.io/tutorials/nginx/log-parsing/
+https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Nginx/Collect-Logs-for-Nginx
 https://jonlabelle.com/snippets/view/shell/nginx-access-log-parsing
 
 nginx log parser regular 
