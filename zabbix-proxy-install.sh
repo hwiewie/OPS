@@ -25,7 +25,7 @@ systemctl start mariadb
 systemctl enable mariadb
 #安裝zabbix 3.4 RPM關聯
 if [ $release = 7 ];then
-    rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4.4-2.el7.noarch.rpm
+    rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm
 elif [ $release = 6 ];then
     rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/6/x86_64/zabbix-release-3.4-1.el6.noarch.rpm
 fi
