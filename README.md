@@ -22,3 +22,15 @@ index=syslog Type=access | eval group_1=split(Hostname,"_"),group=mvindex(group_
 
 前台連線數
 index=syslog Type=access | eval group_1=split(Hostname,"_"),group=mvindex(group_1,0),fnd=mvindex(group_1,1) | search group=$group$ fnd=FE | timechart span=5m values(connections) as "Client IP" by Hostname
+
+日常作業
+域名綁定(綁定與解除) 前台白名單(新增與移除) 後台白名單(新增與移除) RP維護(維護模式開啟與關閉) 主域名設定(設定A type record)
+
+RP告警
+失聯 可用資源過低(CPU、Ram、disk) Upstream異常(失聯、狀態碼異常)
+
+服務異常
+域名解析錯誤(沒cname、域名污染綁架) 服務無法開啟(告警 逾時 錯誤 很卡 不在服務區內) 後端服務異常(無法登入、無法更新)
+
+大量服務異常
+所有品牌服務告警(雲服務商網路ping lose、upstream失聯)
