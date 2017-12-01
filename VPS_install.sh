@@ -106,7 +106,7 @@ esac
 
 #改VPS的hostname
 hostname $proxyname
-echo $agentname > /etc/hostname
+echo $proxyname > /etc/hostname
 
 #安裝套件
 yum update -y
