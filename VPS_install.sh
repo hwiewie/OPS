@@ -1,4 +1,91 @@
 #VPS安裝(proxy採用docker container建置)
+#取得變數
+ipaddr=`ss -t | grep ssh | awk '{ print $4}' | awk -F':' '{print $1}'`
+echo "VPS地區選擇："
+echo "請輸入地區代號：
+echo " 1：江蘇  2：廣東  3：廣西  4：河北  5：福建"
+echo " 6：淅江  7：貴州  8：河南  9：江西 10：北京"
+echo "11：湖南 12：四川 13：山東 14：上海 15：安徵"
+echo "16：遼寧 17：吉林 18：重慶 19：湖北 20：黑龍江"
+echo "21：天津 22：陝西 23：山西"
+read -p "請輸入VPS所在地區代號: " NewName
+case "$NewName" in
+"JSU")
+    agentname="Jiangsu_WebMonitor"
+    ;;
+"GD")
+    agentname="Jiangsu_WebMonitor"
+    ;;
+"GX")
+    agentname="Guangxi_WebMonitor"
+    ;;
+"HP")
+    agentname="Hebei_WebMonitor"
+    ;;
+"FJ")
+    agentname="Forjen_WebMonitor"
+    ;;
+"JJ")
+    agentname="JaiJang_WebMonitor"
+    ;;
+"GJ")
+    agentname="Guizhou_WebMonitor"
+    ;;
+"HN")
+    agentname="Henan_WebMonitor"
+    ;;
+"JS")
+    agentname="Changsha_WebMonitor"
+    ;;
+"BJ")
+    agentname="Beijing_WebMonitor"
+    ;;
+"WN")
+    agentname="WhoNan_WebMonitor"
+    ;;
+"FH")
+    agentname="Sichuan_WebMonitor"
+    ;;
+"SD")
+    agentname="Shandong_WebMonitor"
+    ;;
+"SH")
+    agentname="Shanghai_WebMonitor"
+    ;;
+"AH")
+    agentname="Anhui_WebMonitor"
+    ;;
+"LL")
+    agentname="LauLen_WebMonitor"
+    ;;
+"JL")
+    agentname="Jelin_WebMonitor"
+    ;;
+"BJ")
+    agentname="Beijing_WebMonitor"
+    ;;
+"BJ")
+    agentname="Beijing_WebMonitor"
+    ;;
+"BJ")
+    agentname="Beijing_WebMonitor"
+    ;;
+"BJ")
+    agentname="Beijing_WebMonitor"
+    ;;
+"BJ")
+    agentname="Beijing_WebMonitor"
+    ;;
+"BJ")
+    agentname="Beijing_WebMonitor"
+    ;;
+esac
+
+#改VPS的hostname
+hostname $NewName
+echo $NewName > /etc/hostname
+
+#安裝套件
 yum update -y
 yum install bind-utils net-tools httping lynx iptables-services docker -y
 
@@ -46,9 +133,9 @@ chkconfig docker on
 rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-agent-3.4.4-2.el7.x86_64.rpm
 systemctl enable zabbix-agent
 #修改zabbix agent 設定檔
-sed -i 's/Server=127\.0\.0\.1/Server=172\.17\.0\.3/g' /etc/zabbix/zabbix_agentd.conf
-sed -i 's/ServerActive=127\.0\.0\.1/ServerActive=111\.161\.65\.109/g' /etc/zabbix/zabbix_agentd.conf
-sed -i 's/Hostname=Zabbix server/Hostname=Tianjin_WebMonitor/g' /etc/zabbix/zabbix_agentd.conf
+sed -i "s/Server=127.0.0.1/Server=172.17.0.3/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/ServerActive=127.0.0.1/ServerActive=$ipaddr/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/Hostname=Zabbix server/Hostname=$agentname/g" /etc/zabbix/zabbix_agentd.conf
 #下載psk
 curl -s https://raw.githubusercontent.com/nickchangs/zabbix-agent2/master/zabbix_agentd.psk -o "/etc/zabbix/zabbix_agentd.psk"
 #建立目錄
