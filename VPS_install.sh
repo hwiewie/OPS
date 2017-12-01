@@ -10,80 +10,103 @@ echo "16：遼寧 17：吉林 18：重慶 19：湖北 20：黑龍江"
 echo "21：天津 22：陝西 23：山西"
 read -p "請輸入VPS所在地區代號: " NewName
 case "$NewName" in
-"JSU")
+"1")
     agentname="Jiangsu_WebMonitor"
+    proxyname="JSU"
     ;;
-"GD")
+"2")
     agentname="Jiangsu_WebMonitor"
+    proxyname="GD"
     ;;
-"GX")
+"3")
     agentname="Guangxi_WebMonitor"
+    proxyname="GX"
     ;;
-"HP")
+"4")
     agentname="Hebei_WebMonitor"
+    proxyname="GX"
     ;;
-"FJ")
+"5")
     agentname="Forjen_WebMonitor"
+    proxyname="FJ"
     ;;
-"JJ")
+"6")
     agentname="JaiJang_WebMonitor"
+    proxyname="JJ"
     ;;
-"GJ")
+"7")
     agentname="Guizhou_WebMonitor"
+    proxyname="GJ"
     ;;
-"HN")
+"8")
     agentname="Henan_WebMonitor"
+    proxyname="HN"
     ;;
-"JS")
+"9")
     agentname="Changsha_WebMonitor"
+    proxyname="JS"
     ;;
-"BJ")
+"10")
     agentname="Beijing_WebMonitor"
+    proxyname="BJ"
     ;;
-"WN")
+"11")
     agentname="WhoNan_WebMonitor"
+    proxyname="WN"
     ;;
-"FH")
+"12")
     agentname="Sichuan_WebMonitor"
+    proxyname="FH"
     ;;
-"SD")
+"13")
     agentname="Shandong_WebMonitor"
+    proxyname="SD"
     ;;
-"SH")
+"14")
     agentname="Shanghai_WebMonitor"
+    proxyname="SH"
     ;;
-"AH")
+"15")
     agentname="Anhui_WebMonitor"
+    proxyname="AH"
     ;;
-"LL")
+"16")
     agentname="LauLen_WebMonitor"
+    proxyname="LL"
     ;;
-"JL")
+"17")
     agentname="Jelin_WebMonitor"
+    proxyname="JL"
     ;;
-"BJ")
-    agentname="Beijing_WebMonitor"
+"18")
+    agentname="Chongqing_WebMonitor"
+    proxyname="CG"
     ;;
-"BJ")
-    agentname="Beijing_WebMonitor"
+"19")
+    agentname="Hubei_WebMonitor"
+    proxyname="HB"
     ;;
-"BJ")
-    agentname="Beijing_WebMonitor"
+"20")
+    agentname="HLJ_WebMonitor"
+    proxyname="HLJ"
     ;;
-"BJ")
-    agentname="Beijing_WebMonitor"
+"21")
+    agentname="Tianjin_WebMonitor"
+    proxyname="TJ"
     ;;
-"BJ")
-    agentname="Beijing_WebMonitor"
+"22")
+    agentname="Xian_WebMonitor"
+    proxyname="SC"
     ;;
-"BJ")
-    agentname="Beijing_WebMonitor"
+"23")
+    agentname="Shanxi_WebMonitor"
+    proxyname="SN"
     ;;
 esac
 
 #改VPS的hostname
-hostname $NewName
-echo $NewName > /etc/hostname
+hostname $proxyname
+echo $proxyname > /etc/hostname
 
 #安裝套件
 yum update -y
