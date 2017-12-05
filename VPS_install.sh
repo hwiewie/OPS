@@ -130,6 +130,9 @@ sysctl -w net.ipv4.ip_forward=1
 service iptables restart
 
 #設定本機DNS服務
+if [ -f /etc/dnsmasq.conf ]; then
+    echo "已裝DNSMASQ"
+else
 yum install dnsmasq -y
 cp /etc/resolv.conf /etc/resolv.dnsmasq.conf
 cp /etc/hosts /etc/dnsmasq.hosts
@@ -142,6 +145,7 @@ service dnsmasq start
 echo 'nameserver 127.0.0.1' > /etc/resolv.conf
 systemctl enable dnsmasq
 chkconfig dnsmasq on
+fi
 
 #設定docker
 echo "{" > /etc/docker/daemon.json
