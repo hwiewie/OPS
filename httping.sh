@@ -1,6 +1,6 @@
 #!/bin/bash
 #用法：後面帶4個參數
-#參數1：[status|failed|min|avg|max]
+#參數1：[status|failed|min|avg|max|loss]
 #參數2：域名
 #參數3：端口號
 #參數4：[http|https]
@@ -59,9 +59,17 @@ if [ $proto == "https" ];then
           else  
              echo $output  
           fi  
-            ;;  
+            ;;
+        loss)
+            output=$(cat $tmp_file|grep ok|awk '{print $5}' |awk -F% '{print $1}')
+          if [ "$output" == "" ];then
+            echo 0  
+          else
+             echo $output  
+          fi
+            ;;
         *)  
-        echo -e "\e[033mUsage: sh  $0 [status|failed|min|avg|max]\e[0m"  
+        echo -e "\e[033mUsage: sh  $0 [status|failed|min|avg|max|loss]\e[0m"  
        esac  
 elif [ $proto == "http" ];then  
     /bin/httping -c3 -t5  $proto://$host:$port > $tmp_file  
@@ -107,9 +115,17 @@ elif [ $proto == "http" ];then
           else  
              echo $output  
           fi  
-            ;;  
+            ;;
+        loss)
+             output=$(cat $tmp_file|grep ok|awk '{print $5}' |awk -F% '{print $1}') 
+          if [ "$output" == "" ];then
+             echo 0  
+          else
+             echo $output  
+          fi
+            ;;
         *)  
-        echo -e "\e[033mUsage: sh  $0 [status|failed|min|avg|max]\e[0m"  
+        echo -e "\e[033mUsage: sh  $0 [status|failed|min|avg|max|loss]\e[0m"  
        esac  
 else  
     echo "error parm " $proto >/tmp/httping/error.log  
