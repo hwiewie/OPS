@@ -1,13 +1,19 @@
 #!/bin/sh
+#讀取CentOS版本
+release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{print $1}' |sed 's/ //g'`
+#關閉SElinux
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+#設定網路校時
 sed -i 's/server 0.centos.pool.ntp.org iburst/server tock.stdtime.gov.tw iburst/g' /etc/chrony.conf
 sed -i 's/server 1.centos.pool.ntp.org iburst/server watch.stdtime.gov.tw iburst/g' /etc/chrony.conf
 sed -i 's/server 2.centos.pool.ntp.org iburst/server tick.stdtime.gov.tw iburst/g' /etc/chrony.conf
 sed -i 's/server 3.centos.pool.ntp.org iburst/server clock.stdtime.gov.tw iburst/g' /etc/chrony.conf
+sed -i '/watch.stdtime.gov.tw/a server time.stdtime.gov.tw iburst' /etc/chrony.conf
 systemctl restart chronyd
 chronyc -a makestep
+#防火牆設定
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
 firewall-cmd --permanent --add-service=snmp
@@ -18,19 +24,25 @@ firewall-cmd --permanent --add-port=9000/tcp
 firewall-cmd --permanent --add-port=10050/tcp
 firewall-cmd --permanent --add-port=10051/tcp
 firewall-cmd --reload
+#新增nginx知識庫
 echo "[nginx]" >> /etc/yum.repos.d/nginx.repo
 echo "name=nginx repo" >> /etc/yum.repos.d/nginx.repo
 echo 'baseurl=http://nginx.org/packages/centos/7/$basearch/' >> /etc/yum.repos.d/nginx.repo
 echo "gpgcheck=0" >> /etc/yum.repos.d/nginx.repo
 echo "enabled=1" >> /etc/yum.repos.d/nginx.repo
+#新增mariadb知識庫
 echo "[mariadb]" >> /etc/yum.repos.d/MariaDB.repo
 echo "name = MariaDB" >> /etc/yum.repos.d/MariaDB.repo
 echo "baseurl = http://yum.mariadb.org/10.2/centos7-amd64" >> /etc/yum.repos.d/MariaDB.repo
 echo "gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB" >> /etc/yum.repos.d/MariaDB.repo
 echo "gpgcheck=1" >> /etc/yum.repos.d/MariaDB.repo
+#安裝epel資源庫
 yum -y install epel-release
+#更新系統
 yum -y update
+#安裝常用套件
 yum -y install yum-utils telnet bind-utils net-tools wget nc
+#安裝postgreSQL10.2
 yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
 yum install http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm
 
