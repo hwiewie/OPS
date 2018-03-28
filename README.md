@@ -1,11 +1,18 @@
 # OPS
 ==環境設定==
+
 監控軟體：Zabbix34_Nginx_PostgreSQL_PHP72.sh
+
 Log收集(類似splunk)：ELS-install.sh
+
 自動化運維軟體Saltstack：salt-install.sh
+
 事件追蹤系統Mantisbt：Mantisbt_install.sh
+
 自已架MediaWiki：MediaWiki_install.sh
+
 安裝VPS：VPS_install.sh
+
 其他軟體安裝：install_jenkins.sh
 
 operator monitor
