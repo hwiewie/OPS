@@ -3,7 +3,7 @@
 
 監控軟體：Zabbix34_Nginx_PostgreSQL_PHP72.sh
 
-Log收集(類似splunk)：ELS-install.sh
+Log收集(類似splunk)：ELK-install.sh
 
 自動化運維軟體Saltstack：salt-install.sh
 
