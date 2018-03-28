@@ -42,8 +42,9 @@ yum -y install epel-release
 yum -y update
 #安裝常用套件
 yum -y install yum-utils telnet bind-utils net-tools wget nc
-#安裝postgreSQL10.2
+#安裝postgreSQL10.2知識庫
 yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
+#安裝Zabbix3.4.2資源庫
 yum install http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm
 
 yum -y install nginx mariadb-server zabbix-server-mysql zabbix-web-mysql
