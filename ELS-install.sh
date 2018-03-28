@@ -1,5 +1,6 @@
 #!/bin/sh
-
+#讀取CentOS版本
+release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{print $1}' |sed 's/ //g'`
 #關閉SElinux
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
@@ -73,8 +74,11 @@ chown logstash:logstash /var/lib/logstash
 chown -R logstash:logstash /etc/logstash
 chown -R logstash:logstash /etc/default/logstash
 #啟動logstash
-initctl start logstash
-#systemctl start logstash
+if [ $release = 7 ];then
+   systemctl start logstash
+elif [ $release = 6 ];then 
+   initctl start logstash
+fi
 #加入開機啟動
 chkconfig --add logstash
 #安裝plugin
