@@ -46,11 +46,14 @@ yum -y install yum-utils telnet bind-utils net-tools wget nc
 yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
 #安裝Zabbix3.4.2資源庫
 yum install http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm
-
-yum -y install nginx mariadb-server zabbix-server-mysql zabbix-web-mysql
+#安裝PHP7.2知識庫
 yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum-config-manager --enable remi-php72
+
+#安裝nginx
+yum -y install nginx mariadb-server zabbix-server-mysql zabbix-web-mysql
 yum install php72 php72-php-fpm php72-php-gd php72-php-json php72-php-mbstring php72-php-mysqlnd php72-php-xml php72-php-xmlrpc php72-php-pecl-mcrypt php72-php-bcmath php72-php-opcache php72-php-pgsql php72-php-ldap php72-php-pear
+
 #打開PHP fpm for nginx
 systemctl enable php72-php-fpm.service
 systemctl start php72-php-fpm.service
@@ -64,7 +67,7 @@ sed -i 's/post_max_size = 8M/post_max_size = 32M/g' /etc/php.ini
 sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 16M/g' /etc/php.ini
 sed -i 's/;date.timezone =/date.timezone = Asia\/Taipei/g' /etc/php.ini
 sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php.ini
-
+#修改nginx設定
 sed -i 's/worker_processes  1/worker_processes  4/g' /etc/nginx/nginx.conf
 sed -i 's/worker_connections  1024/worker_connections  10240/g' /etc/nginx/nginx.conf
 sed -i 's/#tcp_nopush/tcp_nopush/g' /etc/nginx/nginx.conf
@@ -77,10 +80,10 @@ sed -i '/gzip/a    fastcgi_temp_file_write_size 128k;' /etc/nginx/nginx.conf
 sed -i '/gzip/a    fastcgi_busy_buffers_size 128k;' /etc/nginx/nginx.conf
 sed -i '/gzip/a    fastcgi_buffers 32 32k;' /etc/nginx/nginx.conf
 sed -i '/gzip/a    fastcgi_buffer_size 128k;' /etc/nginx/nginx.conf
-
+#啟動nginx
 systemctl start nginx
 systemctl enable nginx
-
+#修改php-fpm內使用者設定
 sed -i 's/user = apache/user = nginx/g' /etc/php-fpm.d/www.conf
 sed -i 's/group = apache/group = nginx/g' /etc/php-fpm.d/www.conf
 systemctl restart php-fpm
