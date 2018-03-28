@@ -15,6 +15,7 @@ Log收集(類似splunk)：ELS-install.sh
 
 其他軟體安裝：install_jenkins.sh
 
+Zabbix API用法
 ~~~
 operator monitor
 zabbix_api.py
