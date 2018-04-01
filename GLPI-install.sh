@@ -35,7 +35,13 @@ yum -y install yum-utils telnet bind-utils net-tools wget nc nmap perl gcc perl-
 #安裝postgresql資源庫
 yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
 #安裝必要套件
-yum -y httpd mariadb-server
+yum -y httpd mariadb-server mod_perl zip perl-DBI perl-DBD-MySQL perl-Net-IP perl-SOAP-Lite perl-XML-Simple perl-Archive-Zip perl-XML-Entities perl-Plack
+#安裝perl module
+perl -MCPAN -e 'install Apache::DBI'
+perl -MCPAN -e "install ModPerl::MM"
+perl -MCPAN -e 'install Apache2::SOAP'
+perl -MCPAN -e 'install Mojolicious::Lite'
+cpan -T install YAML Furl Switch Benchmark Cache::LRU Net::DNS::Lite List::MoreUtils IO::Socket::SSL URI::Escape HTML::Entities IO::Socket::Socks::Wrapper
 #設定apache
 
 #設定mariadb
@@ -83,3 +89,15 @@ wget https://github.com/glpi-project/glpi/releases/download/9.2.2/glpi-9.2.2.tgz
 tar -zxvf glpi-9.2.2.tgz
 mv glpi/ /var/www/html/
 chown -R apache:apache /var/www/html
+#下載OCS
+git clone https://github.com/OCSInventory-NG/OCSInventory-Server.git OCSInventory-Server
+cd OCSInventory-Server
+git clone https://github.com/OCSInventory-NG/OCSInventory-ocsreports.git ocsreports
+#安裝fusioninventory
+wget https://github.com/fusioninventory/fusioninventory-for-glpi/releases/download/glpi9.2%2B2.0-RC1/fusioninventory-9.2.2.0-RC1.tar.bz2
+tar jxvf fusioninventory-9.2.2.0-RC1.tar.bz2
+mv fusioninventory/ /var/www/html/glpi/plugins/
+#安裝ocsinventoryng
+git clone https://github.com/pluginsGLPI/ocsinventoryng.git
+mv ocsinventoryng/ /var/www/html/glpi/plugins/
+
