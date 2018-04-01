@@ -9,6 +9,8 @@ Log收集(類似splunk)：ELK-install.sh
 
 事件追蹤系統Mantisbt：Mantisbt_install.sh
 
+資產管理：GLPI-install.sh
+
 自已架MediaWiki：MediaWiki_install.sh
 
 安裝VPS：VPS_install.sh
