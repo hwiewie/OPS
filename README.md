@@ -7,6 +7,8 @@ Log收集(類似splunk)：ELK-install.sh
 
 自動化運維軟體Saltstack：salt-install.sh
 
+專案管理redmine-install.sh
+
 事件追蹤系統Mantisbt：Mantisbt_install.sh
 
 資產管理：GLPI-install.sh
