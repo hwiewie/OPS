@@ -25,7 +25,7 @@ yum -y update
 #安裝常用套件
 yum -y install yum-utils telnet bind-utils net-tools wget nc nmap perl perl-core gcc bzip2 git libxml2-devel libcurl-devel httpd-devel apr-devel apr-util-devel
 #安裝LAMP
-yum -y install httpd mariadb-server
+yum -y install httpd mariadb-server mariadb-devel MariaDB-shared
 yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum-config-manager --enable remi-php72
 yum --enablerepo=remi,remi-php72 -y install php php-common php-cli php-pdo php-mysql php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
@@ -55,19 +55,30 @@ sed -i 's/post_max_size = 8M/post_max_size = 32M/g' /etc/php.ini
 sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 16M/g' /etc/php.ini
 sed -i 's/;date.timezone =/date.timezone = Asia\/Taipei/g' /etc/php.ini
 sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php.ini
-#新增虛擬站台
+#新增redmine虛擬站台
 echo "RailsEnv production" > /etc/httpd/conf.d/redmine.conf
 echo "RailsBaseURI /redmine" >> /etc/httpd/conf.d/redmine.conf
 echo "" >> /etc/httpd/conf.d/redmine.conf
-echo "<Directory /home/redmine/redmine-3.4.4/public>" >> /etc/httpd/conf.d/redmine.conf
+echo "<Directory /var/www/html/redmine/public>" >> /etc/httpd/conf.d/redmine.conf
 echo "Options FollowSymlinks" >> /etc/httpd/conf.d/redmine.conf
 echo "AllowOverride none" >> /etc/httpd/conf.d/redmine.conf
 echo "Require all granted" >> /etc/httpd/conf.d/redmine.conf
 echo "</Directory>" >> /etc/httpd/conf.d/redmine.conf
+#設定 redmine httpd virtual host
+echo "LoadModule passenger_module /usr/local/rvm/gems/ruby-2.2.10/gems/passenger-5.2.2/buildout/apache2/mod_passenger.so" > /etc/httpd/conf.d/passenger.conf
+echo "<IfModule mod_passenger.c>" >> /etc/httpd/conf.d/passenger.conf
+echo "   PassengerRoot /usr/local/rvm/gems/ruby-2.2.10/gems/passenger-5.2.2" >> /etc/httpd/conf.d/passenger.conf
+echo "   PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.2.10/wrappers/ruby" >> /etc/httpd/conf.d/passenger.conf
+echo "</IfModule>" >> /etc/httpd/conf.d/passenger.conf
 #啟動apache
 systemctl start httpd
 #設定開機啟動apache
 systemctl enable httpd
+#設定防火牆
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=3000/tcp
+firewall-cmd --reload
 #安裝rvm
 #install key
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -85,6 +96,35 @@ gem i mime-types --no-document
 gem install rails --no-document -v='4.2.10'
 gem install rbpdf --no-document
 gem install rbpdf-font --no-document
+gem install mysql2 -v '0.4.10'
 gem install passenger
 #安裝apache2-module
 passenger-install-apache2-module
+
+#安裝redmine
+wget http://www.redmine.org/releases/redmine-3.4.4.tar.gz
+tar -zxvf redmine-3.4.4.tar.gz
+mv redmine-3.4.4 /var/www/html/redmine
+chown -R apache:apache /var/www/html/redmine
+#設定Mariadb
+echo "production:" >> /var/www/html/redmine/config/database.yml
+echo "  adapter: mysql2" >> /var/www/html/redmine/config/database.yml
+echo "  database: redmine" >> /var/www/html/redmine/config/database.yml
+echo "  host: localhost" >> /var/www/html/redmine/config/database.yml
+echo "  username: redmine" >> /var/www/html/redmine/config/database.yml
+echo "  password: password" >> /var/www/html/redmine/config/database.yml
+echo "  encoding: utf8" >> /var/www/html/redmine/config/database.yml
+#生成redmine的token
+cd /var/www/html/redmine
+bundle install --without development test rmagick
+bundle exec rake generate_secret_token
+#建立資料庫相關 schema
+RAILS_ENV=production bundle exec rake db:migrate
+RAILS_ENV=production bundle exec rake redmine:load_default_data
+#設定相關檔案目錄權限
+chown -R redmine:redmine files log tmp public/plugin_assets
+chmod -R 755 files log tmp public/plugin_assets
+#測試是否正常啟動
+bundle exec rails server webrick -e production
+#啟動
+bundle exec rails server -p80 webrick -e production -d -b 0.0.0.0
