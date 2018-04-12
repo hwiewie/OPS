@@ -1,6 +1,24 @@
 #!/bin/sh
+# 下面指令需手動執行
+######################################################################
+##改postgres的密碼並建立資料庫與使用者
+# su - postgres -c "psql"
+# \password postgres
+# create role zabbix login ;
+# \password zabbix
+# create database zabbix with template template0 encoding 'UTF8' ;
+# grant all on database zabbix to zabbix;
+# \q
+#####################################################################
+##導入DB schema
+# cd cd /usr/share/doc/zabbix-server-pgsql-3.4.8/ 
+# gunzip create.sql.gz 
+# psql -h 127.0.0.1 -d zabbix -U zabbix -p 5432 -f create.sql
+#####################################################################
+#    程式開始
 #讀取CentOS版本
 release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{print $1}' |sed 's/ //g'`
+#讀取IP
 localip=`ifconfig | awk -F'[ :]+' '/broadcast/{print $3}'`
 #關閉SElinux
 setenforce 0
