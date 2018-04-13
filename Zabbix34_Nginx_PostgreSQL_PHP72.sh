@@ -1,4 +1,5 @@
 #!/bin/sh
+######################################################################
 # 下面指令需手動執行
 ######################################################################
 ##改postgres的密碼並建立資料庫與使用者
@@ -11,14 +12,17 @@
 # \q
 #####################################################################
 ##導入DB schema
-# cd cd /usr/share/doc/zabbix-server-pgsql-3.4.8/ 
+# cd /usr/share/doc/zabbix-server-pgsql-3.4.8/ 
 # gunzip create.sql.gz 
 # psql -h 127.0.0.1 -d zabbix -U zabbix -p 5432 -f create.sql
 #####################################################################
-#    程式開始
+#程式開始
+#####################################################################
+#設定db密碼
+dbpasswd=1234567
 #讀取CentOS版本
 release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{print $1}' |sed 's/ //g'`
-#讀取IP
+#讀取網卡IP
 localip=`ifconfig | awk -F'[ :]+' '/broadcast/{print $3}'`
 #關閉SElinux
 setenforce 0
@@ -58,7 +62,7 @@ yum -y install http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.
 #更新系統
 yum -y update
 #安裝常用套件
-yum -y install yum-utils telnet bind-utils net-tools wget nc nmap perl perl-core gcc bzip2 git net-snmp*
+yum -y install yum-utils telnet bind-utils net-tools wget nc nmap perl perl-core gcc bzip2 git net-snmp* libcurl-devel
 #設定啟用remi(安裝php7.2)
 yum-config-manager --enable remi-php72
 #安裝nginx、postgresql、php7.2
@@ -84,10 +88,10 @@ sed -i '/types_hash_max_size/a    fastcgi_busy_buffers_size 128k;' /etc/nginx/ng
 sed -i '/types_hash_max_size/a    fastcgi_buffers 32 32k;' /etc/nginx/nginx.conf
 sed -i '/types_hash_max_size/a    fastcgi_buffer_size 128k;' /etc/nginx/nginx.conf
 sed -i '/types_hash_max_size/a    client_max_body_size 8m;' /etc/nginx/nginx.conf
-#新增zabbix這個vhost在nginx設定目錄下
+#新增虛擬站台設定
 echo "server {" >> /etc/nginx/conf.d/zabbix.conf
 echo "    listen       80;" >> /etc/nginx/conf.d/zabbix.conf
-echo "    server_name  _;" >> /etc/nginx/conf.d/zabbix.conf
+echo "    server_name  $localip;" >> /etc/nginx/conf.d/zabbix.conf
 echo "    index index.html index.php;" >> /etc/nginx/conf.d/zabbix.conf
 echo "    root /usr/share/zabbix;" >> /etc/nginx/conf.d/zabbix.conf
 echo ""  >> /etc/nginx/conf.d/zabbix.conf
@@ -144,8 +148,9 @@ chown nginx:nginx -R /usr/share/zabbix
 chown nginx /var/log/php-fpm
 chown root:nginx /var/lib/php/session/
 #修改zabbix server 設定
-sed -i '125aDBPassword="密碼"' /etc/zabbix/zabbix_server.conf
-sed -i '339aStartSNMPTrapper=1' /etc/zabbix/zabbix_server.conf
+sed -i '/# DBHost=localhost/aDBHost=' /etc/zabbix/zabbix_server.conf
+sed -i '/DBPassword=/aDBPassword=$dbpasswd' /etc/zabbix/zabbix_server.conf
+sed -i '/# StartSNMPTrapper=0/aStartSNMPTrapper=1' /etc/zabbix/zabbix_server.conf
 #啟動zabbix server
 systemctl start zabbix-server
 #設定開機啟動zabbix-server
@@ -167,6 +172,9 @@ sed -i '29anginx soft nofile 10240' /etc/security/limits.conf
 sed -i '29apostgres hard nofile 10240' /etc/security/limits.conf
 sed -i '29apostgres soft nofile 10240' /etc/security/limits.conf
 systemctl daemon-reload
+#除錯
+sed -i '/$last = strtolower(substr($val, -1));/a$val = substr($val,0,-1);' /usr/share/zabbix/include/func.inc.php
+sed -i 's/7.0/7.4/g' /usr/share/zabbix/include/classes/setup/CFrontendSetup.php
 #安裝grafana
 yum -y install grafana
 #設定grafana
