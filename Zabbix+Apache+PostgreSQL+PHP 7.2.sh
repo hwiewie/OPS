@@ -24,7 +24,6 @@ yum update -y
 yum -y install telnet bind-utils net-tools wget nc python-pip perl gcc make
 mkdir /mnt/cdrom
 mount /dev/cdrom /mnt/cdrom
-tar xzvf /mnt/cdrom/VMwareTools-10.1.7-5541682.tar.gz.gz -C /tmp/
 tar xzvf /mnt/cdrom/VMwareTools-10.1.7-5541682.tar.gz -C /tmp/
 cd /tmp/vmware-tools-distrib/
 ./vmware-install.pl
