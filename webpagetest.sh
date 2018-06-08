@@ -196,8 +196,6 @@ function getinfo(){
   #echo $valu
   for item in $valu; do
     exctime=`date '+%Y-%m-%d %H:%M:%S'`
-    #ip=$(nslookup "$item" | awk '/^Address: / { print $2 }')
-    #curl --connect-timeout 5 -m 10 -w '{"response_code": "%{response_code}","header_size": %{size_header},"request_size": %{size_request},"download_size": %{size_download},"upload_size": %{size_upload},"download_speed": %{speed_download},"upload_speed": %{speed_upload},"num_connects": %{num_connects},"num_redirects": %{num_redirects},"remote_ip": "%{remote_ip}","time_namelookup": %{time_namelookup},"time_appconnect": %{time_appconnect},"time_connect": %{time_connect},"time_redirect": %{time_redirect},"time_pretransfer": %{time_pretransfer},"time_starttransfer": %{time_starttransfer},"time_total": %{time_total}' -o /dev/null -s "$item" >> /var/log/httptest.log
     httptest $item
     echo ',"time": "'$exctime'","url": "'$item'"}' >> /var/log/httptest.log
   done
