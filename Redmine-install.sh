@@ -72,9 +72,9 @@ echo "AllowOverride none" >> /etc/httpd/conf.d/redmine.conf
 echo "Require all granted" >> /etc/httpd/conf.d/redmine.conf
 echo "</Directory>" >> /etc/httpd/conf.d/redmine.conf
 #設定 redmine httpd virtual host
-echo "LoadModule passenger_module /usr/local/rvm/gems/ruby-2.4.1/gems/passenger-5.3.1/buildout/apache2/mod_passenger.so" > /etc/httpd/conf.d/passenger.conf
+echo "LoadModule passenger_module /usr/local/rvm/gems/ruby-2.4.1/gems/passenger-5.3.3/buildout/apache2/mod_passenger.so" > /etc/httpd/conf.d/passenger.conf
 echo "<IfModule mod_passenger.c>" >> /etc/httpd/conf.d/passenger.conf
-echo "   PassengerRoot /usr/local/rvm/gems/ruby-2.4.1/gems/passenger-5.3.1" >> /etc/httpd/conf.d/passenger.conf
+echo "   PassengerRoot /usr/local/rvm/gems/ruby-2.4.1/gems/passenger-5.3.3" >> /etc/httpd/conf.d/passenger.conf
 echo "   PassengerDefaultRuby /usr/local/rvm/gems/ruby-2.4.1/wrappers/ruby" >> /etc/httpd/conf.d/passenger.conf
 echo "</IfModule>" >> /etc/httpd/conf.d/passenger.conf
 #啟動apache
@@ -109,9 +109,9 @@ gem install passenger --no-document
 passenger-install-apache2-module
 
 #安裝redmine
-wget http://www.redmine.org/releases/redmine-3.4.5.tar.gz
-tar -zxvf redmine-3.4.5.tar.gz
-mv redmine-3.4.5 /var/www/html/redmine
+wget http://www.redmine.org/releases/redmine-3.4.6.tar.gz
+tar -zxvf redmine-3.4.6.tar.gz
+mv redmine-3.4.6 /var/www/html/redmine
 chown -R apache:apache /var/www/html/redmine
 #設定Mariadb
 echo "production:" >> /var/www/html/redmine/config/database.yml
