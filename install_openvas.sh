@@ -8,6 +8,6 @@ wget -q -O - https://www.atomicorp.com/installers/atomic | sh
 yum -y install openvas
 sed -i '/^#.*unixsocket/s/^# //' /etc/redis.conf
 systemctl enable redis && systemctl restart redis
-
+openvas-setup
 
 #https://www.linuxincluded.com/installing-openvas-on-centos-7/
