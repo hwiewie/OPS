@@ -11,3 +11,4 @@ systemctl enable redis && systemctl restart redis
 openvas-setup
 
 #https://www.linuxincluded.com/installing-openvas-on-centos-7/
+#https://cloud.tencent.com/info/39a2d8ef1b2398df7982628b1e566bc8.html
