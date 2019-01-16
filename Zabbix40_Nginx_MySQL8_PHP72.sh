@@ -120,6 +120,7 @@ rootpasswd=`grep 'A temporary password is generated for root@localhost' /var/log
 #初始化資料庫
 mysql_secure_installation
 #修改MySQL設定
+sed -i '/#default-authentication-plugin=mysql_native_password/s/#//' /etc/my.cnf
 create database zabbix character set utf8 collate utf8_bin;
 set global validate_password.policy=0;
 create user zabbix identified by '12345678';
