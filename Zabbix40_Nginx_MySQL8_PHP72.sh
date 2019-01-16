@@ -116,16 +116,16 @@ systemctl enable php-fpm
 #寫入測試網頁(用httt://localhost/zabbix/info.php)
 echo '<?php phpinfo(); ?>' > /usr/share/zabbix/info.php
 #初始化資料庫
-/usr/pgsql-10/bin/postgresql-10-setup initdb
-#修改postgresql設定
-sed -i '/^host.*all.*all.*127.*ident/s/ident/md5/' /var/lib/pgsql/10/data/pg_hba.conf
-#啟動postgresql
-systemctl start postgresql-10
-systemctl enable postgresql-10
+
+#修改MySQL設定
+
+#啟動MySQL
+systemctl start mysqld
+systemctl enable mysqld
 #設定防火牆
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
-firewall-cmd --permanent --add-service=postgresql
+firewall-cmd --permanent --add-service=mysql
 firewall-cmd --permanent --add-port=3000/tcp
 firewall-cmd --permanent --add-port=10051/tcp
 firewall-cmd --reload
