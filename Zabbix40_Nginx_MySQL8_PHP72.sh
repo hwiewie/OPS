@@ -115,8 +115,10 @@ systemctl restart php-fpm
 systemctl enable php-fpm
 #寫入測試網頁(用httt://localhost/zabbix/info.php)
 echo '<?php phpinfo(); ?>' > /usr/share/zabbix/info.php
+#取得MySQL root password
+rootpasswd=`grep 'A temporary password is generated for root@localhost' /var/log/mysqld.log |tail -1 | awk -F ': ' '{print $2}'`
 #初始化資料庫
-
+mysql_secure_installation
 #修改MySQL設定
 
 #啟動MySQL
@@ -156,6 +158,10 @@ sed -i 's/#disk \/ 10000/disk \/ 10000/g' /etc/snmp/snmpd.conf
 sed -i 's/#load 12 14 14/load 12 14 14/g' /etc/snmp/snmpd.conf
 systemctl start snmpd
 systemctl enable snmpd
+#安裝zabbix in telegram
+curl -o /usr/lib/zabbix/alertscripts/zbxtg.py https://raw.githubusercontent.com/ableev/Zabbix-in-Telegram/master/zbxtg.py
+chmod +x /usr/lib/zabbix/alertscripts/zbxtg.py
+curl -o /usr/lib/zabbix/alertscripts/zbxtg_settings.py https://raw.githubusercontent.com/ableev/Zabbix-in-Telegram/master/zbxtg_settings.example.py
 #校能調校
 sed -i '29azabbix hard nofile 10240' /etc/security/limits.conf
 sed -i '29azabbix soft nofile 10240' /etc/security/limits.conf
