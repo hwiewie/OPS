@@ -126,8 +126,13 @@ systemctl enable mysqld
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
 firewall-cmd --permanent --add-service=mysql
-firewall-cmd --permanent --add-port=3000/tcp
-firewall-cmd --permanent --add-port=10051/tcp
+firewall-cmd --permanent --new-service=zabbix
+firewall-cmd --permanent --service=graylog --set-short="Zabbix Service Ports"
+firewall-cmd --permanent --service=graylog --set-description="Zabbix service firewalld port exceptions"
+firewall-cmd --permanent --service=graylog --add-port=3000/tcp
+firewall-cmd --permanent --service=graylog --add-port=10050/tcp
+firewall-cmd --permanent --service=graylog --add-port=10051/tcp
+firewall-cmd --permanent --add-service=zabbix
 firewall-cmd --reload
 #設定web目錄執行權限
 chown nginx:nginx /etc/zabbix/web/
