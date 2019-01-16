@@ -120,7 +120,12 @@ rootpasswd=`grep 'A temporary password is generated for root@localhost' /var/log
 #初始化資料庫
 mysql_secure_installation
 #修改MySQL設定
-
+create database zabbix character set utf8 collate utf8_bin;
+set global validate_password.policy=0;
+create user zabbix identified by '12345678';
+grant all privileges on *.* to 'zabbix'@'%';
+flush privileges;
+quit;
 #啟動MySQL
 systemctl start mysqld
 systemctl enable mysqld
