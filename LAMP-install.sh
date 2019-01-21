@@ -4,6 +4,8 @@ release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{p
 #關閉SElinux
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+#設定時區
+timedatectl set-timezone Asia/Taipei
 #設定網路校時
 sed -i 's/server 0.centos.pool.ntp.org iburst/server tock.stdtime.gov.tw iburst/g' /etc/chrony.conf
 sed -i 's/server 1.centos.pool.ntp.org iburst/server watch.stdtime.gov.tw iburst/g' /etc/chrony.conf
