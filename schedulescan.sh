@@ -7,7 +7,7 @@ rm -rf discovery.gnmap
 nmap -sn -T4 -iL all.txt -oG discovery.gnmap
 rm -rf livehost.txt
 grep "Status: Up" discovery.gnmap | cut -f 2 -d" " > livehost.txt
-#rm -rf result.xml
+rm -rf result.xml
 #nmap -p- -T4 -iL livehost.txt -oX result.xml
 #rm report.csv
 #python nmap-parser-xml-to-csv.py result.xml -s , -o report.csv
