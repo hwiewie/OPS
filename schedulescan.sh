@@ -14,7 +14,7 @@ grep "Status: Up" discovery.gnmap | cut -f 2 -d" " > livehost.txt
 #python nmap-parser-xml-to-csv.py result.xml -s , -o report.csv
 #nmap -sS -T4 -Pn -oG TopTCP -iL livehost.txt
 #nmap -sU -T4 -Pn -oN TopUDP -iL livehost.txt
-nmap -sS -T4 -Pn -p 0-65535 -iL livehost.txt -oX result.xml
+sudo nmap -sS -T4 -Pn -p- -iL livehost.txt -oX result.xml
 #grep “open” FullTCP|cut -f 1 -d ‘ ‘ | sort -nu | cut -f 1 -d ‘/’ |xargs | sed ‘s/ /,/g’|awk ‘{print “T:”$0}’
-rm report.csv
+rm -rf report.csv
 python nmap-parser-xml-to-csv.py result.xml -s , -o report.csv
