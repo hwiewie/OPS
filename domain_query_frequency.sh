@@ -1,6 +1,6 @@
 #!/bin/bash
 #取得目前DNS設定
-dnsserver = `cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
+dnsserver = `cat /etc/resolv.conf | awk '/^nameserver / {print $2}'`
 if [ $dnsserver = "127.0.0.1" ]; then
    echo "有開DNS"
 else
