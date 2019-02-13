@@ -88,7 +88,7 @@ def csvSearch():
             for row in reader: ##就readCSV裡的所有資料(以列為單位)
                 ipa = row[0] ##請輸入IP所在欄位(從0開始)##
                 if not searcher.isip(ipa):
-                	print "不合法IP：" ,ipa
+                    print "不合法IP：" ,ipa
                     continue
 
                 data = searcher.memorySearch(ipa)
