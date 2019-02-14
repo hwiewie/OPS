@@ -4,6 +4,7 @@
 # unicodecsv , codecs , geoip2 
 # GeoIP資料庫
 # wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
+# 請將 GeoLite2-City.mmdb 解出來放在程式所在目錄內
 # 用法：
 # python SGeoIP2.py 要查詢的IP列表.csv
 # IP列表CSV檔案格式說明：
