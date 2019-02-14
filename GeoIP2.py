@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
+# 必要套件
 # unicodecsv , codecs , geoip2 
-#wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
+# GeoIP資料庫
+# wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
+# 用法：
+# python SGeoIP2.py 要查詢的IP列表.csv
+# IP列表CSV檔案格式說明：
+# 第一欄位名稱為IP，下面列出所有要查詢的IP列表
+# 程式會將結果另存為 output.csv
 import struct, sys, os, time
 import unicodecsv as csv
 import codecs
