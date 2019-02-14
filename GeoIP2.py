@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
+# unicodecsv , codecs , geoip2 
+#wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
 import struct, sys, os, time
 import unicodecsv as csv
 import codecs
