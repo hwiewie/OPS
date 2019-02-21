@@ -43,7 +43,9 @@ yum -y install yum-utils telnet bind-utils net-tools wget nc nmap perl perl-core
 #設定啟用remi(安裝php7.2)
 yum-config-manager --enable remi-php72
 #安裝nginx、MySQL8、php7.2
-yum -y install nginx mysql-community-server zabbix-server-mysql zabbix-web-mysql zabbix-agent
+yum -y install nginx mysql-community-server
+#安裝Zabbix
+yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-agent
 yum --enablerepo=remi,remi-php72 -y install php php-common php-cli php-pdo php-fpm php-bcmath php-mysqlnd php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
 #安裝grafana
 wget https://dl.grafana.com/oss/release/grafana-5.4.3-1.x86_64.rpm
