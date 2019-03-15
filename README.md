@@ -58,3 +58,7 @@ RP告警
 
 大量服務異常
 所有品牌服務告警(雲服務商網路ping lose、upstream失聯)
+
+=======
+E-Detective 網路監聽系統 
+ObserveIT 跳板機
