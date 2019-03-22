@@ -48,7 +48,7 @@ wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2F
 rpm -ivh jdk-8u202-linux-x64.rpm
 java -version
 #安裝Elasticsearch
-yum install elasticsearch
+yum install -y elasticsearch
 #修改設定
 sed -i 's/-Xmx1g/-Xmx8g/g' /etc/elasticsearch/jvm.options
 sed -i 's/#MAX_LOCKED_MEMORY=unlimited/MAX_LOCKED_MEMORY=unlimited/g' /etc/sysconfig/elasticsearch
@@ -62,11 +62,13 @@ service elasticsearch start
 #安裝插件
 #/usr/share/logstash/bin/elasticsearch-plugin install x-pack
 #安裝Logstash
-yum install logstash
+yum install -y logstash
 #設定
 sed -i -e 's|# path.logs:|path.logs: /var/log/logstash|' -e 's|# path.data:|path.data: /var/lib/logstash|' /etc/logstash/logstash.yml
 #初始化logstash
 /usr/share/logstash/bin/system-install /etc/logstash/startup.options
+#新增設定檔
+
 #修改目錄權限
 chown -R logstash:logstash /usr/share/logstash
 chown -R logstash /var/log/logstash
@@ -84,12 +86,13 @@ chkconfig --add logstash
 #安裝plugin
 #/usr/share/logstash/bin/logstash-plugin install logstash-input-syslog
 #安裝kibana
-yum install kibana
+yum install -y kibana
 #執行kibana
 service kibana start
 #加入開機啟動
 chkconfig kibana on
 #設定防火牆
+firewall-cmd --permanent --add-port=5044/tcp
 firewall-cmd --permanent --add-port=5601/tcp
 firewall-cmd --reload
 #安裝filebeat
