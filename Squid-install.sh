@@ -13,3 +13,9 @@ yum -y install vim yum-utils telnet bind-utils net-tools wget perl perl-core gcc
 yum install squid
 mkdir /usr/share/squid/ssl_cert
 cd /usr/share/squid/ssl_cert/
+
+firewall-cmd --permanent --add-service=squid
+firewall-cmd --reload
+yum install dnsmasq
+systemctl start dnsmasq
+systemctl enable dnsmasq
