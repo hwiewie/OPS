@@ -9,4 +9,7 @@ sed -i '/watch.stdtime.gov.tw/a server time.stdtime.gov.tw iburst' /etc/chrony.c
 systemctl restart chronyd
 chronyc -a makestep
 yum -y install epel-release
-yum -y install vim yum-utils telnet bind-utils net-tools wget perl perl-core gcc bzip2 git net-snmp* libcurl-devel
+yum -y install vim yum-utils telnet bind-utils net-tools wget perl perl-core gcc gcc-multilib bzip2 git net-snmp* libcurl-devel g++ gawk m4 make smbclient openssl* perl-Crypt-OpenSSL-X509 libcap-*
+yum install squid
+mkdir /usr/share/squid/ssl_cert
+cd /usr/share/squid/ssl_cert/
