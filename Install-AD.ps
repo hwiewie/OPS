@@ -1,1 +1,6 @@
-Install-WindwosFeature AD-Domain-Services
+#install AD
+Install-windowsfeature -name AD-Domain-Services -IncludeManagementTools
+#remove install AD
+Invoke-Command { Install-ADDSDomainController -DomainName contoso.com -Credential (Get-Credential) } -ComputerName ConDC3 
+#see ADDSDeployment
+Get-Command -Module ADDSDeployment
