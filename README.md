@@ -64,5 +64,14 @@ E-Detective 網路監聽系統
 ObserveIT 跳板機
 
 =======
+
 [CDN Hub](https://github.com/qiniu/cdnprovider_auth)
+
 [Informap](https://github.com/kttzd/informap)
+
+動態CDN
+動態的內容加速是做鏈路加速和安全保護.
+1.動態內容對於源站是多線的高質量網絡, 無加速效果, 反而慢一點. 這是物理限制.
+2.源站處於單地區覆蓋, 接入CDN可避免跨地區的網絡骨幹擁堵問題.
+3.如果源站只有單線, 如電信. 那麼, CDN就能對聯通和移動網絡進行加速.
+4.起到保護源站的作用, 什麼ddos, cc攻擊都能在CDN擋掉, 不會影響源站的正常服務.
