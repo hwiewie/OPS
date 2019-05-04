@@ -62,3 +62,7 @@ RP告警
 =======
 E-Detective 網路監聽系統 
 ObserveIT 跳板機
+
+=======
+[CDN Hub](https://github.com/qiniu/cdnprovider_auth)
+[Informap](https://github.com/kttzd/informap)
