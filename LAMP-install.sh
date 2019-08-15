@@ -4,6 +4,10 @@ release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{p
 #關閉SElinux
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+#關閉Swap
+sysctl vm.swappiness=0
+#修改系統清除cache的頻率
+sysctl vm.vfs_cache_pressure=500
 #設定時區
 timedatectl set-timezone Asia/Taipei
 #設定網路校時
