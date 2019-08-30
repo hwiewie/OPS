@@ -6,16 +6,16 @@ from hashlib import md5
 import json
 
 class CdnRefresh():
-	def __init__(self, urllist):
-        self.urllist = urllist
-        self.cc = {"username": "", "pass": "", #藍汛API的用戶名密碼
-                   "host": "r.chinacache.com",
-                   "path": "/content/refresh",
-                   "port": 443,
-                   "https": True,
-                   "method": "POST",
-                   "domain": ['static'] #對應的域名前綴
-                   }
+    def __init__(self, urllist):
+        self.urllist = urllist
+        self.cc = {"username: ", "pass" ,"", #藍汛API的用戶名密碼
+        "host: ","r.chinacache.com",
+        "path: ","/content/refresh",
+        "port: 443",
+        "https: True",
+        "method: POST",
+        "domain: ['static']" #對應的域名前綴
+        }
         self.cnc = {"username": "", #網宿API的用戶名密碼
                     "pass": "",
                     "host": "wscp.lxdns.com",
