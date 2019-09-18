@@ -1,6 +1,4 @@
 #!/bin/sh
-#讀取CentOS版本
-release=`cat /etc/redhat-release | awk -F "release" '{print $2}' |awk -F "." '{print $1}' |sed 's/ //g'`
 #關閉SElinux
 setenforce 0
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
@@ -21,7 +19,7 @@ chronyc -a makestep
 #新增Mariadb資源庫
 echo "[mariadb]" >> /etc/yum.repos.d/MariaDB.repo
 echo "name = MariaDB" >> /etc/yum.repos.d/MariaDB.repo
-echo "baseurl = http://yum.mariadb.org/10.2/centos7-amd64" >> /etc/yum.repos.d/MariaDB.repo
+echo "baseurl = http://yum.mariadb.org/10.3/centos7-amd64" >> /etc/yum.repos.d/MariaDB.repo
 echo "gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB" >> /etc/yum.repos.d/MariaDB.repo
 echo "gpgcheck=1" >> /etc/yum.repos.d/MariaDB.repo
 #安裝epel資源庫
@@ -33,8 +31,8 @@ yum -y install yum-utils telnet bind-utils net-tools wget nc nmap perl perl-core
 #安裝LAMP
 yum -y install httpd mariadb-server mariadb-devel MariaDB-shared
 yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-yum-config-manager --enable remi-php72
-yum --enablerepo=remi,remi-php72 -y install php php-common php-cli php-pdo php-mysql php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
+yum-config-manager --enable remi-php73
+yum --enablerepo=remi,remi-php73 -y install php php-common php-cli php-pdo php-mysql php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
 #設定mariadb
 sed -i '4along_query_time=1' /etc/my.cnf
 sed -i '4aslow-query-log-file=/var/lib/mysql/mysql-slow.log' /etc/my.cnf
