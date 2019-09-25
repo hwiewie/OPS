@@ -10,6 +10,7 @@ sed -i 's/server 3.centos.pool.ntp.org iburst/server clock.stdtime.gov.tw iburst
 sed -i '/watch.stdtime.gov.tw/a server time.stdtime.gov.tw iburst' /etc/chrony.conf
 systemctl restart chronyd
 chronyc -a makestep
+#安裝 IUS repository
 yum install https://centos7.iuscommunity.org/ius-release.rpm
 #安裝epel資源庫
 yum -y install epel-release
