@@ -54,6 +54,7 @@ yum install -y elasticsearch
 sed -i 's/-Xmx1g/-Xmx8g/g' /etc/elasticsearch/jvm.options
 sed -i 's/#cluster.name: my-application/cluster.name: T2-ELK/g' /etc/elasticsearch/elasticsearch.yml
 sed -i 's/#node.name: node-1/node.name: T2-ELK-01/g' /etc/elasticsearch/elasticsearch.yml
+sed -i 's/#network.host: 192.168.0.1/network.host: 10.0.2.15/g' /etc/elasticsearch/elasticsearch.yml
 #sed -i 's/#MAX_LOCKED_MEMORY=unlimited/MAX_LOCKED_MEMORY=unlimited/g' /etc/sysconfig/elasticsearch
 #sed -i 's/#JAVA_HOME=/JAVA_HOME=/usr/lib/jvm/g' /etc/sysconfig/elasticsearch
 #echo "LimitMEMLOCK=infinity" >> /usr/lib/systemd/system/elasticsearch.service
