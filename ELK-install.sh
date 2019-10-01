@@ -13,32 +13,32 @@ sed -i '/watch.stdtime.gov.tw/a server time.stdtime.gov.tw iburst' /etc/chrony.c
 systemctl restart chronyd
 chronyc -a makestep
 #新增elasticsearch知識庫
-echo '[elasticsearch-6.x]' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'name=Elasticsearch repository for 6.x packages' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'baseurl=https://artifacts.elastic.co/packages/6.x/yum' >> /etc/yum.repos.d/elasticsearch.repo
+echo '[elasticsearch-7.x]' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'name=Elasticsearch repository for 7.x packages' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'baseurl=https://artifacts.elastic.co/packages/7.x/yum' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'gpgcheck=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'enabled=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'autorefresh=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'type=rpm-md' >> /etc/yum.repos.d/elasticsearch.repo
 #新增kibana知識庫
-echo '[kibana-6.x]' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'name=Kibana repository for 6.x packages' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'baseurl=https://artifacts.elastic.co/packages/6.x/yum' >> /etc/yum.repos.d/elasticsearch.repo
+echo '[kibana-7.x]' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'name=Kibana repository for 7.x packages' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'baseurl=https://artifacts.elastic.co/packages/7.x/yum' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'gpgcheck=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'enabled=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'autorefresh=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'type=rpm-md' >> /etc/yum.repos.d/elasticsearch.repo
 #新增logstash知識庫
-echo '[logstash-6.x]' >> /etc/yum.repos.d/logstash.repo
-echo 'name=Elastic repository for 6.x packages' >> /etc/yum.repos.d/logstash.repo
-echo 'baseurl=https://artifacts.elastic.co/packages/6.x/yum' >> /etc/yum.repos.d/logstash.repo
-echo 'gpgcheck=1' >> /etc/yum.repos.d/logstash.repo
-echo 'gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch' >> /etc/yum.repos.d/logstash.repo
-echo 'enabled=1' >> /etc/yum.repos.d/logstash.repo
-echo 'autorefresh=1' >> /etc/yum.repos.d/logstash.repo
-echo 'type=rpm-md' >> /etc/yum.repos.d/logstash.repo
+echo '[logstash-7.x]' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'name=Elastic repository for 7.x packages' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'baseurl=https://artifacts.elastic.co/packages/7.x/yum' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'gpgcheck=1' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'enabled=1' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'autorefresh=1' >> /etc/yum.repos.d/elasticsearch.repo
+echo 'type=rpm-md' >> /etc/yum.repos.d/elasticsearch.repo
 #更新與安裝必要元件
 yum -y install epel-release
 yum -y update
