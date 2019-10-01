@@ -88,7 +88,8 @@ elif [ $release = 6 ];then
    initctl start logstash
 fi
 #加入開機啟動
-chkconfig --add logstash
+systemctl enable logstash
+#chkconfig --add logstash
 #安裝plugin
 #/usr/share/logstash/bin/logstash-plugin install logstash-input-syslog
 #安裝kibana
