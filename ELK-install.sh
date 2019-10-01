@@ -52,14 +52,16 @@ java -version
 yum install -y elasticsearch
 #修改設定
 sed -i 's/-Xmx1g/-Xmx8g/g' /etc/elasticsearch/jvm.options
-sed -i 's/#MAX_LOCKED_MEMORY=unlimited/MAX_LOCKED_MEMORY=unlimited/g' /etc/sysconfig/elasticsearch
-sed -i 's/#JAVA_HOME=/JAVA_HOME=/usr/lib/jvm/g' /etc/sysconfig/elasticsearch
-echo "LimitMEMLOCK=infinity" >> /usr/lib/systemd/system/elasticsearch.service
-systemctl daemon-reload
+#sed -i 's/#MAX_LOCKED_MEMORY=unlimited/MAX_LOCKED_MEMORY=unlimited/g' /etc/sysconfig/elasticsearch
+#sed -i 's/#JAVA_HOME=/JAVA_HOME=/usr/lib/jvm/g' /etc/sysconfig/elasticsearch
+#echo "LimitMEMLOCK=infinity" >> /usr/lib/systemd/system/elasticsearch.service
+#systemctl daemon-reload
 #加入開機啟動
-chkconfig --add elasticsearch
+#chkconfig --add elasticsearch
+systemctl enable elasticsearch
 #執行elasticsearch
-service elasticsearch start
+#service elasticsearch start
+systemctl start elasticsearch
 #安裝插件
 #/usr/share/logstash/bin/elasticsearch-plugin install x-pack
 #安裝Logstash
