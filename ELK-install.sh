@@ -122,3 +122,12 @@ systemctl start filebeat
 #加入開機啟動
 systemctl enable filebeat
 #chkconfig --add filebea
+#效能優化
+#關閉SWAP
+sed -i '/swap/s/^/#/' /etc/fstab
+swapoff -a
+#修改本地port號範圍限制
+echo "net.ipv4.ip_local_port_range = 1024 65000" >> /etc/sysctl.conf
+#修改最大追蹤TCP連線數的限制
+echo "net.netfilter.nf_conntrack_max = 10240" >> /etc/sysctl.conf
+sysctl -p
