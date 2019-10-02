@@ -95,9 +95,11 @@ systemctl enable logstash
 #安裝kibana
 yum install -y kibana
 #執行kibana
-service kibana start
+systemctl start kibana
+#service kibana start
 #加入開機啟動
-chkconfig kibana on
+systemctl enable kibana
+#chkconfig kibana on
 #設定防火牆
 firewall-cmd --permanent --add-port=5044/tcp
 firewall-cmd --permanent --add-port=5601/tcp
@@ -109,7 +111,9 @@ sed -i '/output.elasticsearch:/s/^/#/' /etc/filebeat/filebeat.yml
 sed -i '/^#output.logstash:/s/#//' /etc/filebeat/filebeat.yml
 sed -i '/^#output.logstash:/s/#//' /etc/filebeat/filebeat.yml
 sed -i 's/#hosts: ["localhost:5044"]/hosts: ["192.168.1.22:22222"]/g' /etc/filebeat/filebeat.yml
-#執行kibana
-service filebea start
+#執行filebeat
+systemctl start filebeat
+#service filebea start
 #加入開機啟動
-chkconfig --add filebea
+systemctl enable filebeat
+#chkconfig --add filebea
