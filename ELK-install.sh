@@ -61,6 +61,7 @@ sed -i '/cluster.initial_master_nodes/s/#//' /etc/elasticsearch/elasticsearch.ym
 #sed -i 's/#JAVA_HOME=/JAVA_HOME=/usr/lib/jvm/g' /etc/sysconfig/elasticsearch
 #echo "LimitMEMLOCK=infinity" >> /usr/lib/systemd/system/elasticsearch.service
 #systemctl daemon-reload
+echo 'vm.max_map_count=262144' >> /etc/sysctl.conf
 #加入開機啟動
 #chkconfig --add elasticsearch
 systemctl enable elasticsearch
