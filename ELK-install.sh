@@ -97,6 +97,8 @@ systemctl enable logstash
 #/usr/share/logstash/bin/logstash-plugin install logstash-input-syslog
 #安裝kibana
 yum install -y kibana
+#修改kibana設定
+sed -i 's/#server.host: "localhost"/server.host: 0.0.0.0/g' /etc/kibana/kibana.yml
 #執行kibana
 systemctl start kibana
 #service kibana start
