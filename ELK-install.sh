@@ -56,6 +56,7 @@ sed -i 's/#cluster.name: my-application/cluster.name: T2-ELK/g' /etc/elasticsear
 #sed -i 's/#node.name: node-1/node.name: T2-ELK-01/g' /etc/elasticsearch/elasticsearch.yml
 sed -i '/#node.name: node-1/s/#//' /etc/elasticsearch/elasticsearch.yml
 sed -i 's/#network.host: 192.168.0.1/network.host: 0.0.0.0/g' /etc/elasticsearch/elasticsearch.yml
+sed -i '/#http.port: 9200/s/#//' /etc/elasticsearch/elasticsearch.yml
 sed -i '/cluster.initial_master_nodes/s/#//' /etc/elasticsearch/elasticsearch.yml
 #sed -i 's/#MAX_LOCKED_MEMORY=unlimited/MAX_LOCKED_MEMORY=unlimited/g' /etc/sysconfig/elasticsearch
 #sed -i 's/#JAVA_HOME=/JAVA_HOME=/usr/lib/jvm/g' /etc/sysconfig/elasticsearch
@@ -106,8 +107,16 @@ systemctl start kibana
 systemctl enable kibana
 #chkconfig kibana on
 #設定防火牆
-firewall-cmd --permanent --add-port=5044/tcp
-firewall-cmd --permanent --add-port=5601/tcp
+firewall-cmd --permanent --new-service=ELK
+firewall-cmd --reloadfirewall-cmd --permanent --service=ELK --set-short="ELK Service Ports"
+firewall-cmd --permanent --service=ELK --set-description="Logstash service firewalld port exceptions"
+firewall-cmd --permanent --service=ELK --add-port=5044/tcp
+firewall-cmd --permanent --service=ELK --add-port=5601/tcp
+firewall-cmd --permanent --service=ELK --add-port=9200/tcp
+firewall-cmd --permanent --service=ELK --add-port=9300/tcp
+firewall-cmd --permanent --service=ELK --add-port=9600/tcp
+firewall-cmd --permanent --add-service=ELK
+firewall-cmd --reload
 firewall-cmd --reload
 #安裝filebeat
 yum install filebeat
@@ -115,7 +124,8 @@ yum install filebeat
 sed -i '/output.elasticsearch:/s/^/#/' /etc/filebeat/filebeat.yml
 sed -i '/^#output.logstash:/s/#//' /etc/filebeat/filebeat.yml
 sed -i '/^#output.logstash:/s/#//' /etc/filebeat/filebeat.yml
-sed -i 's/#hosts: ["localhost:5044"]/hosts: ["192.168.1.22:22222"]/g' /etc/filebeat/filebeat.yml
+sed -i '/hosts: ["localhost:5044"]/s/#//' /etc/filebeat/filebeat.yml
+#sed -i 's/#hosts: ["localhost:5044"]/hosts: ["192.168.1.22:22222"]/g' /etc/filebeat/filebeat.yml
 #執行filebeat
 systemctl start filebeat
 #service filebea start
