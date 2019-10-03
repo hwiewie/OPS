@@ -117,7 +117,6 @@ firewall-cmd --permanent --service=ELK --add-port=9300/tcp
 firewall-cmd --permanent --service=ELK --add-port=9600/tcp
 firewall-cmd --permanent --add-service=ELK
 firewall-cmd --reload
-firewall-cmd --reload
 #安裝filebeat
 yum install filebeat
 #修改設定
