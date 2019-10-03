@@ -86,11 +86,12 @@ chown logstash:logstash /var/lib/logstash
 chown -R logstash:logstash /etc/logstash
 chown -R logstash:logstash /etc/default/logstash
 #啟動logstash
-if [ $release = 7 ];then
-   systemctl start logstash
-elif [ $release = 6 ];then 
-   initctl start logstash
-fi
+#if [ $release = 7 ];then
+#   systemctl start logstash
+#elif [ $release = 6 ];then 
+#   initctl start logstash
+#fi
+systemctl start logstash
 #加入開機啟動
 systemctl enable logstash
 #chkconfig --add logstash
