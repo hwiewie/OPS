@@ -133,6 +133,13 @@ systemctl start filebeat
 systemctl enable filebeat
 #chkconfig --add filebea
 #效能優化
+#設定最大開啟檔案數量
+sed -i 'elasticsearch    soft    nofile          65536/a # End of file' /etc/security/limits.conf
+sed -i 'elasticsearch    hard    nofile          65536/a # End of file' /etc/security/limits.conf
+sed -i 'elasticsearch    soft    nproc           4096/a # End of file' /etc/security/limits.conf
+sed -i 'elasticsearch    hard    nproc           4096/a # End of file' /etc/security/limits.conf
+sed -i 'logstash         hard    nofile          16384/a # End of file' /etc/security/limits.conf
+sed -i 'logstash         soft    nofile          16384/a # End of file' /etc/security/limits.conf
 #關閉SWAP
 sed -i '/swap/s/^/#/' /etc/fstab
 swapoff -a
