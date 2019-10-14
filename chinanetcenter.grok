@@ -1,0 +1,4 @@
+CHINANETCENTER_LOG ^%{IPORHOST:clientip} %{USER:ident} %{USER:auth} \[%{HTTPDATE:timestamp}\] "(?:%{WORD:verb} %{WSURI:request}(?: HTTP/%{NUMBER:httpversion})?|%{DATA:rawrequest})" %{NUMBER:response} (?:%{NUMBER:bytes}|-) %{QS:referrer} \"%{DATA:useragent}\" %{DATA:Data1} %{DATA:Data2}$
+WSURI %{URIPROTO}://?(?:%{URIHOST})?(?:%{URIPATH}(?:%{WSPARAM})?)?
+WSPARAM \?(ip|IP)=%{IP:userip}&([cC]ode)=(?:%{DATA:customcode})&(datatime)=%{TIMESTAMP_ISO8601:clienttime}&(token)=%{TOKEN:token}
+TOKEN [A-Fa-f0-9]{32}
