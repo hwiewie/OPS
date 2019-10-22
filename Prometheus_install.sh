@@ -8,6 +8,5 @@ mkdir -pv /srv/prometheus/data
 chown -R prometheus.prometheus /srv/prometheus
 curl -OL https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
 tar -zxvf node_exporter-0.18.1.linux-amd64.tar.gz
-mv node_exporter-0.18.1.linux-amd64 /srv/node_exporter
-cp /srv/node_exporter/node_exporter /usr/local/bin/
+mv node_exporter-0.18.1.linux-amd64/node_exporter /usr/local/bin/
 node_exporter
