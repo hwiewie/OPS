@@ -49,8 +49,20 @@ yum -y install nginx mysql-community-server
 yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-nginx-conf zabbix-agent
 yum --enablerepo=remi,remi-php74 -y install php php-common php-cli php-pdo php-fpm php-bcmath php-mysqlnd php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
 #安裝grafana
-wget https://dl.grafana.com/oss/release/grafana-5.4.3-1.x86_64.rpm
-yum localinstall grafana-5.4.3-1.x86_64.rpm -y
+#wget https://dl.grafana.com/oss/release/grafana-5.4.3-1.x86_64.rpm
+#yum localinstall grafana-5.4.3-1.x86_64.rpm -y
+cat > /etc/yum.repos.d/grafana.repo << EOF
+[grafana]
+name=grafana
+baseurl=https://packages.grafana.com/oss/rpm
+repo_gpgcheck=1
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.grafana.com/gpg.key
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+EOF
+yum install -y grafana
 #修改php設定參數
 sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php.ini
 sed -i 's/max_input_time = 60/max_input_time = 300/g' /etc/php.ini
