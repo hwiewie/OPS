@@ -123,22 +123,26 @@ systemctl restart php-fpm
 systemctl enable php-fpm
 #寫入測試網頁(用httt://localhost/zabbix/info.php)
 echo '<?php phpinfo(); ?>' > /usr/share/zabbix/info.php
+#啟動MySQL
+systemctl start mysqld
+systemctl enable mysqld
 #取得MySQL root password
 rootpasswd=`grep 'A temporary password is generated for root@localhost' /var/log/mysqld.log |tail -1 | awk -F ': ' '{print $2}'`
 #初始化資料庫
 mysql_secure_installation
+###
 #修改MySQL設定
 sed -i '/#default-authentication-plugin=mysql_native_password/s/#//' /etc/my.cnf
+systemctl restart mysqld
+###
 create database zabbix character set utf8 collate utf8_bin;
 set global validate_password.policy=0;
 create user zabbix identified by '12345678';
 grant all privileges on *.* to 'zabbix'@'%';
 flush privileges;
 quit;
-#啟動MySQL
-systemctl start mysqld
-systemctl enable mysqld
-#設定防火牆
+####
+##設定防火牆
 firewall-cmd --permanent --add-service=http
 firewall-cmd --permanent --add-service=https
 firewall-cmd --permanent --add-service=mysql
