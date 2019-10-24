@@ -31,7 +31,8 @@ echo "enabled=1" >> /etc/yum.repos.d/nginx.repo
 #安裝epel資源庫
 yum -y install epel-release
 #安裝MySQL8知識庫
-yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+#yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+yum localinstall http://repo.mysql.com/yum/mysql-8.0-community/el/7/x86_64/mysql80-community-release-el7-3.noarch.rpm
 #安裝PHP7.x知識庫
 yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 #安裝Zabbix4.0資源庫
