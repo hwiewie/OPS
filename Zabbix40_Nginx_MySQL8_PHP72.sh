@@ -41,13 +41,13 @@ rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.e
 yum -y update
 #安裝常用套件
 yum -y install yum-utils telnet bind-utils net-tools wget nc nmap perl perl-core gcc bzip2 git net-snmp* libcurl-devel
-#設定啟用remi(安裝php7.2)
-yum-config-manager --enable remi-php72
-#安裝nginx、MySQL8、php7.2
+#設定啟用remi(安裝php7.4)
+yum-config-manager --enable remi-php74
+#安裝nginx、MySQL8、php7.4
 yum -y install nginx mysql-community-server
 #安裝Zabbix
-yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-agent
-yum --enablerepo=remi,remi-php72 -y install php php-common php-cli php-pdo php-fpm php-bcmath php-mysqlnd php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
+yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-nginx-conf zabbix-agent
+yum --enablerepo=remi,remi-php74 -y install php php-common php-cli php-pdo php-fpm php-bcmath php-mysqlnd php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
 #安裝grafana
 wget https://dl.grafana.com/oss/release/grafana-5.4.3-1.x86_64.rpm
 yum localinstall grafana-5.4.3-1.x86_64.rpm -y
