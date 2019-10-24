@@ -36,7 +36,7 @@ yum localinstall http://repo.mysql.com/yum/mysql-8.0-community/el/7/x86_64/mysql
 #安裝PHP7.x知識庫
 yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 #安裝Zabbix4.0資源庫
-rpm -i https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm
+rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-2.el7.noarch.rpm
 #更新系統
 yum -y update
 #安裝常用套件
