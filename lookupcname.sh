@@ -2,7 +2,8 @@
 function diglookup()
 {
 	value1="${1}"
-	return `dig $value1 cname | grep '^[^;]CNAME'`
+	result=`dig $value1 cname | grep '^[^;].*CNAME' | awk '{print $5}'`
+	echo "$value1,$result"
 }
 
 function getentlookup()
@@ -16,7 +17,7 @@ if [[ -n $domainfile ]];then
 	while read line
 	do
 		result=$(diglookup $line)
-		echo $result
+		#echo $result
 	done
 else
 	echo "no"
