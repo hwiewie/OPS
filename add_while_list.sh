@@ -1,6 +1,7 @@
 filename=`date +%Y%m%d`
 mv today.txt old.txt
 mv total.txt today.txt
+#sed 's/$/&\/32/g' new.txt > news.txt
 #cat news.txt today.txt today.txt | sort | uniq -u
 cat today.txt news.txt | sort | uniq > total.txt
 cat total.txt | ./cidr.py > result.txt
