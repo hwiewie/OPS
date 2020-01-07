@@ -4,6 +4,7 @@
 #yum-config-manager --enable docker-ce-nightly
 #yum install docker-ce docker-ce-cli containerd.io
 #yum install /path/to/package.rpm
+#rpm -vhU https://nmap.org/dist/nmap-7.80-1.x86_64.rpm
 #systemctl start docker
 #firewall-cmd --permanent --add-service=https
 #firewall-cmd --permanent --add-service=http
