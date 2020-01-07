@@ -5,6 +5,9 @@
 #yum install docker-ce docker-ce-cli containerd.io
 #yum install /path/to/package.rpm
 #systemctl start docker
+#firewall-cmd --permanent --add-service=https
+#firewall-cmd --permanent --add-service=http
+#firewall-cmd --reload
 docker volume create openvas
 docker run -d -p 443:443 -p 9390:9390 -v openvas:/var/lib/openvas/mgr -e OV_UPDATE=yes --name openvas atomicorp/openvas
 #docker exec -it openvas bash
