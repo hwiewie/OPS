@@ -1,11 +1,12 @@
-#install docker
+#install docker step
 #yum install -y yum-utils device-mapper-persistent-data lvm2
 #yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 #yum-config-manager --enable docker-ce-nightly
-#yum install docker-ce docker-ce-cli containerd.io
-#yum install /path/to/package.rpm
+#yum install -y docker-ce docker-ce-cli containerd.io
+#yum install -y /path/to/package.rpm
 #rpm -vhU https://nmap.org/dist/nmap-7.80-1.x86_64.rpm
 #systemctl start docker
+#systemctl enable docker
 #firewall-cmd --permanent --add-service=https
 #firewall-cmd --permanent --add-service=http
 #firewall-cmd --reload
