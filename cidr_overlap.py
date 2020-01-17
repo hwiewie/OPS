@@ -3,23 +3,16 @@
 import sys
 from netaddr import *
 
-# Read from stdin
-data = sys.stdin.readlines()
+f = open(r'today.txt').readlines()
+iplists = f.readlines()
+f.close()
+f = open(r'news.txt').readlines()
+newsip = f.readlines()
+f.close()
+rows = len(iplist)
 
-if len(data) == 1:
-    # Input from echo
-    data = data[0].split()
+N_ip_address = map(IPNetwork,newsip)
+O_ip_address = map(IPNetwork,iplists)
 
-# Create an IPSet of the CIDR blocks
-# IPSet automatically runs cidr_merge
-nets = IPSet(data)
-
-# Output the superset of CIDR blocks
-#for cidr in nets.iter_cidrs():
-#    print cidr
-
-def is_overlap(old, new):
-    old_net = netaddr.IPNetwork(old)
-    new_net = netaddr.IPNetwork(new)
-    return old_net in new_net or new_net in old_net
-    
+if any(x in y for x in N_ip_address for y in O_ip_address):
+    print(x)
