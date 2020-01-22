@@ -1,0 +1,1501 @@
+[
+  {
+    "_id": "28e81190-8113-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "LTM_(201-300)ms",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":8},\"id\":\"0de0d470-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"f94dcd10-80f1-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[23.241346102386135,24.082031250000004],\"mapZoom\":2},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"2b0c2d10-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"78173aa0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"8491cf20-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"8ef80290-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"99bd45f0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"a45007a0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"b2413690-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":23},\"id\":\"0cd8f1a0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"11\",\"w\":16,\"x\":16,\"y\":23},\"id\":\"5e5fea60-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":23},\"id\":\"8937a0c0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"13\",\"w\":8,\"x\":32,\"y\":19},\"id\":\"125f7670-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":8,\"x\":16,\"y\":19},\"id\":\"07255130-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"15\",\"w\":8,\"x\":24,\"y\":19},\"id\":\"0c775110-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"16\",\"w\":8,\"x\":8,\"y\":19},\"id\":\"0127f620-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"17\",\"w\":8,\"x\":0,\"y\":19},\"id\":\"83339dc0-0feb-11e9-b113-4fabd9742420\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"18\",\"w\":8,\"x\":40,\"y\":19},\"id\":\"1cd22d00-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"19\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"604fffd0-d2d6-11e8-9c4f-2149b4175720\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":48,\"x\":0,\"y\":84},\"id\":\"b3c34380-9662-11e8-8daf-13800ce2f62d\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":11,\"i\":\"21\",\"w\":48,\"x\":0,\"y\":49},\"id\":\"e4872c60-810e-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":48,\"x\":0,\"y\":60},\"id\":\"489afc40-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":11,\"i\":\"23\",\"w\":24,\"x\":24,\"y\":73},\"id\":\"e59d61e0-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"206\":\"#3F6833\"}}},\"gridData\":{\"h\":11,\"i\":\"24\",\"w\":24,\"x\":0,\"y\":73},\"id\":\"a95376b0-8110-11e9-be13-f168446c54bb\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"201 to 300\",\"params\":{\"gte\":201,\"lt\":300}},\"range\":{\"response_time\":{\"gte\":201,\"lt\":300}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5802c8d0-8113-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "LTM_(301-400)ms",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":8},\"id\":\"0de0d470-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"f94dcd10-80f1-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[23.241346102386135,24.082031250000004],\"mapZoom\":2},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"2b0c2d10-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"78173aa0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"8491cf20-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"8ef80290-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"99bd45f0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"a45007a0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"b2413690-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":23},\"id\":\"0cd8f1a0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"11\",\"w\":16,\"x\":16,\"y\":23},\"id\":\"5e5fea60-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":23},\"id\":\"8937a0c0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"13\",\"w\":8,\"x\":32,\"y\":19},\"id\":\"125f7670-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":8,\"x\":16,\"y\":19},\"id\":\"07255130-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"15\",\"w\":8,\"x\":24,\"y\":19},\"id\":\"0c775110-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"16\",\"w\":8,\"x\":8,\"y\":19},\"id\":\"0127f620-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"17\",\"w\":8,\"x\":0,\"y\":19},\"id\":\"83339dc0-0feb-11e9-b113-4fabd9742420\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"18\",\"w\":8,\"x\":40,\"y\":19},\"id\":\"1cd22d00-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"19\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"604fffd0-d2d6-11e8-9c4f-2149b4175720\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":48,\"x\":0,\"y\":84},\"id\":\"b3c34380-9662-11e8-8daf-13800ce2f62d\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":11,\"i\":\"21\",\"w\":48,\"x\":0,\"y\":49},\"id\":\"e4872c60-810e-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":48,\"x\":0,\"y\":60},\"id\":\"489afc40-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":11,\"i\":\"23\",\"w\":24,\"x\":24,\"y\":73},\"id\":\"e59d61e0-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"206\":\"#3F6833\"}}},\"gridData\":{\"h\":11,\"i\":\"24\",\"w\":24,\"x\":0,\"y\":73},\"id\":\"a95376b0-8110-11e9-be13-f168446c54bb\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"key\":\"response_time\",\"negate\":false,\"params\":{\"gte\":301,\"lt\":400},\"type\":\"range\",\"value\":\"301 to 400\"},\"range\":{\"response_time\":{\"gte\":301,\"lt\":400}}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a133a970-8113-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "LTM_(401-500)ms",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":8},\"id\":\"0de0d470-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"f94dcd10-80f1-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[23.241346102386135,24.082031250000004],\"mapZoom\":2},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"2b0c2d10-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"78173aa0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"8491cf20-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"8ef80290-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"99bd45f0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"a45007a0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"b2413690-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":23},\"id\":\"0cd8f1a0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"11\",\"w\":16,\"x\":16,\"y\":23},\"id\":\"5e5fea60-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":23},\"id\":\"8937a0c0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"13\",\"w\":8,\"x\":32,\"y\":19},\"id\":\"125f7670-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":8,\"x\":16,\"y\":19},\"id\":\"07255130-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"15\",\"w\":8,\"x\":24,\"y\":19},\"id\":\"0c775110-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"16\",\"w\":8,\"x\":8,\"y\":19},\"id\":\"0127f620-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"17\",\"w\":8,\"x\":0,\"y\":19},\"id\":\"83339dc0-0feb-11e9-b113-4fabd9742420\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"18\",\"w\":8,\"x\":40,\"y\":19},\"id\":\"1cd22d00-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"19\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"604fffd0-d2d6-11e8-9c4f-2149b4175720\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":48,\"x\":0,\"y\":84},\"id\":\"b3c34380-9662-11e8-8daf-13800ce2f62d\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":11,\"i\":\"21\",\"w\":48,\"x\":0,\"y\":49},\"id\":\"e4872c60-810e-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":48,\"x\":0,\"y\":60},\"id\":\"489afc40-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":11,\"i\":\"23\",\"w\":24,\"x\":24,\"y\":73},\"id\":\"e59d61e0-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"206\":\"#3F6833\"}}},\"gridData\":{\"h\":11,\"i\":\"24\",\"w\":24,\"x\":0,\"y\":73},\"id\":\"a95376b0-8110-11e9-be13-f168446c54bb\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"401 to 500\",\"params\":{\"gte\":401,\"lt\":500}},\"range\":{\"response_time\":{\"gte\":401,\"lt\":500}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "9d298850-8112-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "LTM_(0-100)ms",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":8},\"id\":\"0de0d470-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"f94dcd10-80f1-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[23.241346102386135,24.082031250000004],\"mapZoom\":2},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"2b0c2d10-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"78173aa0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"8491cf20-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"8ef80290-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"99bd45f0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"a45007a0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"b2413690-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":23},\"id\":\"0cd8f1a0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"11\",\"w\":16,\"x\":16,\"y\":23},\"id\":\"5e5fea60-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":23},\"id\":\"8937a0c0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"13\",\"w\":8,\"x\":32,\"y\":19},\"id\":\"125f7670-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":8,\"x\":16,\"y\":19},\"id\":\"07255130-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"15\",\"w\":8,\"x\":24,\"y\":19},\"id\":\"0c775110-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"16\",\"w\":8,\"x\":8,\"y\":19},\"id\":\"0127f620-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"17\",\"w\":8,\"x\":0,\"y\":19},\"id\":\"83339dc0-0feb-11e9-b113-4fabd9742420\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"18\",\"w\":8,\"x\":40,\"y\":19},\"id\":\"1cd22d00-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"19\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"604fffd0-d2d6-11e8-9c4f-2149b4175720\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":48,\"x\":0,\"y\":84},\"id\":\"b3c34380-9662-11e8-8daf-13800ce2f62d\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":11,\"i\":\"21\",\"w\":48,\"x\":0,\"y\":49},\"id\":\"e4872c60-810e-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":48,\"x\":0,\"y\":60},\"id\":\"489afc40-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":11,\"i\":\"23\",\"w\":24,\"x\":24,\"y\":73},\"id\":\"e59d61e0-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"206\":\"#3F6833\"}}},\"gridData\":{\"h\":11,\"i\":\"24\",\"w\":24,\"x\":0,\"y\":73},\"id\":\"a95376b0-8110-11e9-be13-f168446c54bb\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"0 to 100\",\"params\":{\"gte\":0,\"lt\":100}},\"range\":{\"response_time\":{\"gte\":0,\"lt\":100}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d8c0da70-8113-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "LTM_(500+)ms",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":8},\"id\":\"0de0d470-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"f94dcd10-80f1-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[23.241346102386135,24.082031250000004],\"mapZoom\":2},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"2b0c2d10-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"78173aa0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"8491cf20-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"8ef80290-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"99bd45f0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"a45007a0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"b2413690-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":23},\"id\":\"0cd8f1a0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"11\",\"w\":16,\"x\":16,\"y\":23},\"id\":\"5e5fea60-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":23},\"id\":\"8937a0c0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"13\",\"w\":8,\"x\":32,\"y\":19},\"id\":\"125f7670-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":8,\"x\":16,\"y\":19},\"id\":\"07255130-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"15\",\"w\":8,\"x\":24,\"y\":19},\"id\":\"0c775110-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"16\",\"w\":8,\"x\":8,\"y\":19},\"id\":\"0127f620-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"17\",\"w\":8,\"x\":0,\"y\":19},\"id\":\"83339dc0-0feb-11e9-b113-4fabd9742420\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"18\",\"w\":8,\"x\":40,\"y\":19},\"id\":\"1cd22d00-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"19\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"604fffd0-d2d6-11e8-9c4f-2149b4175720\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":48,\"x\":0,\"y\":84},\"id\":\"b3c34380-9662-11e8-8daf-13800ce2f62d\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":11,\"i\":\"21\",\"w\":48,\"x\":0,\"y\":49},\"id\":\"e4872c60-810e-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":48,\"x\":0,\"y\":60},\"id\":\"489afc40-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":11,\"i\":\"23\",\"w\":24,\"x\":24,\"y\":73},\"id\":\"e59d61e0-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"206\":\"#3F6833\"}}},\"gridData\":{\"h\":11,\"i\":\"24\",\"w\":24,\"x\":0,\"y\":73},\"id\":\"a95376b0-8110-11e9-be13-f168446c54bb\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"0 to 500\",\"params\":{\"gte\":0,\"lt\":500}},\"range\":{\"response_time\":{\"gte\":0,\"lt\":500}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ed3b4630-8112-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "LTM_(101-200)ms",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":8},\"id\":\"0de0d470-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"f94dcd10-80f1-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[23.241346102386135,24.082031250000004],\"mapZoom\":2},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"2b0c2d10-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"78173aa0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"8491cf20-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"8ef80290-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"99bd45f0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"a45007a0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"b2413690-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":23},\"id\":\"0cd8f1a0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"11\",\"w\":16,\"x\":16,\"y\":23},\"id\":\"5e5fea60-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":23},\"id\":\"8937a0c0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"13\",\"w\":8,\"x\":32,\"y\":19},\"id\":\"125f7670-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":8,\"x\":16,\"y\":19},\"id\":\"07255130-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"15\",\"w\":8,\"x\":24,\"y\":19},\"id\":\"0c775110-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"16\",\"w\":8,\"x\":8,\"y\":19},\"id\":\"0127f620-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"17\",\"w\":8,\"x\":0,\"y\":19},\"id\":\"83339dc0-0feb-11e9-b113-4fabd9742420\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"18\",\"w\":8,\"x\":40,\"y\":19},\"id\":\"1cd22d00-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"19\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"604fffd0-d2d6-11e8-9c4f-2149b4175720\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":48,\"x\":0,\"y\":84},\"id\":\"b3c34380-9662-11e8-8daf-13800ce2f62d\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":11,\"i\":\"21\",\"w\":48,\"x\":0,\"y\":49},\"id\":\"e4872c60-810e-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":48,\"x\":0,\"y\":60},\"id\":\"489afc40-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":11,\"i\":\"23\",\"w\":24,\"x\":24,\"y\":73},\"id\":\"e59d61e0-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"206\":\"#3F6833\"}}},\"gridData\":{\"h\":11,\"i\":\"24\",\"w\":24,\"x\":0,\"y\":73},\"id\":\"a95376b0-8110-11e9-be13-f168446c54bb\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"101 to 200\",\"params\":{\"gte\":101,\"lt\":200}},\"range\":{\"response_time\":{\"gte\":101,\"lt\":200}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d65d7390-8156-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_虛擬主機選單",
+      "visState": "{\"title\":\"ABL_虛擬主機選單\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1559054509020\",\"indexPattern\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"fieldName\":\"virtual.keyword\",\"parent\":\"\",\"label\":\"ABL_虛擬主機選擇\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":false,\"dynamicOptions\":true,\"size\":5,\"order\":\"desc\"}}],\"updateFiltersOnChange\":true,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "874342a0-8136-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_虛擬主機選單",
+      "visState": "{\"title\":\"BOT_虛擬主機選單\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1559040619452\",\"indexPattern\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"fieldName\":\"virtual.keyword\",\"parent\":\"\",\"label\":\"BOT_虛擬主機選擇\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":false,\"dynamicOptions\":false,\"size\":5,\"order\":\"desc\"}}],\"updateFiltersOnChange\":true,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "604fffd0-d2d6-11e8-9c4f-2149b4175720",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務成功次數比例曲線圖",
+      "visState": "{\"title\":\"LTM_服務成功次數比例曲線圖\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=logstash-ltm-index-*, q=status:200).bars(stack=ture).legend(top,top).label(成功次數),.es(index=logstash-ltm-index-*).label(總筆數).title(LTM),.es(index=logstash-ltm-index-*, metric=avg:response_time).label(平均反應時間)\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "19b3d950-8129-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_伺服器被攻擊次數時序圖",
+      "visState": "{\"title\":\"AWAF_伺服器被攻擊次數時序圖\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"stacked\",\"terms_field\":\"virtual.keyword\",\"split_color_mode\":\"rainbow\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"logstash-asm-index-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "489afc40-810f-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_網站存取次數時序圖",
+      "visState": "{\"title\":\"LTM_網站存取次數時序圖\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"stacked\",\"terms_field\":\"hostname.keyword\",\"split_color_mode\":\"rainbow\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"logstash-ltm-index-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f94dcd10-80f1-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_虛擬主機選單",
+      "visState": "{\"title\":\"LTM_虛擬主機選單\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1559011187080\",\"indexPattern\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"fieldName\":\"virtual.keyword\",\"parent\":\"\",\"label\":\"虛擬主機選擇\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":false,\"dynamicOptions\":false,\"size\":5,\"order\":\"desc\"}}],\"updateFiltersOnChange\":true,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c5720650-8128-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "AWAF_Overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"89d954a0-8127-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":7,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":6},\"id\":\"ab5039a0-8127-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"da5f7f30-8127-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"4\",\"w\":16,\"x\":0,\"y\":13},\"id\":\"10322ef0-8128-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"5\",\"w\":16,\"x\":16,\"y\":13},\"id\":\"2e0efd40-8128-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"6\",\"w\":16,\"x\":32,\"y\":13},\"id\":\"4bbe04d0-8128-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"7\",\"w\":48,\"x\":0,\"y\":26},\"id\":\"19b3d950-8129-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"8\",\"w\":24,\"x\":0,\"y\":52},\"id\":\"119d1750-812d-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":21,\"i\":\"9\",\"w\":48,\"x\":0,\"y\":64},\"id\":\"678c9a50-812d-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"10\",\"w\":24,\"x\":24,\"y\":52},\"id\":\"e7c95180-812e-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"11\",\"w\":48,\"x\":0,\"y\":39},\"id\":\"512f04c0-8130-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8b1a36b0-80f3-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "LTM_Overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":6},\"id\":\"0de0d470-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"2\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"f94dcd10-80f1-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[23.241346102386135,24.082031250000004],\"mapZoom\":2},\"gridData\":{\"h\":14,\"i\":\"3\",\"w\":32,\"x\":16,\"y\":0},\"id\":\"2b0c2d10-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"78173aa0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"8491cf20-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"8ef80290-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"99bd45f0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"a45007a0-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"9\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"b2413690-80f2-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":23},\"id\":\"0cd8f1a0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"11\",\"w\":16,\"x\":16,\"y\":23},\"id\":\"5e5fea60-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":23},\"id\":\"8937a0c0-8103-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"13\",\"w\":8,\"x\":32,\"y\":19},\"id\":\"125f7670-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":8,\"x\":16,\"y\":19},\"id\":\"07255130-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"15\",\"w\":8,\"x\":24,\"y\":19},\"id\":\"0c775110-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"16\",\"w\":8,\"x\":8,\"y\":19},\"id\":\"0127f620-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"17\",\"w\":8,\"x\":0,\"y\":19},\"id\":\"83339dc0-0feb-11e9-b113-4fabd9742420\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":4,\"i\":\"18\",\"w\":8,\"x\":40,\"y\":19},\"id\":\"1cd22d00-0fee-11e9-b113-4fabd9742420\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"19\",\"w\":48,\"x\":0,\"y\":37},\"id\":\"604fffd0-d2d6-11e8-9c4f-2149b4175720\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":48,\"x\":0,\"y\":84},\"id\":\"b3c34380-9662-11e8-8daf-13800ce2f62d\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":11,\"i\":\"21\",\"w\":48,\"x\":0,\"y\":49},\"id\":\"e4872c60-810e-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":48,\"x\":0,\"y\":60},\"id\":\"489afc40-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":11,\"i\":\"23\",\"w\":24,\"x\":24,\"y\":73},\"id\":\"e59d61e0-810f-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"206\":\"#3F6833\"}}},\"gridData\":{\"h\":11,\"i\":\"24\",\"w\":24,\"x\":0,\"y\":73},\"id\":\"a95376b0-8110-11e9-be13-f168446c54bb\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0c5177b0-813b-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BOT_Overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"1\",\"w\":15,\"x\":0,\"y\":0},\"id\":\"874342a0-8136-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"2\",\"w\":15,\"x\":0,\"y\":6},\"id\":\"a6d22dc0-8136-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"3\",\"w\":8,\"x\":24,\"y\":14},\"id\":\"d65611a0-8137-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"4\",\"w\":8,\"x\":40,\"y\":14},\"id\":\"c0ac6a20-8137-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":8,\"x\":8,\"y\":14},\"id\":\"e1417aa0-8137-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":8,\"x\":16,\"y\":14},\"id\":\"cd69d400-8137-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":8,\"x\":0,\"y\":14},\"id\":\"b21648a0-8137-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":5,\"i\":\"8\",\"w\":8,\"x\":32,\"y\":14},\"id\":\"eec20d70-8137-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":14,\"i\":\"9\",\"w\":24,\"x\":0,\"y\":47},\"id\":\"cde58920-8136-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"10\",\"w\":33,\"x\":15,\"y\":0},\"id\":\"16fcd1d0-8138-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"11\",\"w\":16,\"x\":0,\"y\":19},\"id\":\"078d23c0-8139-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"12\",\"w\":16,\"x\":16,\"y\":19},\"id\":\"144d4cc0-8139-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"13\",\"w\":16,\"x\":32,\"y\":19},\"id\":\"21c81330-8139-11e9-be13-f168446c54bb\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"14\",\"w\":48,\"x\":0,\"y\":34},\"id\":\"95409f30-8139-11e9-be13-f168446c54bb\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"16\",\"w\":48,\"x\":0,\"y\":61},\"id\":\"b1fc3420-813b-11e9-be13-f168446c54bb\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"17\",\"w\":24,\"x\":24,\"y\":47},\"id\":\"151e3f10-813e-11e9-be13-f168446c54bb\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":19,\"i\":\"18\",\"w\":48,\"x\":0,\"y\":89},\"id\":\"cfdeee80-813e-11e9-be13-f168446c54bb\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"19\",\"w\":24,\"x\":0,\"y\":74},\"id\":\"94827090-813f-11e9-be13-f168446c54bb\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"20\",\"w\":24,\"x\":24,\"y\":74},\"id\":\"0a445050-8140-11e9-be13-f168446c54bb\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e41c4b10-815a-11e9-be13-f168446c54bb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "ABL_Overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":4,\"w\":15,\"h\":6,\"i\":\"1\"},\"id\":\"d65d7390-8156-11e9-be13-f168446c54bb\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"mapCenter\":[11.178401873711785,13.710937500000002],\"mapZoom\":2},\"gridData\":{\"x\":15,\"y\":4,\"w\":33,\"h\":15,\"i\":\"2\"},\"id\":\"ecc00ad0-8156-11e9-be13-f168446c54bb\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":19,\"w\":9,\"h\":8,\"i\":\"3\"},\"id\":\"7684df90-815a-11e9-be13-f168446c54bb\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":10,\"w\":15,\"h\":9,\"i\":\"4\"},\"id\":\"8556b1e0-8157-11e9-be13-f168446c54bb\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":9,\"y\":19,\"w\":39,\"h\":8,\"i\":\"5\"},\"id\":\"9794c560-815a-11e9-be13-f168446c54bb\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":27,\"w\":9,\"h\":8,\"i\":\"6\"},\"id\":\"12d53340-815b-11e9-be13-f168446c54bb\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":35,\"w\":9,\"h\":8,\"i\":\"7\"},\"id\":\"39d9c190-815b-11e9-be13-f168446c54bb\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":9,\"y\":27,\"w\":39,\"h\":8,\"i\":\"8\"},\"id\":\"8349a700-815b-11e9-be13-f168446c54bb\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":9,\"y\":35,\"w\":39,\"h\":8,\"i\":\"9\"},\"id\":\"ba903210-815b-11e9-be13-f168446c54bb\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":43,\"w\":48,\"h\":10,\"i\":\"10\"},\"id\":\"dc3dc200-815c-11e9-be13-f168446c54bb\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":53,\"w\":48,\"h\":10,\"i\":\"11\"},\"id\":\"f7f42de0-815c-11e9-be13-f168446c54bb\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":63,\"w\":48,\"h\":10,\"i\":\"12\"},\"id\":\"07e87fd0-815d-11e9-be13-f168446c54bb\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":73,\"w\":48,\"h\":10,\"i\":\"14\"},\"id\":\"d875ab90-815e-11e9-be13-f168446c54bb\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":83,\"w\":35,\"h\":11,\"i\":\"15\"},\"id\":\"5faefad0-815f-11e9-be13-f168446c54bb\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":35,\"y\":83,\"w\":13,\"h\":11,\"i\":\"16\"},\"id\":\"ee1ff9e0-815f-11e9-be13-f168446c54bb\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":0,\"y\":94,\"w\":24,\"h\":12,\"i\":\"17\"},\"id\":\"d51a60b0-8160-11e9-be13-f168446c54bb\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":0,\"y\":106,\"w\":24,\"h\":12,\"i\":\"18\"},\"id\":\"c1208c10-8160-11e9-be13-f168446c54bb\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":24,\"y\":106,\"w\":24,\"h\":12,\"i\":\"19\"},\"id\":\"03ba2620-8162-11e9-be13-f168446c54bb\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":24,\"y\":94,\"w\":24,\"h\":12,\"i\":\"20\"},\"id\":\"cd9c8ab0-8161-11e9-be13-f168446c54bb\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":144,\"w\":48,\"h\":13,\"i\":\"21\"},\"id\":\"85382500-8165-11e9-be13-f168446c54bb\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":131,\"w\":48,\"h\":13,\"i\":\"22\"},\"id\":\"2c694fd0-8165-11e9-be13-f168446c54bb\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":118,\"w\":48,\"h\":13,\"i\":\"23\"},\"id\":\"a6ba4a10-8164-11e9-be13-f168446c54bb\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":4,\"i\":\"28\"},\"id\":\"ecc25d80-8b56-11e9-be13-f168446c54bb\",\"panelIndex\":\"28\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ecc00ad0-8156-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_世界流量地圖",
+      "visState": "{\"title\":\"ABL_世界流量地圖\",\"type\":\"tile_map\",\"params\":{\"colorSchema\":\"Yellow to Red\",\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"baseLayersAreLoaded\":{},\"tmsLayers\":[{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}],\"selectedTmsLayer\":{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"mapZoom\":2,\"mapCenter\":[0,0],\"precision\":2}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8556b1e0-8157-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_伺服器負載狀態",
+      "visState": "{\"title\":\"ABL_伺服器負載狀態\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":false,\"isDisplayWarning\":false,\"gauge\":{\"verticalSplit\":false,\"extendRange\":true,\"percentageMode\":true,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":35},{\"from\":36,\"to\":70},{\"from\":71,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"\",\"fontSize\":60,\"labelColor\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"伺服器負載能力\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"virtual.keyword\",\"size\":3,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 35\":\"rgb(0,104,55)\",\"36 - 70\":\"rgb(255,255,190)\",\"71 - 100\":\"rgb(165,0,38)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "9794c560-815a-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_全網站連線數時序圖",
+      "visState": "{\"title\":\"ABL_全網站連線數時序圖\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8349a700-815b-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_自動化連線數時序圖",
+      "visState": "{\"title\":\"ABL_自動化連線數時序圖\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "12d53340-815b-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_自動化連線數",
+      "visState": "{\"title\":\"ABL_自動化連線數\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"自動化連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ee1ff9e0-815f-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_後台主機分流比例圖",
+      "visState": "{\"title\":\"ABL_後台主機分流比例圖\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"dest_ip.keyword\",\"size\":3,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8ef80290-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(201-300)ms",
+      "visState": "{\"title\":\"LTM_服務回應時間(201-300)ms\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"201 to 300\",\"params\":{\"gte\":201,\"lt\":300}},\"range\":{\"response_time\":{\"gte\":201,\"lt\":300}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "cfdeee80-813e-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_十大自動化存取連結資料表",
+      "visState": "{\"title\":\"BOT_十大自動化存取連結資料表\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"client_request_uri.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"存取路徑\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"bot_signature_category.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"存取類型\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"request_status.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"判斷方式\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"http_method.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"存取方式\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"action.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"服務器回應\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"client_request_uri.keyword\",\"value\":\"/\",\"params\":{\"query\":\"/\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"client_request_uri.keyword\":{\"query\":\"/\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0a445050-8140-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_十大自動化程式類型",
+      "visState": "{\"title\":\"BOT_十大自動化程式類型\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"bot_signature_category.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "21c81330-8139-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_十大來源IP",
+      "visState": "{\"title\":\"BOT_十大來源IP\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":false,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"x-forwarded-for.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "2b0c2d10-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_世界流量地圖",
+      "visState": "{\"title\":\"LTM_世界流量地圖\",\"type\":\"tile_map\",\"params\":{\"colorSchema\":\"Yellow to Red\",\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"baseLayersAreLoaded\":{},\"tmsLayers\":[{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}],\"selectedTmsLayer\":{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"mapZoom\":2,\"mapCenter\":[0,0],\"precision\":2}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "94827090-813f-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_十大自動化存取連結",
+      "visState": "{\"title\":\"BOT_十大自動化存取連結\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"client_request_uri.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"服務路徑\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"client_request_uri.keyword\",\"value\":\"/\",\"params\":{\"query\":\"/\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"client_request_uri.keyword\":{\"query\":\"/\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a6d22dc0-8136-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_自動化程式存取次數",
+      "visState": "{\"title\":\"BOT_自動化程式存取次數\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":25}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "151e3f10-813e-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_自動化程式特徵",
+      "visState": "{\"title\":\"BOT_自動化程式特徵\",\"type\":\"area\",\"params\":{\"type\":\"area\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"連線數\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"area\",\"mode\":\"normal\",\"data\":{\"label\":\"連線數\",\"id\":\"1\"},\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"linear\",\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"request_status.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "39d9c190-815b-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_網站受攻擊次數",
+      "visState": "{\"title\":\"ABL_網站受攻擊次數\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"網站受攻擊次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ba903210-815b-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_網站受攻擊次數時序圖",
+      "visState": "{\"title\":\"ABL_網站受攻擊次數時序圖\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "cd9c8ab0-8161-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_十大網頁攻擊手法",
+      "visState": "{\"title\":\"ABL_十大網頁攻擊手法\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"attack_type.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"攻擊手法\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "078d23c0-8139-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_十大來源國家",
+      "visState": "{\"title\":\"BOT_十大來源國家\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.country_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c0ac6a20-8137-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_KTXN",
+      "visState": "{\"title\":\"BOT_KTXN\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"bot_signature.keyword\",\"value\":\"/Common/KTXN\",\"params\":{\"query\":\"/Common/KTXN\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"bot_signature.keyword\":{\"query\":\"/Common/KTXN\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e1417aa0-8137-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_Baidu",
+      "visState": "{\"title\":\"BOT_Baidu\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"bot_signature.keyword\",\"value\":\"/Common/Baidu\",\"params\":{\"query\":\"/Common/Baidu\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"bot_signature.keyword\":{\"query\":\"/Common/Baidu\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "cde58920-8136-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_十大自動化程式",
+      "visState": "{\"title\":\"BOT_十大自動化程式\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"bot_signature.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"十大自動化程式\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b1fc3420-813b-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_五大自動化程式時序圖",
+      "visState": "{\"title\":\"BOT_五大自動化程式時序圖\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"bot_signature.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "144d4cc0-8139-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_十大來源城市",
+      "visState": "{\"title\":\"BOT_十大來源城市\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.city_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "07e87fd0-815d-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_伺服器受攻擊連線時序圖",
+      "visState": "{\"title\":\"ABL_伺服器受攻擊連線時序圖\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"virtual.keyword\",\"split_color_mode\":\"rainbow\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"logstash-asm-index-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d875ab90-815e-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_伺服器連線狀態",
+      "visState": "{\"type\":\"timelion\",\"title\":\"ABL_伺服器連線狀態\",\"params\":{\"expression\":\".es(index=logstash-ltm-index-*, q=status:200).bars(stack=ture).legend(top,top).label(成功次數),.es(index=logstash-ltm-index-*).label(總筆數).title(伺服器連線狀態),.es(index=logstash-ltm-index-*, metric=avg:response_time).label(平均反應時間)\",\"interval\":\"auto\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "95409f30-8139-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_自動化程式連線時序圖",
+      "visState": "{\"title\":\"BOT_自動化程式連線時序圖\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"stacked\",\"terms_field\":\"virtual.keyword\",\"split_color_mode\":\"rainbow\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"logstash-bot-index-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f7f42de0-815c-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_伺服器自動化程式連線時序圖",
+      "visState": "{\"title\":\"ABL_伺服器自動化程式連線時序圖\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"virtual.keyword\",\"split_color_mode\":\"rainbow\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"logstash-bot-index-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "dc3dc200-815c-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_伺服器連線時序圖",
+      "visState": "{\"title\":\"ABL_伺服器連線時序圖\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"virtual.keyword\",\"split_color_mode\":\"rainbow\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"logstash-ltm-index-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "7684df90-815a-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_全網站連線數",
+      "visState": "{\"title\":\"ABL_全網站連線數\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"網站連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5faefad0-815f-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_伺服器回應時間",
+      "visState": "{\"title\":\"ABL_伺服器回應時間\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"回應時間(ms)\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"回應時間(ms)\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"回應時間(ms)\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"virtual.keyword\",\"size\":3,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d51a60b0-8160-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_自動化程式分類存取時序圖",
+      "visState": "{\"title\":\"ABL_自動化程式分類存取時序圖\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"bot_signature_category.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c1208c10-8160-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_自動化程式引擎存取時序圖",
+      "visState": "{\"title\":\"ABL_自動化程式引擎存取時序圖\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"bot_signature.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "2c694fd0-8165-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_五大自動化程式存取路徑資料表",
+      "visState": "{\"title\":\"ABL_五大自動化程式存取路徑資料表\",\"type\":\"table\",\"params\":{\"perPage\":5,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"次數\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"client_request_uri.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"存取路徑\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"x-forwarded-for.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"來源IP\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"geoip.country_name.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"來源國家\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"bot_signature_category.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"自動化程式類型\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"client_request_uri.keyword\",\"value\":\"/\",\"params\":{\"query\":\"/\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"client_request_uri.keyword\":{\"query\":\"/\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "16fcd1d0-8138-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_世界自動化程式地圖",
+      "visState": "{\"title\":\"BOT_世界自動化程式地圖\",\"type\":\"tile_map\",\"params\":{\"colorSchema\":\"Yellow to Red\",\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"baseLayersAreLoaded\":{},\"tmsLayers\":[{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}],\"selectedTmsLayer\":{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"mapZoom\":2,\"mapCenter\":[0,0],\"precision\":2}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "03ba2620-8162-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_OWASP TOP 10",
+      "visState": "{\"title\":\"ABL_OWASP TOP 10\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"owasp.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"OWASP TOP 10\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "85382500-8165-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_五大受攻擊路徑資料表",
+      "visState": "{\"title\":\"ABL_五大受攻擊路徑資料表\",\"type\":\"table\",\"params\":{\"perPage\":5,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"次數\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"uri.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"被攻擊路徑\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"x_forwarded_for.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"來源IP\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"attack_type.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"攻擊手法\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"geoip.country_name.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"來源國家\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "10322ef0-8128-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_十大來源國家",
+      "visState": "{\"title\":\"AWAF_十大來源國家\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.country_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "99bd45f0-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(301-400)ms",
+      "visState": "{\"title\":\"LTM_服務回應時間(301-400)ms\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"301 to 400\",\"params\":{\"gte\":301,\"lt\":400}},\"range\":{\"response_time\":{\"gte\":301,\"lt\":400}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "da5f7f30-8127-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_世界攻擊地圖",
+      "visState": "{\"title\":\"AWAF_世界攻擊地圖\",\"type\":\"tile_map\",\"params\":{\"colorSchema\":\"Yellow to Red\",\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"baseLayersAreLoaded\":{},\"tmsLayers\":[{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}],\"selectedTmsLayer\":{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.4.1&license=e3ec17a1-6142-4230-9885-4ffcb6160140\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap contributors</a>|<a href=\\\"https://openmaptiles.org\\\">OpenMapTiles</a>|<a href=\\\"https://www.maptiler.com\\\">MapTiler</a>|<a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"mapZoom\":2,\"mapCenter\":[0,0],\"precision\":2}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a45007a0-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(401-500)ms",
+      "visState": "{\"title\":\"LTM_服務回應時間(401-500)ms\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"401 to 500\",\"params\":{\"gte\":401,\"lt\":500}},\"range\":{\"response_time\":{\"gte\":401,\"lt\":500}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ab5039a0-8127-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_攻擊次數",
+      "visState": "{\"title\":\"AWAF_攻擊次數\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":25}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"攻擊次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8491cf20-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(101-200)ms",
+      "visState": "{\"title\":\"LTM_服務回應時間(101-200)ms\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"101 to 200\",\"params\":{\"gte\":101,\"lt\":200}},\"range\":{\"response_time\":{\"gte\":101,\"lt\":200}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0cd8f1a0-8103-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_十大來源國家",
+      "visState": "{\"title\":\"LTM_十大來源國家\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.country_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5e5fea60-8103-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_十大來源城市",
+      "visState": "{\"title\":\"LTM_十大來源城市\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.city_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b3c34380-9662-11e8-8daf-13800ce2f62d",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_網站應用服務路徑回應時間數據表",
+      "visState": "{\"title\":\"LTM_網站應用服務路徑回應時間數據表\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"平均回應時間(ms)\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"request.keyword\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"5\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"URL存取路徑\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"最大回應時間(ms)\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"最小回應時間(ms)\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"次數\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"request.keyword\",\"value\":\"/\",\"params\":{\"query\":\"/\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"request.keyword\":{\"query\":\"/\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a95376b0-8110-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_伺服器回應狀況",
+      "visState": "{\"title\":\"LTM_伺服器回應狀況\",\"type\":\"area\",\"params\":{\"type\":\"area\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"area\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"linear\",\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"status.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e59d61e0-810f-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_網站存取次數統計表",
+      "visState": "{\"title\":\"LTM_網站存取次數統計表\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"hostname.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e4872c60-810e-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_伺服器回應時間時序圖",
+      "visState": "{\"title\":\"LTM_伺服器回應時間時序圖\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"回應時間(ms)\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"回應時間(ms)\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"回應時間(ms)\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"dest_ip.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "78173aa0-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(0-100)ms",
+      "visState": "{\"title\":\"LTM_服務回應時間(0-100)ms\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"0 to 100\",\"params\":{\"gte\":0,\"lt\":100}},\"range\":{\"response_time\":{\"gte\":0,\"lt\":100}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b2413690-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(500+)ms",
+      "visState": "{\"title\":\"LTM_服務回應時間(500+)ms\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"912dead0-80f1-11e9-be13-f168446c54bb\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"range\",\"key\":\"response_time\",\"value\":\"0 to 500\",\"params\":{\"gte\":0,\"lt\":500}},\"range\":{\"response_time\":{\"gte\":0,\"lt\":500}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8937a0c0-8103-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_十大來源IP",
+      "visState": "{\"title\":\"LTM_十大來源IP\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":false,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"x_forwarded_for.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0de0d470-80f2-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_伺服器連線數",
+      "visState": "{\"title\":\"LTM_伺服器連線數\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":25}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "119d1750-812d-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_十大攻擊手法統計圖",
+      "visState": "{\"title\":\"AWAF_十大攻擊手法統計圖\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"BottomAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"攻擊次數\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"攻擊次數\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":false,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"攻擊次數\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"attack_type.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"攻擊手法\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4bbe04d0-8128-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_十大來源IP",
+      "visState": "{\"title\":\"AWAF_十大來源IP\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":false,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"x_forwarded_for.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e7c95180-812e-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_OWASP 10",
+      "visState": "{\"title\":\"AWAF_OWASP 10\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"owasp.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"OWASP TOP 10\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "678c9a50-812d-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_十大受害服務",
+      "visState": "{\"title\":\"AWAF_十大受害服務\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"次數\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"uri.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"受害服務\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"violations.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"違規項目\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"violation_rating.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"風險等級\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"request_status.keyword\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"執行動作\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "512f04c0-8130-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_十大攻擊手法線性圖",
+      "visState": "{\"title\":\"AWAF_十大攻擊手法線性圖\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"area\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"linear\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"attack_type.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "eec20d70-8137-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_Yahoo!",
+      "visState": "{\"title\":\"BOT_Yahoo!\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"bot_signature.keyword\",\"value\":\"/Common/Yahoo! Slurp\",\"params\":{\"query\":\"/Common/Yahoo! Slurp\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"bot_signature.keyword\":{\"query\":\"/Common/Yahoo! Slurp\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b21648a0-8137-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_Google",
+      "visState": "{\"title\":\"BOT_Google\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"bot_signature.keyword\",\"value\":\"/Common/Google\",\"params\":{\"query\":\"/Common/Google\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"bot_signature.keyword\":{\"query\":\"/Common/Google\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "cd69d400-8137-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_Gomez",
+      "visState": "{\"title\":\"BOT_Gomez\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"bot_signature.keyword\",\"value\":\"/Common/Gomez\",\"params\":{\"query\":\"/Common/Gomez\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"bot_signature.keyword\":{\"query\":\"/Common/Gomez\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d65611a0-8137-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "BOT_Bing",
+      "visState": "{\"title\":\"BOT_Bing\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":20}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"存取次數\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"20168a80-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a0761e40-80f1-11e9-be13-f168446c54bb\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"bot_signature.keyword\",\"value\":\"/Common/Bing\",\"params\":{\"query\":\"/Common/Bing\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"bot_signature.keyword\":{\"query\":\"/Common/Bing\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "2e0efd40-8128-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_十大來源城市",
+      "visState": "{\"title\":\"AWAF_十大來源城市\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.city_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "89d954a0-8127-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "AWAF_虛擬主機選單",
+      "visState": "{\"title\":\"AWAF_虛擬主機選單\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1559034167477\",\"indexPattern\":\"16c06780-91bf-11e9-9814-05143140e7ef\",\"fieldName\":\"virtual.keyword\",\"parent\":\"\",\"label\":\"虛擬主機選擇\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":false,\"dynamicOptions\":false,\"size\":5,\"order\":\"desc\"}}],\"updateFiltersOnChange\":true,\"useTimeFilter\":false,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ecc25d80-8b56-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_Markdown Detail",
+      "visState": "{\"title\":\"ABL_Markdown Detail\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[Overview  ](#/dashboard/e41c4b10-815a-11e9-be13-f168446c54bb)|[  LTM Detail  ](#/dashboard/8b1a36b0-80f3-11e9-be13-f168446c54bb)|[  AWAF Detail  ](#/dashboard/c5720650-8128-11e9-be13-f168446c54bb)|[  BOT Detail  ](#/dashboard/0c5177b0-813b-11e9-be13-f168446c54bb)\",\"openLinksInNewTab\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "1cd22d00-0fee-11e9-b113-4fabd9742420",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(500+)ms_內容",
+      "visState": "{\"title\":\"LTM_服務回應時間(500+)ms_內容\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[點選細節內容](#/dashboard/d8c0da70-8113-11e9-be13-f168446c54bb)\",\"openLinksInNewTab\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "125f7670-0fee-11e9-b113-4fabd9742420",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(401-500)ms_內容",
+      "visState": "{\"title\":\"LTM_服務回應時間(401-500)ms_內容\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[點選細節內容](#/dashboard/a133a970-8113-11e9-be13-f168446c54bb)\",\"openLinksInNewTab\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0c775110-0fee-11e9-b113-4fabd9742420",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(301-400)ms_內容",
+      "visState": "{\"title\":\"LTM_服務回應時間(301-400)ms_內容\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[點選細節內容](#/dashboard/5802c8d0-8113-11e9-be13-f168446c54bb)\",\"openLinksInNewTab\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "07255130-0fee-11e9-b113-4fabd9742420",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(201-300)ms_內容",
+      "visState": "{\"title\":\"LTM_服務回應時間(201-300)ms_內容\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[點選細節內容](#/dashboard/28e81190-8113-11e9-be13-f168446c54bb)\",\"openLinksInNewTab\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0127f620-0fee-11e9-b113-4fabd9742420",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(101-200)ms_內容",
+      "visState": "{\"title\":\"LTM_服務回應時間(101-200)ms_內容\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[點選細節內容](#/dashboard/ed3b4630-8112-11e9-be13-f168446c54bb)\",\"openLinksInNewTab\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "83339dc0-0feb-11e9-b113-4fabd9742420",
+    "_type": "visualization",
+    "_source": {
+      "title": "LTM_服務回應時間(0-100)ms_內容",
+      "visState": "{\"title\":\"LTM_服務回應時間(0-100)ms_內容\",\"type\":\"markdown\",\"params\":{\"fontSize\":10,\"markdown\":\"[點選細節內容](#/dashboard/9d298850-8112-11e9-be13-f168446c54bb)\",\"openLinksInNewTab\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a6ba4a10-8164-11e9-be13-f168446c54bb",
+    "_type": "visualization",
+    "_source": {
+      "title": "ABL_五大存取路徑資料表",
+      "visState": "{\"title\":\"ABL_五大存取路徑資料表\",\"type\":\"table\",\"params\":{\"perPage\":5,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"平均回應時間(ms)\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"response_time\",\"customLabel\":\"最長回應時間(ms)\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"連線次數\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"request.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"存取路徑\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"098dcda0-91bf-11e9-9814-05143140e7ef\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  }
+]
