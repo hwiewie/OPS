@@ -21,24 +21,6 @@ echo 'gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch' >> /etc/yum.rep
 echo 'enabled=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'autorefresh=1' >> /etc/yum.repos.d/elasticsearch.repo
 echo 'type=rpm-md' >> /etc/yum.repos.d/elasticsearch.repo
-#新增kibana知識庫
-echo '[kibana-7.x]' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'name=Kibana repository for 7.x packages' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'baseurl=https://artifacts.elastic.co/packages/7.x/yum' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'gpgcheck=1' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'enabled=1' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'autorefresh=1' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'type=rpm-md' >> /etc/yum.repos.d/elasticsearch.repo
-#新增logstash知識庫
-echo '[logstash-7.x]' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'name=Elastic repository for 7.x packages' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'baseurl=https://artifacts.elastic.co/packages/7.x/yum' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'gpgcheck=1' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'enabled=1' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'autorefresh=1' >> /etc/yum.repos.d/elasticsearch.repo
-echo 'type=rpm-md' >> /etc/yum.repos.d/elasticsearch.repo
 #更新與安裝必要元件
 yum -y install epel-release
 yum -y update
@@ -108,6 +90,11 @@ systemctl start kibana
 #加入開機啟動
 systemctl enable kibana
 #chkconfig kibana on
+#安裝apm-server
+yum install -y apm-server
+#執行apm-server
+systemctl start apm-server
+systemctl enable apm-server
 #設定防火牆
 firewall-cmd --permanent --new-service=ELK
 firewall-cmd --reloadfirewall-cmd --permanent --service=ELK --set-short="ELK Service Ports"
