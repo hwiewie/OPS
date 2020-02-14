@@ -1,4 +1,5 @@
 #!/bin/bash
+#doman.txt放要測試域名
 function diglookup()
 {
 	value1="${1}"
