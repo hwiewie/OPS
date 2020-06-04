@@ -117,7 +117,7 @@ function CentOS6() {
 }
 
 function CentOS7() {
-    echo "	检测到系统为:CentOS7,安装7系运行库,并关闭系统防火墙"
+    echo "檢測到系統為:CentOS7,安裝7系運行庫,並關閉系統防火牆"
     yum clean all
 	yum makecache
 	yum -y install glibc.i686
@@ -125,14 +125,14 @@ function CentOS7() {
 	yum install -y libXtst.i686
 	yum -y install gcc gcc-c++ make zlib-devel
 	echo " "
-	echo "开始关闭防火墙"
+	echo "開始關閉防火牆"
 	echo " "
 	systemctl disable firewalld
 	systemctl stop firewalld
 	systemctl disable firewalld.service
 	systemctl stop firewalld.service
 	echo " "
-	echo "防火墙关闭完成"
+	echo "防火牆關閉完成"
 	echo " "
 }
 
@@ -141,7 +141,7 @@ function Swap() {
 	a=9
 	AA=$(($a - $B))
 	if (($AA > 1)); then
-	echo "	系统根据运行内存自动添加Swap请耐心等待..."
+	echo "系統根據運行內存自動添加Swap請耐心等待..."
     dd if=/dev/zero of=/var/swap.1 bs=${AA}M count=1000
     mkswap /var/swap.1
     swapon /var/swap.1
@@ -149,19 +149,19 @@ function Swap() {
     sed -i 's/swapoff -a/#swapoff -a/g' /etc/rc.d/rc.local
 	echo "添加 Swap 成功"
 	elif (($AA <= 1)); then
-	echo "	系统检测运行内≤8G不需要添加Swap"	
+	echo " 系統檢測運行內≤8G不需要添加Swap"	
 	fi
 }
 
 function ChangeIP() {
     echo -n "	${IP}
-	是否是你的外网IP？(不是你的外网IP或出现两条IP地址请回n自行输入) y/n ："
+	是否是你的外網IP？ (不是你的外網IP或出現兩條IP地址請回n自行輸入) y/n ："
     read ans
     case $ans in
     y|Y|yes|Yes)
     ;;
     n|N|no|No)
-    read -p "	输入你的外网IP地址，回车（确保是英文字符的点号）：" myip
+    read -p "輸入你的外網IP地址，回車（確保是英文字符的點號）：" myip
     IP=$myip
     ;;
     *)
@@ -176,7 +176,7 @@ function ChangeIP() {
 }
 
 function Remove() {
-	echo -n "	完成安装，是否删除临时文件 y/n [n] ?"
+	echo -n "完成安裝，是否刪除臨時文件 y/n [n] ?"
     read ANS
     case $ANS in
     y|Y|yes|Yes)
@@ -191,19 +191,19 @@ function Remove() {
 }
 
 install
-	echo "毒奶粉服务端已经安装完毕！
+	echo "毒奶粉服務端已經安裝完畢!
 	"
-	echo "登录器网关默认使用5系系统专用网关,如果您的小鸡是6系(7系未测试),请删除root目录下文件'DnfGateServer',并修改'DnfGateServer CentOS6'文件名为'DnfGateServer'
+	echo "登錄器網關默認使用5系系統專用網關,如果您的小雞是6系(7系未測試),請刪除root目錄下文件'DnfGateServer',並修改'DnfGateServer CentOS6'文件名為'DnfGateServer'
 	"
-	echo "启动服务端命令为cd 回车再./run，关闭命令为cd 回车再./stop两次
+	echo "啟動服務端命令為cd 回車再./run，關閉命令為cd 回車再./stop兩次
 	"
-	echo "数据库默认帐号为：root，默认密码为：vcmoe
+	echo "數據庫默認帳號為：root，默認密碼為：vcmoe
 	"
-	echo "数据库目录：opt/lampp/var/mysql
+	echo "數據庫目錄：opt/lampp/var/mysql
 	"
-	echo "本服务端及脚本只使用到了XAMPP的MySQL,其他功能均未配置使用且版本较老,如有需求,请自行配置
+	echo "本服務端及腳本只使用到了XAMPP的MySQL,其他功能均未配置使用且版本較老,如有需求,請自行配置
 	"
-	echo "MySQL数据库用户只保留了服务端必须使用到的用户名为game的本地用户,用于phpMyAdmin的本地用户pma(phpMyAdmin默认并未配置使用!)
+	echo "MySQL數據庫用戶只保留了服務端必須使用到的用戶名為game的本地用戶,用於phpMyAdmin的本地用戶pma(phpMyAdmin默認並未配置使用!)
 	"	
-	echo "以及用于外网处理数据库的root用户,如有需要,请自行添加!
+	echo "以及用於外網處理數據庫的root用戶,如有需要,請自行添加!
 	"
