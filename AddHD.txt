@@ -1,0 +1,11 @@
+fdisk /dev/sdb
+pvcreate /dev/sdb1 lvm2
+vgcreate vg2 /dev/sdb1
+lvcreate -l 100%FREE vg2
+#pvdisplay /dev/sdb1
+#vgdisplay
+#lvdisplay
+fsck.xfs -f /dev/vg2/lvol0
+mkfs.xfs /dev/vg2/lvol0
+mkdir /opt/jenkis
+sed -i '$a\/dev/vg2/lvol0 /opt/jenkins  xfs  defaults    0 0' /etc/fstab
