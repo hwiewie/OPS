@@ -1,0 +1,19 @@
+dnf install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+dnf module reset php
+dnf module enable php:remi-7.4
+dnf install php php-mysqlnd php-pdo php-xml php-pear php-devel php-mbstring php-fpm php-mysql php-gd php-cli php-json php-opcache php-curl php-ldap php-odbc php-xmlrpc php-soap php-intl php-zip php-common php-domxml php-imap php-pecl-apcu php-pecl-zip
+
+php php-common php-cli php-pdo php-fpm php-bcmath php-mysqlnd php-gd php-mbstring php-mcrypt php-xml php-ldap php-snmp php-opcache php-imap php-xmlrpc php-pecl-apcu php-soap php-pecl-zip
+#config php.ini
+sed -i 's/max_execution_time = 30/max_execution_time = 600/g' /etc/php.ini
+sed -i 's/max_input_time = 60/max_input_time = 300/g' /etc/php.ini
+sed -i 's/memory_limit = 128M/memory_limit = 512M/g' /etc/php.ini
+sed -i 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php.ini
+sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 64M/g' /etc/php.ini
+sed -i 's/;date.timezone =/date.timezone = Asia\/Taipei/g' /etc/php.ini
+sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php.ini
+#config php-fpm
+sed -i 's/user = apache/user = nginx/g' /etc/php-fpm.d/www.conf
+sed -i 's/group = apache/group = nginx/g' /etc/php-fpm.d/www.conf
+
+systemctl enable --now php-fpm
