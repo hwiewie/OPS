@@ -1,0 +1,5 @@
+dnf install -y libnsl
+wget https://dl-openaudit.opmantek.com/OAE-Linux-x86_64-release_3.4.0-r2.run
+./OAE-Linux-x86_64-release_3.4.0-r2.run
+firewall-cmd --add-service=http --permanent
+firewall-cmd --reload
