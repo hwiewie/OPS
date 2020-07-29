@@ -1,0 +1,4 @@
+hostnamectl set-hostname rhel8.cyadmk.com
+realm discover -vvv cyadmk.com
+dnf install -y sssd adcli samba-common-tools oddjob oddjob-mkhomedir
+realm join -U Administrator cyadmk.com
