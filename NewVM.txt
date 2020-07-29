@@ -1,0 +1,19 @@
+setenforce 0
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+timedatectl set-timezone Asia/Taipei
+swapoff -a
+sysctl vm.swappiness=1
+yum update -y
+yum install -y epel-release yum-utils perl perl-core gcc make kernel-headers kernel-devel bzip2 telnet bind-utils net-tools vim wget policycoreutils-python-utils
+yum install -y realmd sssd oddjob oddjob-mkhomedir adcli samba-common samba-common-tools samba-client cifs-utils
+sed -i '/^pool/a server 192.168.100.10' /etc/chrony.conf
+sed -i '/^pool/a server 192.168.100.9' /etc/chrony.conf
+sed -i '/^pool/a server 192.168.1.1' /etc/chrony.conf
+sed -i 's/^pool/#pool/g' /etc/chrony.conf
+mkdir /mnt/cdrom
+mount /dev/cdrom /mnt/cdrom
+cp /mnt/cdrom/VMwareTools-*.tar.gz /tmp/
+cd /tmp
+tar -zxvf VMwareTools-*.tar.gz
+cd vmware-tools-distrib
+./vmware-install.pl
