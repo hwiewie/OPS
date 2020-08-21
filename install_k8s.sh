@@ -13,3 +13,10 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 EOF
 yum install -y kubectl kubeadm kubelet
 systemctl enable --now kubelet
+#master node
+kubeadm init --pod-network-cidr=10.122.0.0/16 --service-cidr=10.10.0.0/16
+mkdir -p $HOME/.kube
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+chown $(id -u):$(id -g) $HOME/.kube/config
+#kubectl get pod --all-namespaces
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/62e44c867a2846fefb68bd5f178daf4da3095ccb/Documentation/kube-flannel.yml
