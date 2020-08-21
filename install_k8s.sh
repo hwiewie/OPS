@@ -25,4 +25,6 @@ firewall-cmd --zone=public --permanent --add-port={6443,2379,2380,10250,10251,10
 firewall-cmd --permanent --add-port=53/udp
 #work node
 firewall-cmd --zone=public --permanent --add-port={10250,30000-32767}/tcp
+#all node
+firewall-cmd --add-masquerade --permanent
 firewall-cmd --reload
