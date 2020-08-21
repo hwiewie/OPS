@@ -20,4 +20,9 @@ cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 chown $(id -u):$(id -g) $HOME/.kube/config
 #kubectl get pod --all-namespaces
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/62e44c867a2846fefb68bd5f178daf4da3095ccb/Documentation/kube-flannel.yml
+#master node
 firewall-cmd --zone=public --permanent --add-port={6443,2379,2380,10250,10251,10252}/tcp
+firewall-cmd --permanent --add-port=53/udp
+#work node
+firewall-cmd --zone=public --permanent --add-port={10250,30000-32767}/tcp
+firewall-cmd --reload
