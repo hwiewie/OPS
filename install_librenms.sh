@@ -30,3 +30,26 @@ sed -i 's/\[www\]/\[librenms\]/g' /etc/php-fpm.d/librenms.conf
 sed -i 's/user = apache/user = librenms/g' /etc/php-fpm.d/librenms.conf
 sed -i 's/group = apache/group = librenms/g' /etc/php-fpm.d/librenms.conf
 sed -i 's/www.sock/librenms.sock/g' /etc/php-fpm.d/librenms.conf
+cat > /etc/nginx/conf.d/librenms.conf << EOF
+server {
+ listen      80;
+ server_name librenms.example.com;
+ root        /opt/librenms/html;
+ index       index.php;
+
+ charset utf-8;
+ gzip on;
+ gzip_types text/css application/javascript text/javascript application/x-javascript image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon;
+ location / {
+  try_files $uri $uri/ /index.php?$query_string;
+ }
+ location ~ [^/]\.php(/|$) {
+  fastcgi_pass unix:/run/php-fpm-librenms.sock;
+  fastcgi_split_path_info ^(.+\.php)(/.+)$;
+  include fastcgi.conf;
+ }
+ location ~ /\.(?!well-known).* {
+  deny all;
+ }
+}
+EOF
