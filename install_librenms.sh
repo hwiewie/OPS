@@ -4,3 +4,10 @@ yum install -y yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
 yum module reset php -y
 yum module enable php:remi-7.4 -y
 yum install -y mod_php php-cli php-common php-curl php-gd php-mbstring php-process php-snmp php-xml php-zip php-memcached php-mysqlnd
+useradd librenms -d /opt/librenms -M -r -s /usr/bin/bash
+cd /opt
+git clone https://github.com/librenms/librenms.git
+chown -R librenms:librenms /opt/librenms
+chmod 771 /opt/librenms
+setfacl -d -m g::rwx /opt/librenms/rrd /opt/librenms/logs /opt/librenms/bootstrap/cache/ /opt/librenms/storage/
+setfacl -R -m g::rwx /opt/librenms/rrd /opt/librenms/logs /opt/librenms/bootstrap/cache/ /opt/librenms/storage/
