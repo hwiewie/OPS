@@ -17,3 +17,11 @@ exit
 sed -i 's/;date.timezone =/date.timezone =Asia\/Taipei/g' /etc/php.ini
 timedatectl set-timezone Asia/Taipei
 systemctl enable --now mysqld
+cat > createdb.sql << EOF
+CREATE DATABASE librenms CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE USER 'librenms'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON librenms.* TO 'librenms'@'localhost';
+FLUSH PRIVILEGES;
+exit
+EOF
+mysql -u root < createdb.sql
