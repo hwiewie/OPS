@@ -16,4 +16,4 @@ su - librenms
 exit
 sed -i 's/;date.timezone =/date.timezone =Asia\/Taipei/g' /etc/php.ini
 timedatectl set-timezone Asia/Taipei
-
+systemctl enable --now mysqld
