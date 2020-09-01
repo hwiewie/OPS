@@ -63,3 +63,21 @@ restorecon -RFvv /opt/librenms
 setsebool -P httpd_can_sendmail=1
 setsebool -P httpd_execmem 1
 chcon -t httpd_sys_rw_content_t /opt/librenms/.env
+cat > http_fping.tt << EOF
+module http_fping 1.0;
+
+require {
+type httpd_t;
+class capability net_raw;
+class rawip_socket { getopt create setopt write read };
+}
+
+#============= httpd_t ==============
+allow httpd_t self:capability net_raw;
+allow httpd_t self:rawip_socket { getopt create setopt write read };
+EOF
+checkmodule -M -m -o http_fping.mod http_fping.tt
+semodule_package -o http_fping.pp -m http_fping.mod
+semodule -i http_fping.pp
+firewall-cmd --add-service={http,https} --permanent
+firewall-cmd --reload
