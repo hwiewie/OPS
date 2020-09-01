@@ -81,3 +81,5 @@ semodule_package -o http_fping.pp -m http_fping.mod
 semodule -i http_fping.pp
 firewall-cmd --add-service={http,https} --permanent
 firewall-cmd --reload
+ln -s /opt/librenms/lnms /usr/local/bin/lnms
+cp /opt/librenms/misc/lnms-completion.bash /etc/bash_completion.d/
