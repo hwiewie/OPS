@@ -14,3 +14,6 @@ setfacl -R -m g::rwx /opt/librenms/rrd /opt/librenms/logs /opt/librenms/bootstra
 su - librenms
 ./scripts/composer_wrapper.php install --no-dev
 exit
+sed -i 's/;date.timezone =/date.timezone =Asia\/Taipei/g' /etc/php.ini
+timedatectl set-timezone Asia/Taipei
+
