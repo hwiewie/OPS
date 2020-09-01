@@ -53,3 +53,12 @@ server {
  }
 }
 EOF
+mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak #
+systemctl enable --now nginx
+systemctl enable --now php-fpm
+semanage fcontext -a -t httpd_sys_content_t '/opt/librenms/html(/.*)?'
+semanage fcontext -a -t httpd_sys_rw_content_t '/opt/librenms/(logs|rrd|storage)(/.*)?'
+restorecon -RFvv /opt/librenms
+setsebool -P httpd_can_sendmail=1
+setsebool -P httpd_execmem 1
+chcon -t httpd_sys_rw_content_t /opt/librenms/.env
