@@ -25,3 +25,8 @@ FLUSH PRIVILEGES;
 exit
 EOF
 mysql -u root < createdb.sql
+cp /etc/php-fpm.d/www.conf /etc/php-fpm.d/librenms.conf
+sed -i 's/\[www\]/\[librenms\]/g' /etc/php-fpm.d/librenms.conf
+sed -i 's/user = apache/user = librenms/g' /etc/php-fpm.d/librenms.conf
+sed -i 's/group = apache/group = librenms/g' /etc/php-fpm.d/librenms.conf
+sed -i 's/www.sock/librenms.sock/g' /etc/php-fpm.d/librenms.conf
