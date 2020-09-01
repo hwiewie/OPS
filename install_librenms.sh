@@ -53,7 +53,8 @@ server {
  }
 }
 EOF
-mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak #
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak #
+sed -i '38,57d' /etc/nginx/nginx.conf
 systemctl enable --now nginx
 systemctl enable --now php-fpm
 semanage fcontext -a -t httpd_sys_content_t '/opt/librenms/html(/.*)?'
