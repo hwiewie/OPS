@@ -53,6 +53,7 @@ server {
  }
 }
 EOF
+sed -i "s/librenms.example.com/`ip addr |grep inet |egrep -v "inet6|127.0.0.1" |awk '{print $2}' |awk -F "/" '{print $1}'`/g" /etc/nginx/conf.d/librenms.conf
 cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak #
 sed -i '38,57d' /etc/nginx/nginx.conf
 systemctl enable --now nginx
