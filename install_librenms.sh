@@ -83,3 +83,6 @@ firewall-cmd --add-service={http,https} --permanent
 firewall-cmd --reload
 ln -s /opt/librenms/lnms /usr/local/bin/lnms
 cp /opt/librenms/misc/lnms-completion.bash /etc/bash_completion.d/
+mv /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf.bak
+cp /opt/librenms/snmpd.conf.example /etc/snmp/snmpd.conf
+sed -i "s/RANDOMSTRINGGOESHERE/public/g" /etc/snmp/snmpd.conf
