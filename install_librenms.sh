@@ -86,3 +86,12 @@ cp /opt/librenms/misc/lnms-completion.bash /etc/bash_completion.d/
 mv /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf.bak
 cp /opt/librenms/snmpd.conf.example /etc/snmp/snmpd.conf
 sed -i "s/RANDOMSTRINGGOESHERE/public/g" /etc/snmp/snmpd.conf
+curl -o /usr/bin/distro https://raw.githubusercontent.com/librenms/librenms-agent/master/snmp/distro
+chmod +x /usr/bin/distro
+systemctl enable snmpd
+systemctl restart snmpd
+cp /opt/librenms/librenms.nonroot.cron /etc/cron.d/librenms
+cp /opt/librenms/misc/librenms.logrotate /etc/logrotate.d/librenms
+chown librenms:librenms /opt/librenms/config.php
+#sudo su - librenms
+#./validate.php
