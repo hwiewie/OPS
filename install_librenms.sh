@@ -44,7 +44,7 @@ server {
   try_files $uri $uri/ /index.php?$query_string;
  }
  location ~ [^/]\.php(/|$) {
-  fastcgi_pass unix:/run/php-fpm-librenms.sock;
+  fastcgi_pass unix:/run/php-fpm/librenms.sock;
   fastcgi_split_path_info ^(.+\.php)(/.+)$;
   include fastcgi.conf;
  }
