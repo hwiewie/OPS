@@ -41,7 +41,7 @@ server {
  gzip on;
  gzip_types text/css application/javascript text/javascript application/x-javascript image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon;
  location / {
-  try_files $uri $uri/ /index.php?$query_string;
+  try_files $uri $uri/ /index.php?\$query_string;
  }
  location ~ [^/]\.php(/|$) {
   fastcgi_pass unix:/run/php-fpm/librenms.sock;
