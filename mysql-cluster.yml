@@ -4,9 +4,9 @@ services:
     env_file:
       - mysql-server/mysql.env
     image: mysql/mysql-server:8.0.12
-	ports:
+    ports:
       - "3306:3306"
-	command: ["mysqld",
+    command: ["mysqld",
         "--server_id=1",
         "--binlog_checksum=NONE",
         "--gtid_mode=ON",
@@ -23,9 +23,9 @@ services:
     env_file:
       - mysql-server.env
     image: mysql/mysql-server:8.0.12
-	ports:
+    ports:
       - "3307:3306"
-	command: ["mysqld",
+    command: ["mysqld",
         "--server_id=2",
         "--binlog_checksum=NONE",
         "--gtid_mode=ON",
@@ -41,10 +41,10 @@ services:
   mysql-server-3:
     env_file:
       - mysql-server.env
-	image: mysql/mysql-server:8.0.12
-	ports:
+    image: mysql/mysql-server:8.0.12
+    ports:
       - "3308:3306"
-	command: ["mysqld",
+    command: ["mysqld",
         "--server_id=3",
         "--binlog_checksum=NONE",
         "--gtid_mode=ON",
@@ -60,10 +60,10 @@ services:
   mysql-shell:
     env_file:
       - mysql-shell.env
-	image: neumayer/mysql-shell-batch
-	volumes:
+    image: neumayer/mysql-shell-batch
+    volumes:
         - ./scripts/:/scripts/
-	depends_on:
+    depends_on:
       - mysql-server-1
       - mysql-server-2
       - mysql-server-3
